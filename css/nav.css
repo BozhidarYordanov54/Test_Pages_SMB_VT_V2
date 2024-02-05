@@ -159,6 +159,8 @@
   z-index: 1;
   height: 0;
   overflow: hidden;
+  top: -13px;
+  left: 170px;
   transition: all 0.1s ease-in;
 }
 

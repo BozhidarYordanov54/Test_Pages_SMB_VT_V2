@@ -29,7 +29,7 @@ function handleTouchStart(evt) {
 };                                                
                                                                          
 function handleTouchMove(evt) {
-
+    var toggle = document.getElementById("menu-toggle");
     var navWrapper = document.querySelector('.nav-wrapper');
 
     if ( ! xDown || ! yDown ) {
@@ -46,6 +46,8 @@ function handleTouchMove(evt) {
     {
         if ( xDiff > 0 ) {
             navWrapper.style.transform = "translateX(-100%)";
+            toggle.checked = false;
+
         } else {
             navWrapper.style.transform = "translateX(0%)";
         }                       
