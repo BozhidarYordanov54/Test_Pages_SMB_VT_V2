@@ -1,0 +1,42 @@
+:root{
+    --background-color-dark: #121212;
+    --primary-bg-color-dark: #525252;
+    --secondary-bg-color-dark: #1b2a2b;
+    --text-color-dark: #f0f0f0;
+    --text-color-dark-hover: #802bb9;
+    --highlight-color-dark: #294C60;
+}
+
+body.darkmode{
+    background-color: var(--background-color-dark);
+    transition: background-color 0.2s linear;
+}
+
+.nav-wrapper.darkmode{
+    background-color: var(--primary-bg-color-dark);
+    transition: all 0.2s ease-out;
+}
+
+.nav-wrapper.darkmode .nav-list-first li a,
+.nav-wrapper.darkmode .nav-list-second li a{
+    color: var(--text-color-dark);
+    transition: color 0.2s linear;
+}
+
+.nav-wrapper.darkmode .nav-list-first li:hover a,
+.nav-wrapper.darkmode .nav-list-second li:hover a,
+.nav-wrapper.darkmode .nav-list-first li:hover .menu-label{
+    color: var(--text-color-dark-hover) !important;
+    transition: color 0.2s linear;
+}
+
+.nav-wrapper.darkmode .nav-list-first li:hover a svg,
+.nav-wrapper.darkmode .nav-list-second li:hover a svg,
+.nav-wrapper.darkmode .nav-list-first li:hover .menu-label svg{
+    fill: var(--text-color-dark-hover);
+    transition: color 0.2s linear;
+}
+
+.nav-wrapper.darkmode .checkbox-label{
+    background-color: var(--secondary-bg-color-dark);
+}

@@ -2,7 +2,13 @@
   --primary-bg-color: #6eafd8;
   --secondary-bg-color: #1b2a2b;
   --text-color: #ffffff;
+  --text-color: #ffffff;
   --highlight-color: #294C60;
+}
+
+body{
+  background-color: #ffffff;
+  transition: background-color 0.2s linear;
 }
 
 .nav-wrapper {
@@ -266,7 +272,7 @@
   transition: all 0.2s linear;
 }
 
-.fa-moon {color: #008cdd;}
+.fa-moon {color: #c2e4ff;}
 
 .fa-sun {color: #ffffff;}
 
