@@ -25,15 +25,17 @@ body.darkmode{
 
 .nav-wrapper.darkmode .nav-list-first li:hover a,
 .nav-wrapper.darkmode .nav-list-second li:hover a,
-.nav-wrapper.darkmode .nav-list-first li:hover .menu-label{
+.nav-wrapper.darkmode .nav-list-first li:hover .menu-label,
+.nav-wrapper.darkmode .nav-list-second li:hover .logout-btn{
     color: var(--text-color-dark-hover) !important;
     transition: color 0.2s linear;
 }
 
 .nav-wrapper.darkmode .nav-list-first li:hover a svg,
 .nav-wrapper.darkmode .nav-list-second li:hover a svg,
-.nav-wrapper.darkmode .nav-list-first li:hover .menu-label svg{
-    fill: var(--text-color-dark-hover);
+.nav-wrapper.darkmode .nav-list-first li:hover .menu-label svg,
+.nav-wrapper.darkmode .nav-list-second li:hover .logout-btn svg{
+    fill: var(--text-color-dark-hover) !important;
     transition: color 0.2s linear;
 }
 

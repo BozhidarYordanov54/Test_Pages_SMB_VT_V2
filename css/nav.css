@@ -104,7 +104,8 @@ body{
 
 .nav-list-first li a svg,
 .nav-list-second li a svg,
-.menu-label svg {
+.menu-label svg,
+.logout-btn svg{
   position: relative;
   top: 0.2em;
   margin-right: 0.2em;
@@ -114,7 +115,7 @@ body{
 }
 
 .nav-list-first li:hover svg,
-.nav-list-second li:hover svg {
+.nav-list-second li:hover svg{
   fill: var(--highlight-color);
 }
 
@@ -318,6 +319,32 @@ body{
 
 .nav-wrapper.expanded .checkbox-label{
   font-size: 20px;
+}
+
+.logout-btn{
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.logout-btn svg{
+  fill: var(--text-color) !important;
+}
+
+.nav-list-second li:hover .logout-btn svg{
+  fill: var(--highlight-color) !important;
+}
+
+.nav-wrapper.expanded .logout-btn{
+  font-size: 16px;
+  color: var(--text-color) !important;
+  font-weight: bold;
+}
+
+.nav-list-second li:hover .logout-btn{
+  color: var(--highlight-color) !important;
 }
 
 @media (max-width: 768px) {
