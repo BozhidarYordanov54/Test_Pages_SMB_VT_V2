@@ -1,0 +1,110 @@
+:root{
+    --footer-bg: #292929;
+    --footer-text: #868686;
+    --footer-text-header: #ffffff;
+    --footer-text-hover: #ffffff;
+}
+
+.footer-wrap{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background: var(--footer-bg);
+   
+}
+
+.footer-content-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 2em 1em;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.link-card-wrapper{
+    display: flex;
+    gap: 5em;
+}
+
+.card p{
+    color: var(--footer-text-header);
+    font-size: 1em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.card p img{
+    display: flex;
+    align-items: center;
+    width: 60px;
+    margin-right: 0.5em;
+}
+
+.card ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+}
+
+.card ul li a{
+    text-decoration: none;
+    color: var(--footer-text);
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.2s linear;
+}
+
+.card ul li a:hover{
+    color: var(--footer-text-hover);
+}
+.social-media-container{
+    display: flex;
+    gap: 1em;
+    margin-left: 0.5em;
+}
+
+.fa-facebook-f,
+.fa-envelope{
+    font-size: 1.5em;
+    color: var(--footer-text);
+    transition: all 0.2s linear;
+}
+
+.fa-facebook-f:hover,
+.fa-envelope:hover{
+    font-size: 1.5em;
+    color: var(--footer-text-hover);
+}
+
+.copyright-info{
+    color: var(--footer-text);
+    text-align: center;
+    padding: 1em 0;
+}
+
+@media(max-width: 768px){
+    
+    .footer-content-wrapper{
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    .social-media-container{
+        justify-content: center;
+    }
+
+    .link-card-wrapper{
+        flex-direction: column;
+        gap: 1em;
+        
+    }
+}
