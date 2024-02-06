@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: #ffffff;
+    transition: background-color 0.2s linear;
+  }
+
+body.darkmode {
+    background-color: var(--dark-bg);
+    transition: background-color 0.2s linear;
+  }
+
 .site{
     position: relative;
     min-height: 100vh;
