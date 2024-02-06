@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function OpenNav(event) {
         // Check if the clicked element is a dropdown or a child of a dropdown
-        var isDropdown = event.target.closest('.dropdown');
+        var isForm = event.target.closest('.logout-form');
         var isNavLink = event.target.closest('a');
 
         // If it's a dropdown or a nav link, don't toggle the nav
-        if (navWrapper.classList.contains('expanded') || isNavLink) {
+        if (navWrapper.classList.contains('expanded') || isNavLink || isForm) {
             return;
         }
 
@@ -19,9 +19,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeNav(event)
     {   
         var isDropdown = event.target.closest('.dropdown');
+        var isForm = event.target.closest('.logout-form');
         var isNavLink = event.target.closest('a');
 
-        if(isDropdown || isNavLink)
+        if(isDropdown || isNavLink || isForm)
         {
             return;
         }

@@ -1,44 +1,64 @@
-:root{
-    --background-color-dark: #121212;
-    --primary-bg-color-dark: #525252;
-    --secondary-bg-color-dark: #1b2a2b;
-    --text-color-dark: #f0f0f0;
-    --text-color-dark-hover: #802bb9;
-    --highlight-color-dark: #294C60;
-}
-
-body.darkmode{
-    background-color: var(--background-color-dark);
+:root {
+    --dark-bg: #121212;
+    --primary-dark: #525252;
+    --secondary-dark: #1b2a2b;
+    --text-light: #f0f0f0;
+    --text-hover-purple: #802bb9;
+    --text-hover-dark-purple: #2e2e2e;
+    --highlight-dark: #294C60;
+  }
+  
+  body.darkmode {
+    background-color: var(--dark-bg);
     transition: background-color 0.2s linear;
-}
-
-.nav-wrapper.darkmode{
-    background-color: var(--primary-bg-color-dark);
+  }
+  
+  .nav-wrapper.darkmode {
+    background-color: var(--primary-dark);
     transition: all 0.2s ease-out;
-}
-
-.nav-wrapper.darkmode .nav-list-first li a,
-.nav-wrapper.darkmode .nav-list-second li a{
-    color: var(--text-color-dark);
+  }
+  
+  .nav-wrapper.darkmode .nav-list-first li a,
+  .nav-wrapper.darkmode .nav-list-second li a {
+    color: var(--text-light);
     transition: color 0.2s linear;
-}
-
-.nav-wrapper.darkmode .nav-list-first li:hover a,
-.nav-wrapper.darkmode .nav-list-second li:hover a,
-.nav-wrapper.darkmode .nav-list-first li:hover .menu-label,
-.nav-wrapper.darkmode .nav-list-second li:hover .logout-btn{
-    color: var(--text-color-dark-hover) !important;
-    transition: color 0.2s linear;
-}
-
-.nav-wrapper.darkmode .nav-list-first li:hover a svg,
-.nav-wrapper.darkmode .nav-list-second li:hover a svg,
-.nav-wrapper.darkmode .nav-list-first li:hover .menu-label svg,
-.nav-wrapper.darkmode .nav-list-second li:hover .logout-btn svg{
-    fill: var(--text-color-dark-hover) !important;
-    transition: color 0.2s linear;
-}
-
-.nav-wrapper.darkmode .checkbox-label{
-    background-color: var(--secondary-bg-color-dark);
-}
+  }
+  
+  .nav-wrapper.darkmode .nav-list-first li:hover a,
+  .nav-wrapper.darkmode .nav-list-second li:hover a {
+    color: var(--text-hover-purple);
+  }
+  
+  .nav-wrapper.darkmode .nav-list-first li:hover a svg,
+  .nav-wrapper.darkmode .nav-list-second li:hover a svg,
+  .nav-wrapper.darkmode .nav-list-first li:hover .menu-label svg,
+  .nav-wrapper.darkmode .nav-list-second li:hover .logout-btn svg {
+    fill: var(--text-hover-purple) !important;
+  }
+  
+  .nav-wrapper.darkmode .checkbox-label {
+    background-color: var(--secondary-dark);
+  }
+  
+  .nav-wrapper.darkmode .nav-list-first li:hover .menu-label {
+    color: var(--text-hover-purple) !important;
+  }
+  
+  .nav-wrapper.expanded.darkmode .dropdown {
+    > label {
+      cursor: pointer;
+    }
+  
+    .dropdown-content {
+      background-color: var(--text-hover-dark-purple);
+    }
+  }
+  
+  .nav-wrapper.darkmode .dropdown-content a:hover {
+    color: var(--text-hover-purple) !important;
+  }
+  
+  .nav-wrapper.darkmode .nav-list-second li:hover .logout-text {
+    color: var(--text-hover-purple);
+  }
+  
