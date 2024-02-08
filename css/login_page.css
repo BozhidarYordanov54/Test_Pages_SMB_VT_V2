@@ -1,0 +1,154 @@
+:root {
+    --primary-bg-color: #6eafd8;
+    --secondary-bg-color: #1b2a2b;
+    --text-color: #ffffff;
+    --text-color-black: #000000;
+    --highlight-color: #294C60;
+}
+
+.footer-wrap {
+    display: none;
+}
+
+.login-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.login-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* changed height to min-height */
+    background-color: #ffffff;
+}
+
+.new-user {
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* increased width */
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    padding: 2rem;
+    border-top-right-radius: 2em;
+}
+
+.new-user .new-user-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-wrapper img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.form {
+    border: 2px solid var(--primary-bg-color);
+    width: 70%; /* adjusted width */
+    height: 70vh;
+    background-color: #ffffff;
+    padding: 2rem;
+}
+
+.form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 50px;
+}
+
+.form-header a {
+    text-decoration: none;
+    color: var(--primary-bg-color);
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+}
+
+.form-header a:hover {
+    color: var(--highlight-color);
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-text {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    height: 4em;
+    padding-left: 1em;
+    margin: 0 auto;
+}
+
+.form-label-username,
+.form-label-password {
+    position: relative;
+    top: -2.8em;
+    left: 1em;
+    padding: 5px;
+    color: #ccc;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+    width: max-content;
+    pointer-events: none;
+}
+
+.input-wrapper .input-text + .form-label-username,
+.input-wrapper .input-text + .form-label-password {
+    padding: 5px;
+    color: #ccc;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    background: transparent;
+    transition: all 0.1s ease-in-out;
+}
+
+.input-text:focus + .form-label-username,
+.input-text:focus + .form-label-password,
+.input-text.has-content + .form-label-username,
+.input-text.has-content + .form-label-password {
+    transform: translateY(-100%) translateX(0%);
+    background-color: #ffffff;
+    color: var(--text-color-black);
+    font-weight: bold;
+}
+
+.btn-submit {
+    outline: none;
+    border: none;
+    height: 3em;
+    width: 60%;
+    background: var(--primary-bg-color);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-top: 10px;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+    cursor: pointer;
+    color: var(--highlight-color);
+    box-shadow: none;
+}

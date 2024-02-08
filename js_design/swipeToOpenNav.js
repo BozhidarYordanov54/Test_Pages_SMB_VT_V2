@@ -6,7 +6,7 @@ window.addEventListener('resize', function() {
     var navWrapper = document.querySelector('.nav-wrapper');
     var windowWidth = window.innerWidth;
 
-    if (windowWidth > 768) {
+    if (windowWidth > 1200) {
         navWrapper.style.transform = "translateX(0%)";
     }
     else {
