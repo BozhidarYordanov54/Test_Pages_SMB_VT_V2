@@ -110,8 +110,6 @@
     transition: all 0.2s ease-in-out;
     width: max-content;
     pointer-events: none;
-
-    transition: all 0.2s linear;
 }
 
 .input-wrapper .input-text + .form-label-username,
@@ -121,7 +119,7 @@
     font-size: 0.9rem;
     white-space: nowrap;
     background: transparent;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .input-wrapper .forgotten-pass{
@@ -296,6 +294,6 @@
     }
 
     .btn-submit{
-        margin-top: 1em;
+        margin-top: -0.5em;
     }
 }
