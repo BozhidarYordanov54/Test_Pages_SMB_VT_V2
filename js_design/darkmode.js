@@ -12,6 +12,8 @@ if (savedDarkMode === "true") {
     document.querySelector('.site').classList.add("darkmode");
     document.querySelector('.nav-wrapper').classList.add("darkmode");
     document.querySelector('.footer-wrap').classList.add("darkmode");
+
+    document.querySelector('.login-form-wrapper').classList.add("darkmode");
     websiteLogo.forEach(logo => {
         logo.src = "images/Logo-White.png";
     });
@@ -21,6 +23,8 @@ if (savedDarkMode === "true") {
     document.querySelector('.site').classList.remove("darkmode");
     document.querySelector('.nav-wrapper').classList.remove("darkmode");
     document.querySelector('.footer-wrap').classList.remove("darkmode");
+
+    document.querySelector('.login-form-wrapper').classList.remove("darkmode");
     websiteLogo.forEach(logo => {
         logo.src = "images/Logo-Black.png";
     });
@@ -33,6 +37,8 @@ darkModeSwitch.addEventListener("change", function() {
         document.querySelector('.site').classList.add("darkmode");
         document.querySelector('.nav-wrapper').classList.add("darkmode");
         document.querySelector('.footer-wrap').classList.add("darkmode");
+
+        document.querySelector('.login-form-wrapper').classList.add("darkmode");
         websiteLogo.forEach(logo => {
             logo.src = "images/Logo-White.png";
         });
@@ -42,6 +48,8 @@ darkModeSwitch.addEventListener("change", function() {
         document.querySelector('.site').classList.remove("darkmode");
         document.querySelector('.nav-wrapper').classList.remove("darkmode");
         document.querySelector('.footer-wrap').classList.remove("darkmode");
+
+        document.querySelector('.login-form-wrapper').classList.remove("darkmode");
         websiteLogo.forEach(logo => {
             logo.src = "images/Logo-Black.png";
         });
