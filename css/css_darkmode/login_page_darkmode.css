@@ -50,7 +50,7 @@
     transition: all 0.2s linear;
 }
 
-.login-form-wrapper.darkmode .input-wrapper-remember-me{
+.login-form-wrapper.darkmode .remember-me{
     color: var(--text-light);
 }
 
