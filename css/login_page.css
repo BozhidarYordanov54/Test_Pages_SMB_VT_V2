@@ -26,10 +26,10 @@
     height: 70vh;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    gap: 4em;
     background: var(--highlight-color);
     color: var(--text-color);
-    padding: 2rem;
+    padding: 2em;
     border-top-right-radius: 2em;
 
     transition: all 0.2s linear;
@@ -49,12 +49,6 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.login-form-wrapper img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
-}
-
 .form {
     flex: 1 40%;
     display: flex;
@@ -62,10 +56,10 @@
     justify-content: center;
     border: 2px solid var(--primary-bg-color);
     border-bottom-left-radius: 2em;
-    width: 70%; /* adjusted width */
+    width: 70%; 
     height: 70vh;
     background-color: #ffffff;
-    padding: 2rem;
+    padding: 2em;
 
     transition: all 0.2s ease-in-out;
 }
@@ -226,7 +220,7 @@
 }
 
 .border{
-    width: 20rem;
+    width: 20em;
     border-bottom: 2px solid var(--primary-bg-color);
 }
 
@@ -276,26 +270,29 @@
 
 
 @media(max-width: 768px) {
+    .login-form-wrapper{
+        height: 100%;
+    }
+    
     .card-wrapper{
         flex-direction: column;
-        height: 100%;
         border-bottom-right-radius: 2em;
         border-top-left-radius: 2em;
+        width: 95vw;
     }
 
     .new-user {
         border-top-right-radius: 0;
         border-bottom-right-radius: 2em;
-        flex: 1 0 30%;
-        height: 50vh;
+        flex: 1 1 30%;
+        width: 100%;
     }
 
     .form {
         border-bottom-left-radius: 0;
         border-top-left-radius: 2em;
         width: 100%;
-        flex: 1 0 50%;
-        height: 70vh;
+        
     }
 
     .btn-submit{
