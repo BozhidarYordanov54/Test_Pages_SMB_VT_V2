@@ -103,7 +103,6 @@
 .form-label-password {
     position: relative;
     top: -2.8em;
-    left: 1em;
     padding: 5px;
     color: #ccc;
     background: transparent;
@@ -119,7 +118,7 @@
     font-size: 0.9rem;
     white-space: nowrap;
     background: transparent;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .input-wrapper .forgotten-pass{
@@ -146,6 +145,7 @@
     background-color: #ffffff;
     color: var(--text-color-black);
     font-weight: bold;
+    transition: all 0.2s ease-in-out;
 }
 
 .additional-fields{
@@ -229,6 +229,7 @@
     margin: 0 auto;
     padding: 0 1em;
     background: var(--text-color);
+    transition: all 0.2s ease-in-out;
 }
 
 .exteranal-login-buttons{
@@ -265,11 +266,21 @@
     color: #0e76a8;
 }
 
+.new-user-header{
+    
+    white-space: nowrap;
+}
 
+.reg-info{
+    font-size: 16px;
+    line-height: 1.5em;
+    text-align: center;
+}
 
 @media(max-width: 768px) {
     .login-form-wrapper{
         height: 100%;
+        padding: 1em 2em;
     }
     
     .card-wrapper{

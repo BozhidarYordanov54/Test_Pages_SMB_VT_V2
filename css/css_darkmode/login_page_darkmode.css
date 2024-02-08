@@ -4,6 +4,7 @@
     --lighter-primary-dark: #6e6e6e;
     --secondary-dark: #1b2a2b;
     --text-light: #f0f0f0;
+    --text-dark: #adadad;
     --text-hover-purple: #9434d4;
     --text-hover-dark-purple: #2e2e2e;
     --highlight-dark: #294C60;
@@ -32,8 +33,7 @@
 
 .login-form-wrapper.darkmode .form-label-username,
 .login-form-wrapper.darkmode .form-label-password{
-    color: var(--text-light);
-    
+    color: var(--text-dark);
 }
 
 .login-form-wrapper.darkmode .input-text:focus + .form-label-username,
@@ -41,6 +41,7 @@
 .login-form-wrapper.darkmode .input-text.has-content + .form-label-username,
 .login-form-wrapper.darkmode .input-text.has-content + .form-label-password{
     background: var(--primary-dark);
+    color: var(--text-light);
 }
 
 .login-form-wrapper.darkmode .remember-me{
