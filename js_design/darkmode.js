@@ -13,7 +13,11 @@ if (savedDarkMode === "true") {
     document.querySelector('.nav-wrapper').classList.add("darkmode");
     document.querySelector('.footer-wrap').classList.add("darkmode");
 
-    document.querySelector('.login-form-wrapper').classList.add("darkmode");
+    if(document.querySelector('.login-form-wrapper'))
+    {
+        document.querySelector('.login-form-wrapper').classList.add("darkmode");
+    }
+
     websiteLogo.forEach(logo => {
         logo.src = "images/Logo-White.png";
     });
@@ -24,7 +28,11 @@ if (savedDarkMode === "true") {
     document.querySelector('.nav-wrapper').classList.remove("darkmode");
     document.querySelector('.footer-wrap').classList.remove("darkmode");
 
-    document.querySelector('.login-form-wrapper').classList.remove("darkmode");
+    if(document.querySelector('.login-form-wrapper'))
+    {
+        document.querySelector('.login-form-wrapper').classList.remove("darkmode");
+    }
+
     websiteLogo.forEach(logo => {
         logo.src = "images/Logo-Black.png";
     });
@@ -38,7 +46,10 @@ darkModeSwitch.addEventListener("change", function() {
         document.querySelector('.nav-wrapper').classList.add("darkmode");
         document.querySelector('.footer-wrap').classList.add("darkmode");
 
-        document.querySelector('.login-form-wrapper').classList.add("darkmode");
+        if(document.querySelector('.login-form-wrapper'))
+        {
+            document.querySelector('.login-form-wrapper').classList.add("darkmode");
+        }
         websiteLogo.forEach(logo => {
             logo.src = "images/Logo-White.png";
         });
@@ -49,7 +60,10 @@ darkModeSwitch.addEventListener("change", function() {
         document.querySelector('.nav-wrapper').classList.remove("darkmode");
         document.querySelector('.footer-wrap').classList.remove("darkmode");
 
-        document.querySelector('.login-form-wrapper').classList.remove("darkmode");
+        if(document.querySelector('.login-form-wrapper'))
+        {
+            document.querySelector('.login-form-wrapper').classList.remove("darkmode");
+        }
         websiteLogo.forEach(logo => {
             logo.src = "images/Logo-Black.png";
         });
