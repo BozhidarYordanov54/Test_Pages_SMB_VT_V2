@@ -1,0 +1,70 @@
+:root {
+    --dark-bg: #121212;
+    --primary-dark: #525252;
+    --lighter-primary-dark: #6e6e6e;
+    --secondary-dark: #1b2a2b;
+    --text-light: #f0f0f0;
+    --text-dark: #adadad;
+    --text-hover-purple: #9434d4;
+    --text-hover-dark-purple: #2e2e2e;
+    --highlight-dark: #294C60;
+  }
+
+.register-form-wrapper.darkmode .form{
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    border: 2px solid var(--lighter-primary-dark);
+}
+
+.register-form-wrapper.darkmode .input-text{
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    border-bottom: 2px solid var(--text-light);
+}
+
+.register-form-wrapper.darkmode .input-text:focus{
+    border-bottom: 2px solid var(--text-hover-purple);
+}
+
+.register-form-wrapper.darkmode .form-label-username,
+.register-form-wrapper.darkmode .form-label-password
+.register-form-wrapper.darkmode .form-label-email,
+.register-form-wrapper.darkmode .form-label-name,
+.register-form-wrapper.darkmode .form-label-phone,
+.register-form-wrapper.darkmode .form-label-confirm-password{
+    color: var(--text-dark);
+}
+
+.register-form-wrapper.darkmode .input-text:focus + .form-label-username,
+.register-form-wrapper.darkmode .input-text:focus + .form-label-password,
+.register-form-wrapper.darkmode .input-text:focus + .form-label-email,
+.register-form-wrapper.darkmode .input-text:focus + .form-label-name,
+.register-form-wrapper.darkmode .input-text:focus + .form-label-phone,
+.register-form-wrapper.darkmode .input-text:focus + .form-label-confirm-password,
+.register-form-wrapper.darkmode .input-text.has-content + .form-label-username,
+.register-form-wrapper.darkmode .input-text.has-content + .form-label-password,
+.register-form-wrapper.darkmode .input-text.has-content + .form-label-phone,
+.register-form-wrapper.darkmode .input-text.has-content + .form-label-confirm-password,
+.register-form-wrapper.darkmode .input-text.has-content + .form-label-name{
+    background: var(--primary-dark);
+    color: var(--text-light);
+}
+
+.register-form-wrapper.darkmode .remember-me{
+    color: var(--text-light);
+}
+
+.register-form-wrapper.darkmode .more-logins h3{
+    color: var(--text-light);
+    background: var(--primary-dark);
+}
+
+.register-form-wrapper.darkmode .btn-submit,
+.register-form-wrapper.darkmode .btn-register{
+    background-color: var(--text-light);
+    color: var(--text-hover-dark-purple);
+}
+
+.register-form-wrapper.darkmode .forgotten-pass a{
+    color: var(--text-light);
+}

@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login_page.css">
+    <link rel="stylesheet" href="css/register_page.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/typography.css">
     <link rel="stylesheet" type="text/css" href="css/nav.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
 
     <link rel="stylesheet" type="text/css" href="css/css_darkmode/nav_darkmode.css">
     <link rel="stylesheet" type="text/css" href="css/css_darkmode/footer_darkmode.css">
-    <link rel="stylesheet" href="css/css_darkmode/login_page_darkmode.css">
+    <link rel="stylesheet" href="css/css_darkmode/register_page_darkmode.css">
 
     <link rel="icon" type="image/x-icon"  href="/images/Logo-White.png">
 
@@ -71,54 +71,36 @@
             </nav>
         </header>
 
-        <section class="login-form-wrapper">
+        <section class="register-form-wrapper">
             <div class="card-wrapper">
                 <form method="post" class="form">
                     <div class="form-header">
-                        <h1 class="login-header">Добре дошли,</h1>
+                        <h1 class="register-header">Регистрация</h1>
                     </div>
                     <div class="input-wrapper">
-                        <input type="text" name="username" id="username" class="input-text"/>
-                        <label class="form-label-username" for="username">Потребителско име</label>
+                        <input type="text" name="name" id="name" class="input-text"/>
+                        <label class="form-label-name" for="name">Име</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" name="phone" id="phone" class="input-text"/>
+                        <label class="form-label-phone" for="phone">Тел. номер</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" name="email" id="email" class="input-text"/>
+                        <label class="form-label-email" for="email">Имейл</label>
                     </div>
                     <div class="input-wrapper">
                         <input type="text" name="password" id="password" class="input-text"/>
                         <label class="form-label-password" for="password">Парола</label>
                     </div>
                     <div class="input-wrapper">
-                        <div class="forgotten-pass">
-                            <a href="#">Забравена парола?</a>
-                        </div>
-                        <div class="additional-fields">
-                            <div class="remember-me">
-                                <label for="remember-me" class="label-remember-me">Запомни ме</label>
-                                <input type="checkbox" name="remember-me" id="remember-me" class="checkbox-remember-me"/>
-                            </div>
-                        </div>
+                        <input type="text" name="confirm-password" id="confirm-password" class="input-text"/>
+                        <label class="form-label-confirm-password" for="confirm-password">Потвърждение на паролата</label>
                     </div>
                     <div class="input-wrapper">
-                        <input class="btn-submit" type="submit" value="Вход">
-                    </div>
-                    <div class="more-logins-wrapper">
-                        <div class="more-logins">
-                            <h3>Или влез с:</h3>
-                            <div class="border"></div>
-                            <div class="exteranal-login-buttons">
-                                <a href="#" class="fa fa-facebook"></a>
-                                <a href="#" class="fa fa-google"></a>
-                                <a href="#" class="fa fa-twitter"></a>
-                                <a href="#" class="fa fa-linkedin"></a>
-                            </div>
-                        </div>
+                        <input class="btn-submit" type="submit" value="Регистрация">
                     </div>
                 </form>
-                <div class="new-user">
-                    <div class="new-user-header">
-                        <h2 class="new-user-h2">Нямате акаунт?</h2>
-                    </div>
-                    <p class="reg-info">Можете да кликнете бутона долу и да се регистрирате, за да откриете най-новите неща в сайта!</p>
-                    <a href="register.html" class="btn-register">Регистрация</a>
-                </div>
             </div>
         </section>
 

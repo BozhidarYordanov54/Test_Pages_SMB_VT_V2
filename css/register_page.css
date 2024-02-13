@@ -1,0 +1,181 @@
+:root {
+    --primary-bg-color: #6eafd8;
+    --secondary-bg-color: #1b2a2b;
+    --text-color: #ffffff;
+    --text-color-black: #000000;
+    --highlight-color: #294C60;
+}
+
+.footer-wrap {
+    display: none;
+}
+
+.register-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2em;
+    background: transparent;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 2em;
+    border-top-right-radius: 2em;
+    min-width: 95%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid var(--primary-bg-color);
+    border-bottom-left-radius: 2em;
+    height: 70vh;
+    min-width: 100%;
+    background-color: #ffffff;
+    padding: 2em;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-text {
+    border: none;
+    font-size: 1em;
+    margin-top: 1em;
+    border-bottom: 2px solid var(--primary-bg-color);
+    width: 100%;
+    padding: 1em;
+    padding-left: 1em;
+    margin: 0 auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-label-password,
+.form-label-email,
+.form-label-name,
+.form-label-phone,
+.form-label-confirm-password {
+    position: relative;
+    top: -2.8em;
+    padding: 5px;
+    color: #ccc;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+    width: max-content;
+    pointer-events: none;
+}
+
+.input-wrapper .input-text + .form-label-password,
+.input-wrapper .input-text + .form-label-email,
+.input-wrapper .input-text + .form-label-name,
+.input-wrapper .input-text + .form-label-phone,
+.input-wrapper .input-text + .form-label-confirm-password {
+    padding: 5px;
+    color: #ccc;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.input-text:focus{
+    outline: none;
+}
+
+.input-text:focus + .form-label-password,
+.input-text:focus + .form-label-email,
+.input-text:focus + .form-label-name,
+.input-text:focus + .form-label-phone,
+.input-text:focus + .form-label-confirm-password,
+.input-text.has-content + .form-label-password,
+.input-text.has-content + .form-label-email,
+.input-text.has-content + .form-label-name,
+.input-text.has-content + .form-label-phone,
+.input-text.has-content + .form-label-confirm-password {
+    transform: translateY(-110%) translateX(0%);
+    background-color: #ffffff;
+    color: var(--text-color-black);
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.btn-submit,
+.btn-register {
+    outline: none;
+    border: none;
+    height: 3em;
+    width: 60%;
+    background: var(--primary-bg-color);
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-top: 10px;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-submit{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.btn-submit:hover,
+.btn-register:hover {
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.btn-register{
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    padding: 1em 0;    
+}
+
+@media(max-width: 768px) {
+    .login-form-wrapper{
+        height: 100%;
+        padding: 1em 2em;
+    }
+    
+    .card-wrapper{
+        flex-direction: column;
+        border-bottom-right-radius: 2em;
+        border-top-left-radius: 2em;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .form {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 2em;
+        width: 100%;
+        height: 95vh;
+    }
+
+    .btn-submit{
+        margin-top: -0.5em;
+    }
+}
