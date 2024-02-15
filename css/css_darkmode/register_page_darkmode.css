@@ -79,3 +79,8 @@
     color: var(--text-light);
     background: var(--lighter-primary-dark);
 }
+
+.register-form-wrapper.darkmode .options li:hover{
+    color: var(--text-hover-purple);
+    background: var(--text-light);
+}

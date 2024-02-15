@@ -75,10 +75,10 @@
             <div class="card-wrapper">
                 <form method="post" class="form">
                     <div class="form-header">
-                        <h1 class="register-header">Добре дошли,</h1>
+                        <h1 class="register-header">Регистрация</h1>
                     </div>
                     <div class="input-wrapper">
-                        <input type="text" name="username" id="username" class="input-text"/>
+                        <input type="text" name="username" id="username" class="input-text" autocomplete="off">
                         <label class="form-label-username" for="username">Име</label>
                     </div>
                     <div class="input-wrapper">
@@ -111,12 +111,16 @@
                         </div>
                     </div>
                     <div class="input-wrapper">
-                        <input type="text" name="password" id="password" class="input-text"/>
+                        <input type="password" name="password" id="password" class="input-text"/>
                         <label class="form-label-password" for="password">Парола</label>
+                        <i class="fa-solid fa-eye show-password"></i>
+                        <i class="fa-solid fa-eye-slash hide-password"></i>
                     </div>
                     <div class="input-wrapper">
-                        <input type="text" name="confirm-password" id="confirm-password" class="input-text"/>
+                        <input type="password" name="confirm-password" id="confirm-password" class="input-text"/>
                         <label class="form-label-confirm-password" for="confirm-password">Потвърждение на парола</label>
+                        <i class="fa-solid fa-eye show-password"></i>
+                        <i class="fa-solid fa-eye-slash hide-password"></i>
                     </div>
                     <div class="input-wrapper">
                         <input class="btn-submit" type="submit" value="Регистрация">
@@ -193,6 +197,7 @@
     <script src="js_design/swipeToOpenNav.js"></script>
     <script src="js_design/darkmode.js"></script>
     <script src="js_design/checkInputContent.js"></script>
+    <script src="js_design/changePasswordIcon.js"></script>
     
     <script src="js_logic/filterOptions.js"></script>
 </body>
