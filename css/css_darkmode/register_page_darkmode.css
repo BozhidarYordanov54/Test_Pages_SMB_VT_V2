@@ -16,6 +16,11 @@
     border: 2px solid var(--lighter-primary-dark);
 }
 
+.register-form-wrapper.darkmode .old-user{
+    color: var(--text-light);
+    background-color: var(--lighter-primary-dark);
+}
+
 .register-form-wrapper.darkmode .input-text{
     background-color: var(--primary-dark);
     color: var(--text-light);
@@ -27,25 +32,22 @@
 }
 
 .register-form-wrapper.darkmode .form-label-username,
-.register-form-wrapper.darkmode .form-label-password
-.register-form-wrapper.darkmode .form-label-email,
-.register-form-wrapper.darkmode .form-label-name,
-.register-form-wrapper.darkmode .form-label-phone,
-.register-form-wrapper.darkmode .form-label-confirm-password{
+.register-form-wrapper.darkmode .form-label-password{
     color: var(--text-dark);
 }
 
 .register-form-wrapper.darkmode .input-text:focus + .form-label-username,
-.register-form-wrapper.darkmode .input-text:focus + .form-label-password,
 .register-form-wrapper.darkmode .input-text:focus + .form-label-email,
-.register-form-wrapper.darkmode .input-text:focus + .form-label-name,
 .register-form-wrapper.darkmode .input-text:focus + .form-label-phone,
+.register-form-wrapper.darkmode .input-text:focus + .form-label-town,
+.register-form-wrapper.darkmode .input-text:focus + .form-label-password,
 .register-form-wrapper.darkmode .input-text:focus + .form-label-confirm-password,
 .register-form-wrapper.darkmode .input-text.has-content + .form-label-username,
-.register-form-wrapper.darkmode .input-text.has-content + .form-label-password,
+.register-form-wrapper.darkmode .input-text.has-content + .form-label-email,
 .register-form-wrapper.darkmode .input-text.has-content + .form-label-phone,
-.register-form-wrapper.darkmode .input-text.has-content + .form-label-confirm-password,
-.register-form-wrapper.darkmode .input-text.has-content + .form-label-name{
+.register-form-wrapper.darkmode .input-text.has-content + .form-label-town,
+.register-form-wrapper.darkmode .input-text.has-content + .form-label-password,
+.register-form-wrapper.darkmode .input-text.has-content + .form-label-confirm-password{
     background: var(--primary-dark);
     color: var(--text-light);
 }
@@ -67,4 +69,13 @@
 
 .register-form-wrapper.darkmode .forgotten-pass a{
     color: var(--text-light);
+}
+
+.register-form-wrapper.darkmode .border{
+    border-bottom: 2px solid var(--text-light);
+}
+
+.register-form-wrapper.darkmode .options{
+    color: var(--text-light);
+    background: var(--lighter-primary-dark);
 }

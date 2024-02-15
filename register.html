@@ -17,7 +17,7 @@
 
     <link rel="icon" type="image/x-icon"  href="/images/Logo-White.png">
 
-    <title>Вход - СМБ-Велико Търново</title>
+    <title>Регистрация - СМБ-Велико Търново</title>
 </head>
 <body>
 
@@ -75,19 +75,40 @@
             <div class="card-wrapper">
                 <form method="post" class="form">
                     <div class="form-header">
-                        <h1 class="register-header">Регистрация</h1>
+                        <h1 class="register-header">Добре дошли,</h1>
                     </div>
                     <div class="input-wrapper">
-                        <input type="text" name="name" id="name" class="input-text"/>
-                        <label class="form-label-name" for="name">Име</label>
+                        <input type="text" name="username" id="username" class="input-text"/>
+                        <label class="form-label-username" for="username">Име</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" name="email" id="email" class="input-text"/>
+                        <label class="form-label-email" for="email">Email</label>
                     </div>
                     <div class="input-wrapper">
                         <input type="text" name="phone" id="phone" class="input-text"/>
                         <label class="form-label-phone" for="phone">Тел. номер</label>
                     </div>
                     <div class="input-wrapper">
-                        <input type="text" name="email" id="email" class="input-text"/>
-                        <label class="form-label-email" for="email">Имейл</label>
+                        <input type="text" name="town" id="town" class="search-box input-text" oninput="filterOptions()">
+                        <label class="form-label-town" for="town">Изберете град</label>
+                        <div class="select-box">
+                            <ul class="options">
+                                <li data-value="1">Велико Търново</li> 
+                                <li data-value="Полски Тръмбеш">Полски Тръмбеш</li> 
+                                <li data-value="Присово">Присово</li> 
+                                <li data-value="Дебелец">Дебелец</li> 
+                                <!--
+                                    @foreach(var town in towns)
+                                    {
+                                        <li class="option">
+                                            <input class="radio" type="radio" id="@town" name="town" value="@town">
+                                            <label for="@town">@town</label>
+                                        </li>
+                                    }
+                                -->
+                            </ul>
+                        </div>
                     </div>
                     <div class="input-wrapper">
                         <input type="text" name="password" id="password" class="input-text"/>
@@ -95,12 +116,19 @@
                     </div>
                     <div class="input-wrapper">
                         <input type="text" name="confirm-password" id="confirm-password" class="input-text"/>
-                        <label class="form-label-confirm-password" for="confirm-password">Потвърждение на паролата</label>
+                        <label class="form-label-confirm-password" for="confirm-password">Потвърждение на парола</label>
                     </div>
                     <div class="input-wrapper">
                         <input class="btn-submit" type="submit" value="Регистрация">
                     </div>
                 </form>
+                <div class="old-user">
+                    <div class="old-user-header">
+                        <h2 class="new-user-h2">Имате профил?</h2>
+                    </div>
+                    <p class="login-info">Можете да кликнете бутона долу и да влезете в профила си!</p>
+                    <a href="login.html" class="btn-register">Вход</a>
+                </div>
             </div>
         </section>
 
@@ -165,5 +193,7 @@
     <script src="js_design/swipeToOpenNav.js"></script>
     <script src="js_design/darkmode.js"></script>
     <script src="js_design/checkInputContent.js"></script>
+    
+    <script src="js_logic/filterOptions.js"></script>
 </body>
 </html>

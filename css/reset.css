@@ -18,3 +18,26 @@ body.darkmode {
     position: relative;
     min-height: 100vh;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  right:5px;
+  position:absolute;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background:#294C60;
+  border-radius:5px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
