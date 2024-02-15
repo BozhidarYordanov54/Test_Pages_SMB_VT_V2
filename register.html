@@ -92,12 +92,13 @@
                     <div class="input-wrapper">
                         <input type="text" name="town" id="town" class="search-box input-text" oninput="filterOptions()" autocomplete="off"/>
                         <label class="form-label-town" for="town">Изберете град</label>
+                        <i class="fa-solid fa-xmark"></i>
                         <div class="select-box">
                             <ul class="options">
                                 <li data-value="1">Велико Търново</li> 
-                                <li data-value="Полски Тръмбеш">Полски Тръмбеш</li> 
-                                <li data-value="Присово">Присово</li> 
-                                <li data-value="Дебелец">Дебелец</li> 
+                                <li data-value="2">Полски Тръмбеш</li> 
+                                <li data-value="3">Присово</li> 
+                                <li data-value="4">Дебелец</li> 
                                 <!--
                                     @foreach(var town in towns)
                                     {
@@ -108,6 +109,7 @@
                                     }
                                 -->
                             </ul>
+                            
                         </div>
                     </div>
                     <div class="input-wrapper">

@@ -267,7 +267,7 @@
     position: absolute;
     margin-top: -1.6em;
     background-color: #f9f9f9;
-    border: 1px solid #ccc;
+    border: 2px solid var(--primary-bg-color);
     max-height: 200px;
     width: 100%;
     overflow-y: auto;
@@ -286,12 +286,16 @@
 }
 
 .fa-eye,
-.fa-eye-slash
+.fa-eye-slash,
+.fa-xmark
  {
+    position: absolute;
+    padding: 0;
+    margin: 0;
     font-size: 0px;
-    position: relative;
-    top: -3.8em;
-    margin-left: 90%;
+    margin-top: 1em;
+    margin-left: 17rem;
+    z-index: 1;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }

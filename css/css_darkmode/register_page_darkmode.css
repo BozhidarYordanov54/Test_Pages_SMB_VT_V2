@@ -78,6 +78,7 @@
 .register-form-wrapper.darkmode .options{
     color: var(--text-light);
     background: var(--lighter-primary-dark);
+    border: 2px solid var(--lighter-primary-dark);
 }
 
 .register-form-wrapper.darkmode .options li:hover{
