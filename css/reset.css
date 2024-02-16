@@ -15,7 +15,8 @@ body.darkmode {
   }
 
 .site{
-    position: relative;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
@@ -52,6 +53,19 @@ select:-webkit-autofill:focus {
 .register-form-wrapper.darkmode select:-webkit-autofill,
 .register-form-wrapper.darkmode select:-webkit-autofill:hover,
 .register-form-wrapper.darkmode select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #525252 inset !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+.login-form-wrapper.darkmode input:-webkit-autofill,
+.login-form-wrapper.darkmode input:-webkit-autofill:hover,
+.login-form-wrapper.darkmode input:-webkit-autofill:focus,
+.login-form-wrapper.darkmode textarea:-webkit-autofill,
+.login-form-wrapper.darkmode textarea:-webkit-autofill:hover,
+.login-form-wrapper.darkmode textarea:-webkit-autofill:focus,
+.login-form-wrapper.darkmode select:-webkit-autofill,
+.login-form-wrapper.darkmode select:-webkit-autofill:hover,
+.login-form-wrapper.darkmode select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #525252 inset !important;
   -webkit-text-fill-color: #ffffff;
 }

@@ -6,10 +6,6 @@
     --highlight-color: #535353;
 }
 
-.footer-wrap {
-    display: none;
-}
-
 .register-form-wrapper {
     display: flex;
     justify-content: center;

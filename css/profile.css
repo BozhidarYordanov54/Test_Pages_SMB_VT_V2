@@ -1,0 +1,11 @@
+.profile-settings{
+    display: flex;
+    align-items: center;
+    margin:auto 0;
+}
+
+.profile-settings-pages{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
