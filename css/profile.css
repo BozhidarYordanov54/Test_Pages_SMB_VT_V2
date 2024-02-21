@@ -1,7 +1,8 @@
 .profile-settings{
     display: flex;
-    align-items: center;
-    margin:auto 0;
+    justify-content: center;
+    gap: 2em;
+    flex-grow: 1;
 }
 
 .profile-settings-pages{

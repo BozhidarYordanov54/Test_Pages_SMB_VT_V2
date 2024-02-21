@@ -53,7 +53,7 @@
     justify-content: center;
     border: 2px solid var(--primary-bg-color);
     border-bottom-left-radius: 2em;
-    width: 70%; 
+    max-width: 70%; 
     height: 80vh;
     background-color: #ffffff;
     padding: 2em;
@@ -302,6 +302,13 @@
 
 .input-text.has-content .fa-eye{
     font-size: 16px;
+}
+
+.input-error{
+    position: relative;
+    top: -1.4em;
+    margin-bottom: -0.5em;
+    color: #e23838;
 }
 
 @media(max-width: 768px) {

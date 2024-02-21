@@ -2,6 +2,7 @@
     --dark-bg: #121212;
     --primary-dark: #525252;
     --secondary-dark: #1b2a2b;
+    --third-dark: #2b2b2b;
     --text-light: #f0f0f0;
     --text-hover-purple: #802bb9;
     --text-hover-dark-purple: #2e2e2e;
@@ -55,5 +56,9 @@
   
   .nav-wrapper.darkmode .nav-list-second li:hover .logout-text {
     color: var(--text-hover-purple);
+  }
+
+  .nav-wrapper.darkmode .checkbox-label{
+      background-color: var(--third-dark);
   }
   
