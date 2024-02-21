@@ -31,27 +31,6 @@
     border-bottom: 2px solid var(--text-hover-purple);
 }
 
-.register-form-wrapper.darkmode .form-label-username,
-.register-form-wrapper.darkmode .form-label-password{
-    color: var(--text-dark);
-}
-
-.register-form-wrapper.darkmode .input-text:focus + .form-label-username,
-.register-form-wrapper.darkmode .input-text:focus + .form-label-email,
-.register-form-wrapper.darkmode .input-text:focus + .form-label-phone,
-.register-form-wrapper.darkmode .input-text:focus + .form-label-town,
-.register-form-wrapper.darkmode .input-text:focus + .form-label-password,
-.register-form-wrapper.darkmode .input-text:focus + .form-label-confirm-password,
-.register-form-wrapper.darkmode .input-text.has-content + .form-label-username,
-.register-form-wrapper.darkmode .input-text.has-content + .form-label-email,
-.register-form-wrapper.darkmode .input-text.has-content + .form-label-phone,
-.register-form-wrapper.darkmode .input-text.has-content + .form-label-town,
-.register-form-wrapper.darkmode .input-text.has-content + .form-label-password,
-.register-form-wrapper.darkmode .input-text.has-content + .form-label-confirm-password{
-    background: var(--primary-dark);
-    color: var(--text-light);
-}
-
 .register-form-wrapper.darkmode .remember-me{
     color: var(--text-light);
 }

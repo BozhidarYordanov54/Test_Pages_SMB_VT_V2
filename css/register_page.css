@@ -79,88 +79,6 @@
     color: var(--highlight-color);
 }
 
-.input-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-.input-text {
-    border: none;
-    font-size: 1em;
-    margin-top: 1em;
-    border-bottom: 2px solid var(--primary-bg-color);
-    width: 100%;
-    padding: 1em;
-    padding-left: 1em;
-    margin: 0 auto;
-    transition: all 0.2s ease-in-out;
-}
-
-.form-label-username,
-.form-label-email,
-.form-label-phone,
-.form-label-town,
-.form-label-password,
-.form-label-confirm-password {
-    position: relative;
-    top: -2.8em;
-    padding: 5px;
-    color: #ccc;
-    background: transparent;
-    transition: all 0.2s ease-in-out;
-    width: max-content;
-    pointer-events: none;
-}
-
-.input-wrapper .input-text + .form-label-username,
-.input-wrapper .input-text + .form-label-email,
-.input-wrapper .input-text + .form-label-phone,
-.input-wrapper .input-text + .form-label-town,
-.input-wrapper .input-text + .form-label-password,
-.input-wrapper .input-text + .form-label-confirm-password{
-    padding: 5px;
-    color: #ccc;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    background: transparent;
-    transition: all 0.2s ease-in-out;
-}
-
-.input-wrapper .forgotten-pass{
-    text-align: end;
-    position: relative;
-    top: -1em;
-    font-size: 14px;
-    margin-bottom: 1em;
-}
-.input-wrapper .forgotten-pass a{
-    color: var(--primary-bg-color);
-    text-decoration: none;
-}
-
-.input-text:focus{
-    outline: none;
-}
-
-.input-text:focus + .form-label-username,
-.input-text:focus + .form-label-email,
-.input-text:focus + .form-label-phone,
-.input-text:focus + .form-label-town,
-.input-text:focus + .form-label-password,
-.input-text:focus + .form-label-confirm-password,
-.input-text.has-content + .form-label-username,
-.input-text.has-content + .form-label-email,
-.input-text.has-content + .form-label-phone,
-.input-text.has-content + .form-label-town,
-.input-text.has-content + .form-label-password,
-.input-text.has-content + .form-label-confirm-password{
-    transform: translateY(-110%) translateX(0%);
-    background-color: #ffffff;
-    color: var(--text-color-black);
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
-}
-
 .additional-fields{
     position: relative;
     top: -20px;
@@ -281,24 +199,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-.fa-eye,
-.fa-eye-slash,
-.fa-xmark
- {
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    font-size: 0px;
-    margin-top: 1em;
-    margin-left: 17rem;
-    z-index: 1;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
 
-.fa-eye-slash{
-    font-size: 0px;
-}
 
 .input-text.has-content .fa-eye{
     font-size: 16px;

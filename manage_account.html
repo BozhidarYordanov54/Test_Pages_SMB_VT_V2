@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/site.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/typography.css">
     <link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
 
     <link rel="stylesheet" type="text/css" href="css/profile_nav.css">
+    <link rel="stylesheet" type="text/css" href="css/css_darkmode/profile_darkmode.css">
 
     <link rel="stylesheet" type="text/css" href="css/css_darkmode/nav_darkmode.css">
     <link rel="stylesheet" type="text/css" href="css/css_darkmode/footer_darkmode.css">
@@ -66,19 +68,54 @@
             </nav>
         </header>
 
-        <div class="profile-settings">
-            <div class="profile-settings-page-wrapper">
-                <div class="profile-settings-nav-wrapper">
-                    <ul class="profile-link-list">
-                        <li><a href="manage_account.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96l576 0c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96zm0 32V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V128H0zM64 405.3c0-29.5 23.9-53.3 53.3-53.3H234.7c29.5 0 53.3 23.9 53.3 53.3c0 5.9-4.8 10.7-10.7 10.7H74.7c-5.9 0-10.7-4.8-10.7-10.7zM176 192a64 64 0 1 1 0 128 64 64 0 1 1 0-128zm176 16c0-8.8 7.2-16 16-16H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16zm0 64c0-8.8 7.2-16 16-16H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16zm0 64c0-8.8 7.2-16 16-16H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16z"/></svg>Управление на профила</a></li>
-                        <li><a href="manage_account.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M96 64a64 64 0 1 1 128 0A64 64 0 1 1 96 64zm48 320v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V287.8L59.1 321c-9.4 15-29.2 19.4-44.1 10S-4.5 301.9 4.9 287l39.9-63.3C69.7 184 113.2 160 160 160s90.3 24 115.2 63.6L315.1 287c9.4 15 4.9 34.7-10 44.1s-34.7 4.9-44.1-10L240 287.8V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V384H144z"/></svg>Добавяне на дете</a></li>
-                        <li><a href="change_password.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z"/></svg>Промяна на паролата</a></li>
-                        <li><a href="change_email.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>Промяна на имейла</a></li>
-                        <li><a href="delete_account.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm96 64c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16z"/></svg></i>Изтриване на профила</a></li>
-                    </ul>
+        <section class="profile-settings-wrapper">
+            <div class="profile-general-information">
+                <div class="profile-image">
+                    <img src="images/Profile-PNG-File.png" alt="Profile Picture" class="profile-picture-placeholder">
                 </div>
+                <h2 class="settings-header">Информация за профила</h2>
+                <form class="form" method="post">
+                        <div class="input-wrapper">
+                            <input type="text" id="username" name="username" class="input-text">
+                            <label for="username" class="form-label">Потребителско име</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="text" id="username" name="username" class="input-text">
+                            <label for="username" class="form-label">Име Фамилия</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="text" id="username" name="username" class="input-text">
+                            <label for="username" class="form-label">Телефонен номер</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="text" name="town" id="town" class="search-box input-text" oninput="filterOptions()" autocomplete="off"/>
+                            <label class="form-label" for="town">Изберете град</label>
+                            <span class="input-error"></span>
+                            <i class="fa-solid fa-xmark"></i>
+                            <div class="select-box">
+                                <ul class="options">
+                                    <li data-value="1">Велико Търново</li> 
+                                    <li data-value="2">Полски Тръмбеш</li> 
+                                    <li data-value="3">Присово</li> 
+                                    <li data-value="4">Дебелец</li> 
+                                    <!--
+                                        @foreach(var town in towns)
+                                        {
+                                            <li class="option">
+                                                <input class="radio" type="radio" id="@town" name="town" value="@town">
+                                                <label for="@town">@town</label>
+                                            </li>
+                                        }
+                                    -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="btn-submit" type="submit" value="Запази">
+                        </div>
+                </form>
             </div>
-        </div>
+        </section>
 
         <footer class="footer-wrap">
             <div class="footer-content-wrapper">
@@ -135,10 +172,13 @@
     <script src="https://kit.fontawesome.com/6592283e01.js" crossorigin="anonymous"></script>
 
     <script src="js_design/expandNavigation.js"></script>
+    <script src="js_design/checkInputContent.js"></script>
     <script src="js_design/uncheck.js"></script>
     <script src="js_design/rotateArrow.js"></script>
     <script src="js_design/swipeToOpenNav.js"></script>
     <script src="js_design/darkmode.js"></script>
+
+    <script src="js_logic/filterOptions.js"></script>
     
 </body>
 </html>

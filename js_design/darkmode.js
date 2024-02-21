@@ -23,6 +23,11 @@ if (savedDarkMode === "true") {
         document.querySelector('.register-form-wrapper').classList.add("darkmode");
     }
 
+    if(document.querySelector('.profile-settings-wrapper'))
+    {
+        document.querySelector('.profile-settings-wrapper').classList.add("darkmode");
+    }
+
     websiteLogo.forEach(logo => {
         logo.src = "images/Logo-White.png";
     });
@@ -41,6 +46,11 @@ if (savedDarkMode === "true") {
     if(document.querySelector('.register-form-wrapper'))
     {
         document.querySelector('.register-form-wrapper').classList.remove("darkmode");
+    }
+
+    if(document.querySelector('.profile-settings-wrapper'))
+    {
+        document.querySelector('.profile-settings-wrapper').classList.remove("darkmode");
     }
 
     websiteLogo.forEach(logo => {
@@ -66,6 +76,10 @@ darkModeSwitch.addEventListener("change", function() {
             document.querySelector('.register-form-wrapper').classList.add("darkmode");
         }
 
+        if(document.querySelector('.profile-settings-wrapper')){
+            document.querySelector('.profile-settings-wrapper').classList.add("darkmode");
+        }
+
         websiteLogo.forEach(logo => {
             logo.src = "images/Logo-White.png";
         });
@@ -75,7 +89,7 @@ darkModeSwitch.addEventListener("change", function() {
         document.querySelector('.site').classList.remove("darkmode");
         document.querySelector('.nav-wrapper').classList.remove("darkmode");
         document.querySelector('.footer-wrap').classList.remove("darkmode");
-
+        
         if(document.querySelector('.login-form-wrapper'))
         {
             document.querySelector('.login-form-wrapper').classList.remove("darkmode");
@@ -84,6 +98,11 @@ darkModeSwitch.addEventListener("change", function() {
         if(document.querySelector('.register-form-wrapper'))
         {
             document.querySelector('.register-form-wrapper').classList.remove("darkmode");
+        }
+
+        if(document.querySelector('.profile-settings-wrapper')){
+            document.querySelector('.profile-settings-wrapper').classList.remove("darkmode");
+        
         }
 
         websiteLogo.forEach(logo => {

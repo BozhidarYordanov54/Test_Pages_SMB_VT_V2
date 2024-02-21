@@ -2,6 +2,7 @@
   --primary-bg-color: #6eafd8;
   --secondary-bg-color: #1b2a2b;
   --text-color: #ffffff;
+  --text-color: #ffffff;
   --highlight-color: #294C60;
 }
 
@@ -238,7 +239,6 @@
     margin-top: 0.5em;
     height: 85px;
     overflow: visible;
-    
     pointer-events: all;
   }
   

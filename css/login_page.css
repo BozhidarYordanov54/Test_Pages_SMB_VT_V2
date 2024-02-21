@@ -28,7 +28,7 @@
     padding: 2em;
     border-top-right-radius: 2em;
 
-    transition: all 0.2s linear;
+    transition: all 0.2s ease-in-out;
 }
 
 .new-user .new-user-header {
@@ -95,32 +95,10 @@
     transition: all 0.2s ease-in-out;
 }
 
-.form-label-username,
-.form-label-password {
-    position: relative;
-    top: -2.8em;
-    padding: 5px;
-    color: #ccc;
-    background: transparent;
-    transition: all 0.2s ease-in-out;
-    width: max-content;
-    pointer-events: none;
-}
-
-.input-wrapper .input-text + .form-label-username,
-.input-wrapper .input-text + .form-label-password {
-    padding: 5px;
-    color: #ccc;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    background: transparent;
-    transition: all 0.2s ease-in-out;
-}
-
 .input-wrapper .forgotten-pass{
     text-align: end;
     position: relative;
-    top: -1em;
+    top: 0.5em;
     font-size: 14px;
     margin-bottom: 1em;
 }
@@ -129,20 +107,6 @@
     text-decoration: none;
 }
 
-.input-text:focus{
-    outline: none;
-}
-
-.input-text:focus + .form-label-username,
-.input-text:focus + .form-label-password,
-.input-text.has-content + .form-label-username,
-.input-text.has-content + .form-label-password {
-    transform: translateY(-110%) translateX(0%);
-    background-color: #ffffff;
-    color: var(--text-color-black);
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
-}
 
 .additional-fields{
     position: relative;
@@ -167,43 +131,7 @@
 }
 
 
-.btn-submit,
-.btn-register {
-    outline: none;
-    border: none;
-    height: 3em;
-    width: 60%;
-    background: var(--primary-bg-color);
-    border-top-right-radius: 1em;
-    border-bottom-left-radius: 1em;
-    border-top-left-radius: 0.3em;
-    border-bottom-right-radius: 0.3em;
-    font-size: 16px;
-    font-weight: bold;
-    color: var(--text-color);
-    margin-top: 10px;
-    margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    transition: all 0.3s ease-in-out;
-}
 
-.btn-submit{
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-
-.btn-submit:hover,
-.btn-register:hover {
-    cursor: pointer;
-    box-shadow: none;
-}
-
-.btn-register{
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    padding: 1em 0;    
-}
 
 .more-logins-wrapper{
     display: flex;

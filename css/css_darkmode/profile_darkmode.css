@@ -1,0 +1,48 @@
+:root {
+    --dark-bg: #121212;
+    --primary-dark: #525252;
+    --lighter-primary-dark: #6e6e6e;
+    --secondary-dark: #1b2a2b;
+    --text-light: #f0f0f0;
+    --text-dark: #adadad;
+    --text-hover-purple: #9434d4;
+    --text-hover-dark-purple: #2e2e2e;
+    --highlight-dark: #294C60;
+  }
+
+  .profile-settings-wrapper.darkmode{
+    background-color: var(--dark-bg);
+    border-radius: 1em;
+    margin: 1em auto;
+    padding: 2em;
+  }
+
+  .profile-settings-wrapper.darkmode .settings-header{
+    color: var(--text-light);
+  }
+
+.profile-settings-wrapper.darkmode .form{
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+}
+.profile-settings-wrapper.darkmode .input-wrapper{
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+
+    transition: all 0.2s ease-in-out;
+}
+
+.profile-settings-wrapper.darkmode .input-text{
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    border-bottom: 2px solid var(--text-light);
+}
+
+.profile-settings-wrapper.darkmode .input-text:focus{
+    border-bottom: 2px solid var(--text-hover-purple);
+}
+
+.profile-settings-wrapper.darkmode .btn-submit{
+    background-color: var(--text-light);
+    color: var(--text-hover-dark-purple);
+}

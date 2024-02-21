@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         wrapper.classList.add('expanded');
-        adjustPosition();
         event.stopPropagation();
     }
 
@@ -24,38 +23,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (isDropdown || isNavLink || isForm) {
             return;
-        } else if ((event.target.closest('.nav-wrapper') || !event.target.closest('.nav-wrapper') && navWrapper.classList.contains('expanded')) || (event.target.closest('.profile-settings-nav-wrapper') || !event.target.closest('.profile-settings-nav-wrapper') && profileSettingsNavWrapper.classList.contains('expanded'))) {
+        } else if ((event.target.closest('.nav-wrapper') || !event.target.closest('.nav-wrapper') && navWrapper.classList.contains('expanded'))) {
             wrapper.classList.remove('expanded');
-            adjustPosition();
         }
     }
-
-    function adjustPosition() {
-        const navExpanded = navWrapper.classList.contains('expanded');
-        const profileExpanded = profileSettingsNavWrapper.classList.contains('expanded');
-    
-        if (navExpanded && profileExpanded) {
-            profileSettingsNavWrapper.style.transform = 'translateX(45%)';
-        } else if (navExpanded && !profileExpanded) {
-            profileSettingsNavWrapper.style.transform = 'translateX(225%)';
-        } else {
-            profileSettingsNavWrapper.style.transform = 'translateX(0)';
-        }
-    }
-    
-    
 
     document.querySelector('.nav-wrapper').addEventListener('click', function(event) {
         openNav(event, navWrapper);
-        adjustPosition();
-    });
-    document.querySelector('.profile-settings-nav-wrapper').addEventListener('click', function(event) {
-        openNav(event, profileSettingsNavWrapper);
-        
     });
     document.addEventListener('click', function(event) {
         closeNav(event, navWrapper);
-        closeNav(event, profileSettingsNavWrapper);
-        
     });
 });

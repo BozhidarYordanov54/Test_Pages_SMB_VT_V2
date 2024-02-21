@@ -31,19 +31,6 @@
     border-bottom: 2px solid var(--text-hover-purple);
 }
 
-.login-form-wrapper.darkmode .form-label-username,
-.login-form-wrapper.darkmode .form-label-password{
-    color: var(--text-dark);
-}
-
-.login-form-wrapper.darkmode .input-text:focus + .form-label-username,
-.login-form-wrapper.darkmode .input-text:focus + .form-label-password,
-.login-form-wrapper.darkmode .input-text.has-content + .form-label-username,
-.login-form-wrapper.darkmode .input-text.has-content + .form-label-password{
-    background: var(--primary-dark);
-    color: var(--text-light);
-}
-
 .login-form-wrapper.darkmode .remember-me{
     color: var(--text-light);
 }
