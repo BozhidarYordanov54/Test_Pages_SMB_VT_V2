@@ -1,0 +1,35 @@
+.main-content-wrapper {
+  margin-top: 0.5em;
+}
+
+.gallery {
+  background: #EEE;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 500px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 400px;
+  font-size: 80px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .flickity-prev-next-button.previous { left: 10px; }
+  .flickity-prev-next-button.next { right: 10px; }
+}
+

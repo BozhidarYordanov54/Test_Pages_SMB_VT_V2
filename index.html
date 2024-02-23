@@ -8,6 +8,9 @@
     <link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
 
+    <link rel="stylesheet" href="css/flickity.css">
+    <link rel="stylesheet" href="css/main-layout.css">
+
     <link rel="stylesheet" type="text/css" href="css/css_darkmode/nav_darkmode.css">
     <link rel="stylesheet" type="text/css" href="css/css_darkmode/footer_darkmode.css">
     <link rel="icon" type="image/x-icon"  href="/images/Logo-White.png">
@@ -65,7 +68,13 @@
         </header>
 
         <main class="main-content-wrapper">
-            
+            <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+            </div>
         </main>
 
         <footer class="footer-wrap">
@@ -127,6 +136,7 @@
     <script src="js_design/rotateArrow.js"></script>
     <script src="js_design/swipeToOpenNav.js"></script>
     <script src="js_design/darkmode.js"></script>
-    
+
+    <script src="js_logic/flickity.js"></script>
 </body>
 </html>
