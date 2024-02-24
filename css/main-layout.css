@@ -1,21 +1,66 @@
-.main-content-wrapper {
-  margin-top: 0.5em;
+:root {
+  --wave-color-one: #6eafd8;
+  --wave-color-two: #034877;
+  --wave-color-three: #6eafd8;
+  --main-content-bg: rgba(110, 175, 216, 0.6);
+  --main-content-bg-hover: rgba(110, 175, 216, 0.9);
+}
+
+.main-content-wrapper{
+  position: relative;
+}
+
+.wave-wrapper {
+  position: absolute; /* Position absolute to place it behind */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1; /* Ensure it's behind other content */
+}
+
+.wave-wrapper svg .path-one {
+  fill: var(--wave-color-one);
+  opacity: 1;
+}
+
+.wave-wrapper svg .path-two {
+  fill: var(--wave-color-two);
+  opacity: 0.8;
+}
+
+.wave-wrapper svg .path-three {
+  fill: var(--wave-color-three);
+  opacity: 0.5;
+}
+
+.carousell-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
 .gallery {
-  background: #EEE;
+  background: transparent;
   height: 500px;
-  display: flex;
-  flex-direction: column;
 }
 
 .gallery-cell {
+  display: flex;
+  flex-direction: column;
   width: 66%;
   height: 500px;
-  margin-right: 10px;
-  background: #8C8;
+  /* From https://css.glass */
+  background: var(--main-content-bg);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   counter-increment: gallery-cell;
-  transition: transform 0.3s ease-in-out;
+  margin-right: 10px;
+  transition: background 0.5s ease;
+}
+
+.gallery-cell:hover{
+  background-color: var(--main-content-bg-hover);
 }
 
 /* cell number */
@@ -23,7 +68,7 @@
   display: block;
   text-align: center;
   content: counter(gallery-cell);
-  line-height: 400px;
+  line-height: 500px;
   font-size: 80px;
   color: white;
 }

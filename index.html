@@ -68,12 +68,21 @@
         </header>
 
         <main class="main-content-wrapper">
-            <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-                <div class="gallery-cell"></div>
-                <div class="gallery-cell"></div>
-                <div class="gallery-cell"></div>
-                <div class="gallery-cell"></div>
-                <div class="gallery-cell"></div>
+            <div class="wave-wrapper">
+                <svg viewBox="0 0 500 200">
+                    <path d="M 0 50 C 150 150 300 0 500 80 L 500 0 L 0 0" class="path-one"></path>
+                    <path d="M 0 50 C 150 150 330 -30 500 50 L 500 0 L 0 0" class="path-two"></path>
+                    <path d="M 0 50 C 215 150 250 0 500 100 L 500 0 L 0 0" class="path-three"></path>
+                </svg>
+            </div>
+            <div class="carousel-wrapper">
+                <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                    <div class="gallery-cell"></div>
+                    <div class="gallery-cell"></div>
+                    <div class="gallery-cell"></div>
+                    <div class="gallery-cell"></div>
+                    <div class="gallery-cell"></div>
+                </div>
             </div>
         </main>
 
@@ -124,7 +133,7 @@
                 </div>
             <div class="copyright-info">
                 <p class="site-copyright">&copy; СМБ - Велико Търново</p>
-                <p class="website-creator">Created and maintained by Bozhidar Yordanov</p>
+                <p class="website-creator">Created and maintained by Bozhidar Yordanov <a href="https://www.linkedin.com/in/bozhidar-yordanov-85862828a/"><i class="fa-brands fa-linkedin"></i></a></p>
             </div>
         </footer>
 
