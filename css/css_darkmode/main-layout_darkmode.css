@@ -1,0 +1,32 @@
+:root {
+    --main-content-bg-dark: rgba(82, 82, 82, 0.6);
+    --main-content-bg-hover-dark: rgba(128, 43, 185, 0.7);
+    --wave-color-one-dark: #8a8a8a;
+    --wave-color-two-dark: #707070;
+    --wave-color-three-dark: #464646;
+  }
+
+.main-content-wrapper.darkmode .wave-wrapper svg .path-one {
+    fill: var(--wave-color-one-dark);
+    opacity: 1;
+}
+
+.main-content-wrapper.darkmode .wave-wrapper svg .path-two {
+    fill: var(--wave-color-two-dark);
+    opacity: 0.8;
+}
+
+.main-content-wrapper.darkmode .wave-wrapper svg .path-three {
+    fill: var(--wave-color-three-dark);
+    opacity: 0.5;
+}
+
+.main-content-wrapper.darkmode .gallery-cell {
+  background: var(--main-content-bg-dark);
+  color: #fff;
+}
+
+.main-content-wrapper.darkmode .gallery-cell:hover {
+    background: var(--main-content-bg-hover-dark);
+}
+

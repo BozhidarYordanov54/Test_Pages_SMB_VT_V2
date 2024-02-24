@@ -28,6 +28,11 @@ if (savedDarkMode === "true") {
         document.querySelector('.profile-settings-wrapper').classList.add("darkmode");
     }
 
+    if(document.querySelector('.main-content-wrapper'))
+    {
+        document.querySelector('.main-content-wrapper').classList.add("darkmode");
+    }
+
     websiteLogo.forEach(logo => {
         logo.src = "images/Logo-White.png";
     });
@@ -51,6 +56,11 @@ if (savedDarkMode === "true") {
     if(document.querySelector('.profile-settings-wrapper'))
     {
         document.querySelector('.profile-settings-wrapper').classList.remove("darkmode");
+    }
+
+    if(document.querySelector('.main-content-wrapper'))
+    {
+        document.querySelector('.main-content-wrapper').classList.remove("darkmode");
     }
 
     websiteLogo.forEach(logo => {
@@ -80,6 +90,11 @@ darkModeSwitch.addEventListener("change", function() {
             document.querySelector('.profile-settings-wrapper').classList.add("darkmode");
         }
 
+        if(document.querySelector('.main-content-wrapper'))
+    {
+        document.querySelector('.main-content-wrapper').classList.add("darkmode");
+    }
+
         websiteLogo.forEach(logo => {
             logo.src = "images/Logo-White.png";
         });
@@ -104,6 +119,11 @@ darkModeSwitch.addEventListener("change", function() {
             document.querySelector('.profile-settings-wrapper').classList.remove("darkmode");
         
         }
+
+        if(document.querySelector('.main-content-wrapper'))
+    {
+        document.querySelector('.main-content-wrapper').classList.remove("darkmode");
+    }
 
         websiteLogo.forEach(logo => {
             logo.src = "images/Logo-Black.png";
