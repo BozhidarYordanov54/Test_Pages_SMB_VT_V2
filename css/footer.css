@@ -103,6 +103,22 @@
     position: relative;
 }
 
+.website-creator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.website-creator a i{
+    color: var(--footer-text);
+    margin-left: 0.5em;
+    transition: color 0.2s linear;
+}
+
+.website-creator a i:hover{
+    color: var(--footer-text-hover);
+}
+
 @media(max-width: 768px){
     
     .footer-content-wrapper{
@@ -121,5 +137,9 @@
     .copyright-info{
         flex-direction: column;
         gap: 1em;
+    }
+
+    .website-creator{
+        flex-direction: column;
     }
 }
