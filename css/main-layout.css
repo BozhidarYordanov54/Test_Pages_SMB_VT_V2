@@ -75,6 +75,71 @@
   color: white;
 }
 
+.services-card-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  gap: 5em;
+  margin-top: 1em;
+}
+
+.service-vl{
+  position: absolute;
+  border: 66px solid rgba(3, 72, 119, 0.6);
+  width: 100%;
+  z-index: -1;
+}
+
+.service-wrapper{
+  display: flex;
+  border-radius: 16px;
+  flex-direction: column;
+  padding: 50px;
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  color: var(--text-color-main);
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
+  transition: all 0.2s linear;
+}
+
+.service-wrapper i{
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  transition: color 0.2s linear;
+}
+
+.service-wrapper:hover{
+  color: #ffffff;
+  background-color: var(--service-card-bg);
+}
+
+.service-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+}
+
+.service-card i{
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.service-card.one:hover i{
+  color: #ffffff;
+}
+
+.service-card.two:hover i{
+  color: #FEDC56;
+}
+
+.service-card.three:hover i{
+  color: #ff2d2d;
+}
+
 @media (max-width: 768px) {
   .flickity-prev-next-button.previous { left: 10px; }
   .flickity-prev-next-button.next { right: 10px; }
