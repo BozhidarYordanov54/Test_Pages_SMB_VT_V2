@@ -1,6 +1,7 @@
 :root {
     --main-content-bg-dark: rgba(82, 82, 82, 0.6);
     --main-content-bg-hover-dark: rgba(128, 43, 185, 0.7);
+    --service-content-bg-hover-dark: rgba(85, 28, 122, 0.7) ;
     --wave-color-one-dark: #8a8a8a;
     --wave-color-two-dark: #707070;
     --wave-color-three-dark: #464646;
@@ -28,5 +29,17 @@
 
 .main-content-wrapper.darkmode .gallery-cell:hover {
     background: var(--main-content-bg-hover-dark);
+}
+
+.main-content-wrapper.darkmode .service-vl{
+    border-color: var(--main-content-bg-dark);
+}
+
+.main-content-wrapper.darkmode .service-wrapper {
+    background: var(--main-content-bg-dark);
+}
+
+.main-content-wrapper.darkmode .service-wrapper:hover {
+    background: var(--service-content-bg-hover-dark);
 }
 
