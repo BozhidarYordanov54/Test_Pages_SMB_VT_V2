@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+::selection{
+  background: var(--primary-bg-color);
+  color: var(--text-color);
+}
+
 html{
   scroll-behavior: smooth;
 }

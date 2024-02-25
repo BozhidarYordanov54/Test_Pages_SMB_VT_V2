@@ -53,7 +53,6 @@
     justify-content: center;
     border: 2px solid var(--primary-bg-color);
     border-bottom-left-radius: 2em;
-    max-width: 70%; 
     height: 80vh;
     background-color: #ffffff;
     padding: 2em;
@@ -199,8 +198,6 @@
     transition: all 0.2s ease-in-out;
 }
 
-
-
 .input-text.has-content .fa-eye{
     font-size: 16px;
 }
@@ -215,7 +212,7 @@
 @media(max-width: 768px) {
     .register-form-wrapper{
         height: 100%;
-        padding: 1em 2em;
+        padding: 1em 1em;
     }
     
     .card-wrapper{

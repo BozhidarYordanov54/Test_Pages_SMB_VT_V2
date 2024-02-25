@@ -2,7 +2,14 @@ var darkModeSwitch = document.getElementById("checkbox");
 var websiteLogo = document.querySelectorAll('.logo'); //Select all logo images => used for foreach loop
 
 // Check local storage for dark mode preference
-var savedDarkMode = localStorage.getItem('darkMode') === "true";
+var savedDarkMode = localStorage.getItem('darkMode');
+
+// If there's no saved preference, use the device's preference
+if (savedDarkMode === null) {
+    savedDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+} else {
+    savedDarkMode = savedDarkMode === "true";
+}
 
 // Set initial dark mode state based on the saved preference
 toggleDarkMode(savedDarkMode);
