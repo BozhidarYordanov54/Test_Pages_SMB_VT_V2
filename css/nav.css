@@ -104,10 +104,18 @@
 .logout-btn svg{
   position: relative;
   top: 0.2em;
-  margin-right: 0.2em;
+  margin-right: 0.3em;
   width: 20px;
   fill: var(--text-color);
   aspect-ratio: 1/1;
+}
+
+.nav-list-second li a svg{
+  top: 0.25em;
+}
+
+.logout-btn svg{
+  margin-right: 0em;
 }
 
 .nav-list-first li:hover svg,
@@ -268,9 +276,9 @@
   transition: all 0.2s linear;
 }
 
-.fa-solid.fa-lightbulb {color: #b4ae77;}
+.fa-solid.fa-lightbulb {color: #b4ae77; margin-left: 0.1em;}
 
-.fa-regular.fa-lightbulb {color: #fff6a7;}
+.fa-regular.fa-lightbulb {color: #fff6a7; margin-right: 0.1em;}
 
 .checkbox-label .ball {
   background-color: #fff;

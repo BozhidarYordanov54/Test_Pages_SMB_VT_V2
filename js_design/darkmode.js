@@ -1,135 +1,40 @@
 var darkModeSwitch = document.getElementById("checkbox");
-
 var websiteLogo = document.querySelectorAll('.logo'); //Select all logo images => used for foreach loop
 
 // Check local storage for dark mode preference
-var savedDarkMode = localStorage.getItem('darkMode');
+var savedDarkMode = localStorage.getItem('darkMode') === "true";
 
 // Set initial dark mode state based on the saved preference
-if (savedDarkMode === "true") {
-    darkModeSwitch.checked = true;
-    document.body.classList.add("darkmode");
-    document.querySelector('.site').classList.add("darkmode");
-    document.querySelector('.nav-wrapper').classList.add("darkmode");
-    document.querySelector('.footer-wrap').classList.add("darkmode");
-
-    if(document.querySelector('.login-form-wrapper'))
-    {
-        document.querySelector('.login-form-wrapper').classList.add("darkmode");
-    }
-
-    if(document.querySelector('.register-form-wrapper'))
-    {
-        document.querySelector('.register-form-wrapper').classList.add("darkmode");
-    }
-
-    if(document.querySelector('.profile-settings-wrapper'))
-    {
-        document.querySelector('.profile-settings-wrapper').classList.add("darkmode");
-    }
-
-    if(document.querySelector('.main-content-wrapper'))
-    {
-        document.querySelector('.main-content-wrapper').classList.add("darkmode");
-    }
-
-    websiteLogo.forEach(logo => {
-        logo.src = "images/Logo-White.png";
-    });
-} else {
-    darkModeSwitch.checked = false;
-    document.body.classList.remove("darkmode");
-    document.querySelector('.site').classList.remove("darkmode");
-    document.querySelector('.nav-wrapper').classList.remove("darkmode");
-    document.querySelector('.footer-wrap').classList.remove("darkmode");
-
-    if(document.querySelector('.login-form-wrapper'))
-    {
-        document.querySelector('.login-form-wrapper').classList.remove("darkmode");
-    }
-
-    if(document.querySelector('.register-form-wrapper'))
-    {
-        document.querySelector('.register-form-wrapper').classList.remove("darkmode");
-    }
-
-    if(document.querySelector('.profile-settings-wrapper'))
-    {
-        document.querySelector('.profile-settings-wrapper').classList.remove("darkmode");
-    }
-
-    if(document.querySelector('.main-content-wrapper'))
-    {
-        document.querySelector('.main-content-wrapper').classList.remove("darkmode");
-    }
-
-    websiteLogo.forEach(logo => {
-        logo.src = "images/Logo-Black.png";
-    });
-}
+toggleDarkMode(savedDarkMode);
 
 darkModeSwitch.addEventListener("change", function() {
-    if (darkModeSwitch.checked) 
-    {
-        document.body.classList.add("darkmode");
-        document.querySelector('.site').classList.add("darkmode");
-        document.querySelector('.nav-wrapper').classList.add("darkmode");
-        document.querySelector('.footer-wrap').classList.add("darkmode");
-
-        if(document.querySelector('.login-form-wrapper'))
-        {
-            document.querySelector('.login-form-wrapper').classList.add("darkmode");
-        }
-
-        if(document.querySelector('.register-form-wrapper'))
-        {
-            document.querySelector('.register-form-wrapper').classList.add("darkmode");
-        }
-
-        if(document.querySelector('.profile-settings-wrapper')){
-            document.querySelector('.profile-settings-wrapper').classList.add("darkmode");
-        }
-
-        if(document.querySelector('.main-content-wrapper'))
-    {
-        document.querySelector('.main-content-wrapper').classList.add("darkmode");
-    }
-
-        websiteLogo.forEach(logo => {
-            logo.src = "images/Logo-White.png";
-        });
-    } else 
-    {
-        document.body.classList.remove("darkmode");
-        document.querySelector('.site').classList.remove("darkmode");
-        document.querySelector('.nav-wrapper').classList.remove("darkmode");
-        document.querySelector('.footer-wrap').classList.remove("darkmode");
-        
-        if(document.querySelector('.login-form-wrapper'))
-        {
-            document.querySelector('.login-form-wrapper').classList.remove("darkmode");
-        }
-
-        if(document.querySelector('.register-form-wrapper'))
-        {
-            document.querySelector('.register-form-wrapper').classList.remove("darkmode");
-        }
-
-        if(document.querySelector('.profile-settings-wrapper')){
-            document.querySelector('.profile-settings-wrapper').classList.remove("darkmode");
-        
-        }
-
-        if(document.querySelector('.main-content-wrapper'))
-    {
-        document.querySelector('.main-content-wrapper').classList.remove("darkmode");
-    }
-
-        websiteLogo.forEach(logo => {
-            logo.src = "images/Logo-Black.png";
-        });
-    }
-
+    toggleDarkMode(darkModeSwitch.checked);
     // Save the dark mode state to local storage
     localStorage.setItem('darkMode', darkModeSwitch.checked);
 });
+
+function toggleDarkMode(isDarkMode) {
+    var selectors = [
+        'body',
+        '.site',
+        '.nav-wrapper',
+        '.footer-wrap',
+        '.login-form-wrapper',
+        '.register-form-wrapper',
+        '.profile-settings-wrapper',
+        '.main-content-wrapper'
+    ];
+
+    selectors.forEach(selector => {
+        var element = document.querySelector(selector);
+        if (element) {
+            isDarkMode ? element.classList.add("darkmode") : element.classList.remove("darkmode");
+        }
+    });
+
+    websiteLogo.forEach(logo => {
+        logo.src = isDarkMode ? "images/Logo-White.png" : "images/Logo-Black.png";
+    });
+
+    darkModeSwitch.checked = isDarkMode;
+}

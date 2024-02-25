@@ -4,21 +4,24 @@
   --wave-color-three: #6eafd8;
   --main-content-bg: rgba(110, 175, 216, 0.6);
   --main-content-bg-hover: rgba(110, 175, 216, 0.9);
-  --service-card-bg-hover: rgba(3, 72, 119, 0.6);
+  --service-card-bg: rgba(110, 175, 216, 0.8);
+  --service-card-bg-hover: rgba(3, 72, 119, 0.8);
+  --white-background: #ffffff;
   --text-color-main: #ffffff;
+  --text-color-hover: #6eafd8;
 }
 
-.main-content-wrapper{
+.main-content-wrapper {
   position: relative;
-  margin-top: 0.5em
+  margin-top: 0.5em;
 }
 
 .wave-wrapper {
-  position: absolute; /* Position absolute to place it behind */
+  position: absolute;
   top: -0.5em;
   left: 0;
   width: 100%;
-  z-index: -1; /* Ensure it's behind other content */
+  z-index: -1;
 }
 
 .wave-wrapper svg .path-one {
@@ -36,11 +39,10 @@
   opacity: 0.5;
 }
 
-.carousell-wrapper{
+.carousell-wrapper {
   display: flex;
   flex-direction: column;
   width: 50%;
-  
 }
 
 .gallery {
@@ -53,7 +55,6 @@
   flex-direction: column;
   width: 66%;
   height: 500px;
-  /* From https://css.glass */
   background: var(--main-content-bg);
   border-radius: 16px;
   backdrop-filter: blur(5px);
@@ -63,21 +64,20 @@
   transition: background 0.5s ease;
 }
 
-.gallery-cell:hover{
+.gallery-cell:hover {
   background-color: var(--main-content-bg-hover);
 }
 
-/* cell number */
 .gallery-cell:before {
   display: block;
   text-align: center;
   content: counter(gallery-cell);
   line-height: 500px;
   font-size: 80px;
-  color: white;
+  color: var(--text-color-main);
 }
 
-.services-card-list{
+.services-card-list {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -87,69 +87,76 @@
   margin-top: 2em;
 }
 
-.service-vl{
+.service-vl {
   position: absolute;
-  border: 66px solid rgba(3, 72, 119, 0.8);
+  border: 66px solid var(--service-card-bg-hover);
   width: 100%;
   z-index: -1;
 }
 
-.service-wrapper{
+.service-wrapper {
   display: flex;
-  border-radius: 16px;
   flex-direction: column;
-  padding: 3em;
+  padding: 2em;
   border-radius: 16px;
   backdrop-filter: blur(5px);
   color: var(--text-color-main);
-  background: var(--main-content-bg);
+  background: var(--service-card-bg);
   transition: all 0.2s linear;
+  width: 25%;
 }
 
-.service-wrapper i{
-  font-size: 3em;
-  margin-bottom: 0.5em;
-  transition: color 0.2s linear;
-}
-
-.service-wrapper:hover{
-  color: #ffffff;
+.service-wrapper:hover {
   background-color: var(--service-card-bg-hover);
 }
 
-.service-card{
+.service-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   border-radius: 16px;
 }
 
-.service-card i{
-  font-size: 3em;
+.service-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
   margin-bottom: 0.5em;
 }
 
-.service-card.one:hover i,
-.service-card.two:hover i,
-.service-card.three:hover i{
-  color: #ffffff;
+.service-header i{
+  margin-right: 0.5em;
 }
 
+.service-context {
+  font-size: 1.2em;
+  text-align: center;
+}
 
-@media (max-width: 768px) {
-  .services-card-list{
-    text-align: center;
-    padding: 1em;
+.service-link{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  background: transparent;
+  text-align: center;
+  padding: 0.5em;
+  margin-top: 1em;
+  border-radius: 10px 0 10px 0;
+  background: var(--white-background);
+  color: var(--text-color-hover);
+  transition: opacity, background 0.2s linear;
+}
+
+@media (max-width: 767px) {
+  .services-card-list {
     flex-direction: column;
     gap: 1em;
   }
 
-  .service-wrapper{
-    padding: 2em;
-  }
-
-  .service-card i{
-    font-size: 2em;
+  .service-wrapper {
+    padding: 1.5em;
+    width: 25rem;
+    font-size: 1em;
   }
 }
-
