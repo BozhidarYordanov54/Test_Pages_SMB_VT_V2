@@ -4,8 +4,6 @@
   --wave-color-three: #6eafd8;
   --main-content-bg: rgba(110, 175, 216, 0.6);
   --main-content-bg-hover: rgba(110, 175, 216, 0.9);
-  --service-card-bg: rgba(110, 175, 216, 0.9);
-  --text-color-main: #575757;
 }
 
 .main-content-wrapper{
@@ -14,11 +12,11 @@
 }
 
 .wave-wrapper {
-  position: absolute; 
+  position: absolute; /* Position absolute to place it behind */
   top: -0.5em;
   left: 0;
   width: 100%;
-  z-index: -1; 
+  z-index: -1; /* Ensure it's behind other content */
 }
 
 .wave-wrapper svg .path-one {
@@ -34,10 +32,6 @@
 .wave-wrapper svg .path-three {
   fill: var(--wave-color-three);
   opacity: 0.5;
-}
-
-.wave-wrapper.second{
-  rotate: 180deg;
 }
 
 .carousell-wrapper{
@@ -57,6 +51,7 @@
   flex-direction: column;
   width: 66%;
   height: 500px;
+  /* From https://css.glass */
   background: var(--main-content-bg);
   border-radius: 16px;
   backdrop-filter: blur(5px);
@@ -70,6 +65,7 @@
   background-color: var(--main-content-bg-hover);
 }
 
+/* cell number */
 .gallery-cell:before {
   display: block;
   text-align: center;
@@ -77,70 +73,6 @@
   line-height: 500px;
   font-size: 80px;
   color: white;
-}
-
-.services-card-list{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 5em;
-  margin-top: 1em;
-}
-
-.service-vl{
-  position: absolute;
-  border: 66px solid rgba(3, 72, 119, 0.6);
-  width: 100%;
-  z-index: -1;
-}
-
-.service-wrapper{
-  display: flex;
-  border-radius: 16px;
-  flex-direction: column;
-  padding: 50px;
-  border-radius: 16px;
-  backdrop-filter: blur(5px);
-  color: var(--text-color-main);
-  background: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
-  transition: all 0.2s linear;
-}
-
-.service-wrapper i{
-  font-size: 3em;
-  margin-bottom: 0.5em;
-  transition: color 0.2s linear;
-}
-
-.service-wrapper:hover{
-  color: #ffffff;
-  background-color: var(--service-card-bg);
-}
-
-.service-card{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 16px;
-}
-
-.service-card i{
-  font-size: 3em;
-  margin-bottom: 0.5em;
-}
-
-.service-card.one:hover i{
-  color: #ffffff;
-}
-
-.service-card.two:hover i{
-  color: #FEDC56;
-}
-
-.service-card.three:hover i{
-  color: #ff2d2d;
 }
 
 @media (max-width: 768px) {

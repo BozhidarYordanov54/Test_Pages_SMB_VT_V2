@@ -43,11 +43,3 @@
     border: 1px solid var(--footer-border-darkmode);
    
 }
-
-.footer-wrap.darkmode .website-creator a i{
-    color: var(--footer-text-darkmode);
-}
-
-.footer-wrap.darkmode .website-creator a i:hover{
-    color: var(--footer-text-hover-darkmode);
-}
