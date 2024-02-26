@@ -148,6 +148,51 @@
   transition: opacity, background 0.2s linear;
 }
 
+.upcoming-events{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin: 2em 0;
+}
+
+.upcoming-events-header{
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+.events-wrapper{
+  display: flex;
+  gap: 2em;
+  padding: 2em;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  background: red;
+}
+
+.event-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  padding: 1em;
+  width: 20em;
+  height: 10em;
+}
+
+.event-name{
+  text-align: center;
+}
+
+.event-link{
+  text-decoration: none;
+  text-align: center;
+  margin-top: 1em;
+}
+
 @media (max-width: 767px) {
   .services-card-list {
     flex-direction: column;
@@ -156,7 +201,7 @@
 
   .service-wrapper {
     padding: 1.5em;
-    width: 25rem;
-    font-size: 1em;
+    width: 24rem;
+    font-size: 0.9rem;
   }
 }
