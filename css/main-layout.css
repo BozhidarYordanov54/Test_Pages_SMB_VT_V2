@@ -2,10 +2,18 @@
   --wave-color-one: #6eafd8;
   --wave-color-two: #034877;
   --wave-color-three: #6eafd8;
+
   --main-content-bg: rgba(110, 175, 216, 0.6);
+  --main-content-bg-opacity: rgba(3, 72, 119, 0.6);
   --main-content-bg-hover: rgba(3, 72, 119, 0.9);
+
   --service-card-bg: rgba(110, 175, 216, 0.8);
   --service-card-bg-hover: rgba(3, 72, 119, 0.8);
+
+  --event-content-bg: rgba(110, 175, 216, 1);
+  --event-content-bg-hover: rgba(110, 175, 216, 1);
+  --event-content-bg-hover-darker: rgba(3, 72, 119, 0.8);
+
   --white-background: #ffffff;
   --text-color-main: #ffffff;
   --text-color-hover: #6eafd8;
@@ -153,38 +161,89 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1em;
-  margin: 2em 0;
+  flex-wrap: wrap;
+  margin-top: 2em;
+  padding: 2em 0em;
+  background: var(--event-content-bg);
+  color: var(--text-color-main);
 }
 
 .upcoming-events-header{
   font-size: 1.5em;
-  text-decoration: underline;
+  font-weight: 800;
 }
 
 .events-wrapper{
   display: flex;
-  gap: 2em;
+  gap: 1.5em;
   padding: 2em;
   width: 100%;
   justify-content: center;
   align-items: center;
   overflow-y: auto;
-  background: red;
 }
 
 .event-card{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background: white;
-  padding: 1em;
-  width: 20em;
-  height: 10em;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  backdrop-filter: blur(15px);
+  background-color: var(--white-background);
+  color: var(--text-color-hover);
+  width: 330px;
+  height: 300px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.event-card img{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transition: all 0.2s ease-in;
+}
+
+.event-card:hover img{
+  transform: scale(1.1);
+}
+
+.event-card-context{
+  position: absolute;
+  backdrop-filter: blur(5px);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: black;
+  padding: 0.5em;
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  transform: translateY(70%);
+  transition: all 0.2s linear;
 }
 
 .event-name{
-  text-align: center;
+  font-size: 0.9em;
+  font-weight: 800;
+}
+
+.event-card:hover .event-card-context{
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(0%);
+}
+
+.event-card:nth-child(even){
+  border-radius: 10px 0 10px 0;
+}
+
+.event-card:nth-child(odd){
+  border-radius: 0 10px 0px 10px;
+}
+
+.event-card-image{
+  border: 1px solid red;
 }
 
 .event-link{
