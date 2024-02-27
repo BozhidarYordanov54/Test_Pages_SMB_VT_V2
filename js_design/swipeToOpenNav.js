@@ -52,12 +52,12 @@
             event.stopPropagation();
         }, false);
     }
-   
+
     window.addEventListener('resize', () => {
         const windowWidth = window.innerWidth;
 
         if (windowWidth > 1200) {
-            navWrapper.style.transform = '';
+            setNavWrapperTransform("0%");
         } else {
             setNavWrapperTransform("-100%");
         }

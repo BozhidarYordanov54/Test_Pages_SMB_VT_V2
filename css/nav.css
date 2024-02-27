@@ -4,7 +4,7 @@
   --text-color: #ffffff;
   --text-color: #ffffff;
   --highlight-color: #294C60;
-  --arrow-bg-color: rgba(3, 73, 119, 0.8);
+  --arrow-bg-color: #034877;
 }
 
 .nav-wrapper {
@@ -23,19 +23,11 @@
   width: 4em;
   opacity: 0.75;
   background-color: var(--primary-bg-color);
-  transform: translateX(-115%);
+  transform: translateX(-100%);
   transition: all 0.2s ease-out;
 }
 
-.nav-wrapper.opened{
-  transform: translateX(0);
-}
-
 .nav-wrapper:hover{
-  opacity: 1;
-}
-
-.nav-wrapper.expanded{
   opacity: 1;
 }
 
@@ -292,26 +284,21 @@
 
 .fa-solid.fa-angles-right {
   position: fixed;
-  top: 55%;
+  top: 50%;
+  left: 5rem;
   padding: 0.5em;
-  transform: translateX(0%);
-  color: rgb(136, 136, 136, 0.5);
+  background: var(--arrow-bg-color);
+  transform: translateX(-140%);
+  color: white;
   border-radius: 50%;
   z-index: 1;
+  opacity: 0.5;
   font-size: 1.5em;
-  transition: all 0.2s ease-out;
-}
-
-.fa-solid.fa-angles-right.opened {
-  transform: translateX(140%) rotate(-180deg);
+  transition: all 0.2s linear;
 }
 
 .fa-solid.fa-angles-right:hover {
-  color: var(--arrow-bg-color);
-}
-
-.nav-wrapper.opened.expanded .fa-solid.fa-angles-right {
-  opacity: 0;
+  opacity: 1;
 }
 
 .checkbox-label .ball {
@@ -379,3 +366,10 @@
 .nav-list-second li:hover .logout-btn{
   color: var(--highlight-color) !important;
 }
+
+@media (max-width: 768px) {
+  .nav-wrapper {
+    
+  }
+}
+

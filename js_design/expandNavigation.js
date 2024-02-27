@@ -1,24 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     var navWrapper = document.querySelector('.nav-wrapper');
-    var openArrow = document.querySelector('.fa-solid.fa-angles-right');
+    var profileSettingsNavWrapper = document.querySelector('.profile-settings-nav-wrapper');
 
-    function toggleNav(event) {
-        if (window.innerWidth < 1200) {
-            return;
-        }
-        
-        if (navWrapper.classList.contains('opened')) {
-            navWrapper.classList.remove('opened');
-            openArrow.classList.remove('opened');
-        } else {
-            navWrapper.classList.add('opened');
-            openArrow.classList.add('opened');
-        }
-
-        event.stopPropagation();
-    }
-
-    function expandNav(event, wrapper) {
+    function openNav(event, wrapper) {
         // Check if the clicked element is a dropdown or a child of a dropdown
         var isForm = event.target.closest('.logout-form');
         var isNavLink = event.target.closest('a');
@@ -45,14 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     document.querySelector('.nav-wrapper').addEventListener('click', function(event) {
-        expandNav(event, navWrapper);
+        openNav(event, navWrapper);
     });
     document.addEventListener('click', function(event) {
         closeNav(event, navWrapper);
     });
-
-    openArrow.addEventListener('click', function(event) {
-        toggleNav(event);
-    });
-    
 });
