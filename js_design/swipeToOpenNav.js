@@ -1,7 +1,6 @@
 (() => {
     const carouselWrapper = document.querySelector('.carousel-wrapper');
     const navWrapper = document.querySelector('.nav-wrapper');
-    const openArrow = document.querySelector('.fa-solid.fa-angles-right'); // select the arrow element
     const toggle = document.getElementById("menu-toggle");
     let xDown = null;
     let yDown = null;
@@ -27,13 +26,11 @@
 
         if (Math.abs(xDiff) > Math.abs(yDiff)) {
             if (xDiff > 0) {
-                setNavWrapperTransform("-115%");
-                openArrow.style.transform = ''; // reset the arrow transform
+                setNavWrapperTransform("-100%");
                 navWrapper.classList.remove('expanded');
                 toggle.checked = false;
             } else {
                 setNavWrapperTransform("0%");
-                openArrow.style.transform = 'translateX(140%) rotate(-180deg)'; // rotate the arrow when the nav is opened
             }
         }
 
@@ -61,10 +58,8 @@
 
         if (windowWidth > 1200) {
             navWrapper.style.transform = '';
-            openArrow.style.transform = ''; // reset the arrow transform
         } else {
-            setNavWrapperTransform("-115%");
-            openArrow.style.transform = 'translateX(140%) rotate(-180deg)'; // rotate the arrow when the nav is opened
+            setNavWrapperTransform("-100%");
         }
     });
 })();

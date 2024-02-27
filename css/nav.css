@@ -379,9 +379,3 @@
 .nav-list-second li:hover .logout-btn{
   color: var(--highlight-color) !important;
 }
-
-@media(max-width: 1200px){
-  .fa-solid.fa-angles-right:hover {
-    color: rgba(136, 136, 136, 0.5);
-  }
-}
