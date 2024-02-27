@@ -33,7 +33,7 @@
                 toggle.checked = false;
             } else {
                 setNavWrapperTransform("0%");
-                openArrow.style.transform = 'translateX(160%) rotate(-180deg)'; // rotate the arrow when the nav is opened
+                openArrow.style.transform = 'translateX(140%) rotate(-180deg)'; // rotate the arrow when the nav is opened
             }
         }
 
@@ -58,14 +58,13 @@
    
     window.addEventListener('resize', () => {
         const windowWidth = window.innerWidth;
-    
+
         if (windowWidth > 1200) {
             navWrapper.style.transform = '';
-            openArrow.style.transform = ''; // reset the arrow transform for desktop view
+            openArrow.style.transform = ''; // reset the arrow transform
         } else {
             setNavWrapperTransform("-115%");
-            navWrapper.classList.remove('opened');
-            openArrow.classList.remove("opened"); // reset the arrow transform for mobile view
+            openArrow.style.transform = 'translateX(140%) rotate(-180deg)'; // rotate the arrow when the nav is opened
         }
     });
 })();
