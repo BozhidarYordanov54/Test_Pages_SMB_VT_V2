@@ -185,6 +185,7 @@
 .event-card{
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   backdrop-filter: blur(15px);
@@ -197,9 +198,8 @@
 
 .event-card img{
   width: 100%;
-  height: 100%;
+  height: 65%;
   object-fit: cover;
-  z-index: -1;
   transition: all 0.2s ease-in;
 }
 
@@ -208,15 +208,20 @@
 }
 
 .event-card-context{
-  position: fixed;
   text-align: center;
-  bottom: 0;
   color: black;
   width: 100%;
+  height: 35%;
   padding: 0.5em;
   backdrop-filter: blur(5px);
+  order: 2;
   background: rgba(255, 255, 255, 0.7);
   transition: all 0.2s linear;
+}
+
+.event-name{
+  white-space: nowrap;
+  font-size: 100%;
 }
 
 .event-card:nth-child(even){
