@@ -346,8 +346,7 @@
   color: var(--highlight-color) !important;
 }
 
-@media(width: 1200px)
-{
+@media(max-width: 1200px){
   .nav-wrapper{
     transform: translateX(-100%);
   }
