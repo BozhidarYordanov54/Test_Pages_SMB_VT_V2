@@ -1,10 +1,16 @@
 :root {
     --main-content-bg-dark: rgba(82, 82, 82, 0.6);
     --main-content-bg-darker: rgba(65, 65, 65, 0.6);
-    --main-content-bg-hover-dark-old: rgba(128, 43, 185, 0.8);
     --main-content-bg-hover-dark: rgba(90, 39, 115, 0.7);
+
     --service-content-link-bg-dark: rgba(82, 82, 82, 1);
     --service-content-bg-hover-dark: rgba(148, 49, 214, 0.7);
+
+    --event-content-bg-dark: rgba(65, 65, 65, 1);
+    --event-content-white-bg-dark: rgba(255, 255, 255, 1);
+    --event-content-bg-hover-dark: rgba(90, 39, 115, 1);
+    --event-content-bg-hover-link: rgba(148, 49, 214, 0.7);
+
     --text-color-main-dark: #ffffff;
     --wave-color-one-dark: #8a8a8a;
     --wave-color-two-dark: #707070;
@@ -60,5 +66,29 @@
 .main-content-wrapper.darkmode .service-link{
     background: var(--service-content-link-bg-dark);
     color: var(--text-color-main-dark);
+}
+
+.main-content-wrapper.darkmode .upcoming-events{
+    background: var(--main-content-bg-dark);
+    color: white;
+}
+
+.main-content-wrapper.darkmode .event-card-context{
+    background: var(--main-content-bg-dark);
+    color: white;
+}
+
+.main-content-wrapper.darkmode .event-card:hover .event-card-context{
+    background: var(--event-content-bg-hover-dark);
+}
+
+.main-content-wrapper.darkmode .event-card:hover .event-link{
+    background: var(--event-content-bg-hover-link);
+}
+
+.main-content-wrapper.darkmode .event-card:hover .event-link:hover{
+    background: white;
+    color: var(--event-content-bg-hover-link);
+    font-weight: bold;
 }
 

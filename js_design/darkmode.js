@@ -40,7 +40,7 @@ function toggleDarkMode(isDarkMode) {
     });
 
     websiteLogo.forEach(logo => {
-        logo.src = isDarkMode ? "images/Logo-White.png" : "images/Logo-Black.png";
+        logo.src = isDarkMode ? "images/website_images/images_lightmode/Logo-White.png" : "images/website_images/images_darkmode/Logo-Black.png";
     });
 
     darkModeSwitch.checked = isDarkMode;
