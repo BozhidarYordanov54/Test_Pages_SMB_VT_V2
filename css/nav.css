@@ -4,7 +4,6 @@
   --text-color: #ffffff;
   --text-color: #ffffff;
   --highlight-color: #294C60;
-  --arrow-bg-color: #034877;
 }
 
 .nav-wrapper {
@@ -23,7 +22,6 @@
   width: 4em;
   opacity: 0.75;
   background-color: var(--primary-bg-color);
-  transform: translateX(-100%);
   transition: all 0.2s ease-out;
 }
 
@@ -282,25 +280,6 @@
 
 .fa-regular.fa-lightbulb {color: #fff6a7; margin-right: 0.1em;}
 
-.fa-solid.fa-angles-right {
-  position: fixed;
-  top: 50%;
-  left: 5rem;
-  padding: 0.5em;
-  background: var(--arrow-bg-color);
-  transform: translateX(-140%);
-  color: white;
-  border-radius: 50%;
-  z-index: 1;
-  opacity: 0.5;
-  font-size: 1.5em;
-  transition: all 0.2s linear;
-}
-
-.fa-solid.fa-angles-right:hover {
-  opacity: 1;
-}
-
 .checkbox-label .ball {
   background-color: #fff;
   width: 22px;
@@ -367,9 +346,11 @@
   color: var(--highlight-color) !important;
 }
 
-@media (max-width: 768px) {
-  .nav-wrapper {
-    
+@media(width: 1200px)
+{
+  .nav-wrapper{
+    transform: translateX(-100%);
   }
 }
+
 

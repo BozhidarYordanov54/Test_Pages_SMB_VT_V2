@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
     var navWrapper = document.querySelector('.nav-wrapper');
-    var profileSettingsNavWrapper = document.querySelector('.profile-settings-nav-wrapper');
 
     function openNav(event, wrapper) {
         // Check if the clicked element is a dropdown or a child of a dropdown

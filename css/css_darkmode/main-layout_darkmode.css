@@ -92,3 +92,13 @@
     font-weight: bold;
 }
 
+.main-content-wrapper.darkmode .event-card img{
+    filter: brightness(0.6);
+}
+
+.main-content-wrapper.darkmode .event-card:hover img{
+    filter: brightness(1);
+}
+
+
+
