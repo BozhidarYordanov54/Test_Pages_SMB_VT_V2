@@ -4,7 +4,7 @@
   --text-color: #ffffff;
   --text-color: #ffffff;
   --highlight-color: #294C60;
-  --arrow-bg-color: rgba(3, 73, 119, 0.8);
+  --arrow-bg-color: rgba(3, 73, 119, 0.7);
 }
 
 .nav-wrapper {
@@ -294,8 +294,9 @@
   position: fixed;
   top: 55%;
   padding: 0.5em;
-  transform: translateX(0%);
-  color: rgb(136, 136, 136, 0.5);
+  transform: translateX(10%);
+  color: rgba(255, 255, 255, 0.5);
+  background-color: var(--arrow-bg-color);
   border-radius: 50%;
   z-index: 1;
   font-size: 1.5em;
@@ -303,15 +304,11 @@
 }
 
 .fa-solid.fa-angles-right.opened {
-  transform: translateX(140%) rotate(-180deg);
+  transform: translateX(160%) rotate(-180deg);
 }
 
 .fa-solid.fa-angles-right:hover {
-  color: var(--arrow-bg-color);
-}
-
-.nav-wrapper.opened.expanded .fa-solid.fa-angles-right {
-  opacity: 0;
+  color: rgba(255, 255, 255, 1);
 }
 
 .checkbox-label .ball {
@@ -381,7 +378,13 @@
 }
 
 @media(max-width: 1200px){
-  .fa-solid.fa-angles-right:hover {
+  .fa-solid.fa-angles-right{
+    background: transparent;
+    mix-blend-mode: difference;
     color: rgba(136, 136, 136, 0.5);
+  }
+
+  .fa-solid.fa-angles-right:hover {
+    background: transparent;
   }
 }
