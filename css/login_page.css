@@ -10,24 +10,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    padding: 2em;
     background: transparent;
+    padding: 1em;
+    height: 100%;
+    margin-top: 5%;
+}
+
+.login-form,
+.new-user{
+    height: 40rem;
 }
 
 .new-user {
     display: flex;
     flex-direction: column;
-    flex: 1 50%;
-    height: 70vh;
     justify-content: center;
     align-items: center;
-    gap: 4em;
+    flex-basis: 1 20%;
     background: var(--highlight-color);
     color: var(--text-color);
+    gap: 3em;
     padding: 2em;
     border-top-right-radius: 2em;
-
     transition: all 0.2s ease-in-out;
 }
 
@@ -45,18 +49,15 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.form {
-    flex: 1 40%;
+.login-form {
+    flex: 1 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: 2px solid var(--primary-bg-color);
-    border-bottom-left-radius: 2em;
-    width: 70%; 
-    height: 70vh;
     background-color: #ffffff;
     padding: 2em;
-
+    border-bottom-left-radius: 2em;
     transition: all 0.2s ease-in-out;
 }
 
@@ -129,9 +130,6 @@
     text-decoration: none;
     font-size: 14px;
 }
-
-
-
 
 .more-logins-wrapper{
     display: flex;
@@ -238,11 +236,10 @@
     .new-user {
         border-top-right-radius: 0;
         border-bottom-right-radius: 2em;
-        flex: 1 1 30%;
         width: 100%;
     }
 
-    .form {
+    .login-form {
         border-bottom-left-radius: 0;
         border-top-left-radius: 2em;
         width: 100%;

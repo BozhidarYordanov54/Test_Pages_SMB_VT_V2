@@ -10,7 +10,7 @@
     --highlight-dark: #294C60;
   }
 
-.login-form-wrapper.darkmode .form{
+.login-form-wrapper.darkmode .login-form{
     background-color: var(--primary-dark);
     color: var(--text-light);
     border: 2px solid var(--lighter-primary-dark);
