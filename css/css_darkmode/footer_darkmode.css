@@ -4,6 +4,7 @@
     --footer-border-darkmode: #919191;
     --footer-text-header-darkmode: #ffffff;
     --footer-text-hover-darkmode: #ffffff;
+    --footer-text-hover-after-darkmode: #802bb9;
 }
 
 .footer-wrap.darkmode{
@@ -50,4 +51,8 @@
 
 .footer-wrap.darkmode .website-creator a i:hover{
     color: var(--footer-text-hover-darkmode);
+}
+
+.footer-wrap.darkmode .card ul li a:after{
+    background: var(--footer-text-hover-after-darkmode);
 }

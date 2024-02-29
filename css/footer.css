@@ -4,6 +4,7 @@
     --footer-text: #868686;
     --footer-text-header: #575757;
     --footer-text-hover: #6eafd8;
+    --footer-text-hover-after: rgba(3, 72, 119, 0.7);
 }
 
 .footer-wrap{
@@ -56,6 +57,8 @@
 }
 
 .card ul li a{
+    position: relative;
+    display: inline-block;
     text-decoration: none;
     color: var(--footer-text);
     font-size: 14px;
@@ -66,6 +69,22 @@
 .card ul li a:hover{
     color: var(--footer-text-hover);
 }
+
+.card ul li a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    background: var(--footer-text-hover-after);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .card ul li a:hover:after { 
+    width: 100%;
+    left: 0; 
+  }
+
 .social-media-container{
     display: flex;
     gap: 1em;
