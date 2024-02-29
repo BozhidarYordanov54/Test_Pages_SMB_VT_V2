@@ -29,7 +29,8 @@ function toggleDarkMode(isDarkMode) {
         '.login-form-wrapper',
         '.register-form-wrapper',
         '.profile-settings-wrapper',
-        '.main-content-wrapper'
+        '.main-content-wrapper',
+        '.contacts-content-wrapper'
     ];
 
     selectors.forEach(selector => {

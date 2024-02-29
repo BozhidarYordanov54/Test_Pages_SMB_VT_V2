@@ -245,7 +245,7 @@
     opacity: 1;
     font-size: 16px;
     margin-top: 0.5em;
-    height: 85px;
+    height: fit-content;
     overflow: visible;
     pointer-events: all;
   }

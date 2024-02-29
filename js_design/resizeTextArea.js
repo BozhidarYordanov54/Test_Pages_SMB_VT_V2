@@ -6,21 +6,29 @@ for (let i = 0; i < tx.length; i++) {
 
 function OnInput() {
   this.style.height = 'auto';
-  this.style.height = (this.scrollHeight) + "px";
+  this.style.height = (this.scrollHeight + 4) + "px";
 
   // Get the label associated with this textarea
   let label = document.querySelector(`label[for=${this.id}]`);
 
   // If the textarea is empty, reset the styles
   if (this.value === '') {
-    this.style.height = null;
+    this.style.height = 'auto';
     if (label) {
       label.style.top = null;
+      label.style.fontWeight = null;
+      label.style.fontSize = null;
+      label.style.color = null;
+      label.style.transition = 'top 0.2s ease-in-out';
     }
   } else {
     // Adjust the position of the label
     if (label) {
-      label.style.top = `${-this.scrollHeight - 41}px`;
+      label.style.top = `${-this.scrollHeight - 40}px`;
+      label.style.fontWeight = 'bold';
+      label.style.fontSize = '0.9em';
+      label.style.color = 'black';
+      label.style.transition = 'none';
     }
   }
 }
