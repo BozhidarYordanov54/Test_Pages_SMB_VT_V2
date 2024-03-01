@@ -1,0 +1,70 @@
+:root{
+    --darkmode-bg: #121212;
+    --darkmode-bg-opacity: rgba(18, 18, 18, 0.6);
+    --darkmode-bg-hover: rgba(90, 39, 115, 1);
+    --darkmode-gradient-one: #292929;
+    --darkmode-gradient-two: #4e4e4e;
+    --darkmode-gradient-three: #292929;
+    --darkmode-text-light: #FFFFFF; /* Replace with actual color */
+    --darkmode-text-hover-purple: #9434d4; /* Replace with actual color */
+    --darkmode-btn-submit-bg: white;
+    --darkmode-btn-submit-text: #121212;
+}
+
+.contacts-content-wrapper.darkmode .wrapper{
+    background: linear-gradient(45deg, var(--darkmode-gradient-one), var(--darkmode-gradient-two), var(--darkmode-gradient-three));
+    background-size: 600% 100%;
+    animation: gradient 8s linear infinite;
+    z-index: -1;
+    animation-direction: alternate;
+}
+
+@keyframes gradient {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
+}
+
+.contacts-content-wrapper.darkmode .contact-card:hover{
+    background: var(--darkmode-bg-hover);
+}
+
+.contacts-content-wrapper.darkmode .btn-submit{
+    background: var(--darkmode-btn-submit-bg);
+    color: var(--darkmode-btn-submit-text);
+}
+
+.contacts-content-wrapper.darkmode .form-label,
+.contacts-content-wrapper.darkmode .contact-form-header{
+    color: var(--darkmode-text-light) !important;
+}
+
+.contacts-content-wrapper.darkmode .input-text{
+    background-color: var(--darkmode-bg);
+    color: var(--darkmode-text-light);
+    border-bottom: 2px solid var(--darkmode-text-light);
+    transition: all 0.2s ease-in-out;
+}
+
+.contacts-content-wrapper.darkmode .input-textarea{
+    border: 2px solid var(--darkmode-text-light);
+    background-color: var(--darkmode-bg);
+    color: var(--darkmode-text-light);
+}
+
+.contacts-content-wrapper.darkmode .input-text:focus{
+    border-bottom: 2px solid var(--darkmode-text-hover-purple);
+}
+
+.contacts-content-wrapper.darkmode .input-textarea:focus{
+    border: 2px solid var(--darkmode-text-hover-purple);
+}
+
+.contacts-content-wrapper.darkmode .form-label-textarea{
+    color: var(--darkmode-text-light);
+    background-color: var(--darkmode-bg);
+    transition: all 0.2s ease-in-out;
+}
+
+.contacts-content-wrapper.darkmode .contact-form-wrapper{
+    background: var(--darkmode-bg-opacity);
+}
