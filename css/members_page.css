@@ -43,6 +43,7 @@
     font-size: 26px;
     margin: 20px 0;
     text-align: center;
+    color: #ffffff;
 }
 
 .responsive-table li {
@@ -50,11 +51,11 @@
     padding: 25px 30px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .responsive-table .table-header {
-    background-color: #6eafd8;
+    background-color: #6eafd8d5;
     color: #ffffff;
     font-weight: bold;
     font-size: 14px;
@@ -71,7 +72,7 @@
 }
 
 .responsive-table .table-row:hover{
-    background-color: #6eafd8a9;
+    background-color: #6eafd8d5;
     color: #ffffff;
 
 }
@@ -93,8 +94,13 @@
 }
 
 @media all and (max-width: 767px) {
+    .main-table-wrapper h2{
+        color: #234465;
+    }
+
     .responsive-table .table-header {
         display: none;
+
     }
     
     .responsive-table li {
