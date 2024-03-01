@@ -27,7 +27,6 @@ function OnInput() {
       label.style.top = `${-this.scrollHeight - 40}px`;
       label.style.fontWeight = 'bold';
       label.style.fontSize = '0.9em';
-      label.style.color = 'black';
       label.style.transition = 'none';
     }
   }
