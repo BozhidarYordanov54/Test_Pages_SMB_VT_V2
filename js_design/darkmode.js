@@ -30,7 +30,8 @@ function toggleDarkMode(isDarkMode) {
         '.register-form-wrapper',
         '.profile-settings-wrapper',
         '.main-content-wrapper',
-        '.contacts-content-wrapper'
+        '.contacts-content-wrapper',
+        '.main-table-wrapper'
     ];
 
     selectors.forEach(selector => {

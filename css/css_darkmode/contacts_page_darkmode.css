@@ -9,6 +9,25 @@
     --darkmode-text-hover-purple: #9434d4;
     --darkmode-btn-submit-bg: white;
     --darkmode-btn-submit-text: #121212;
+
+    --wave-color-one-dark: #8a8a8a;
+    --wave-color-two-dark: #707070;
+    --wave-color-three-dark: #464646;
+}
+
+.contacts-content-wrapper.darkmode .wave-wrapper svg .path-one {
+    fill: var(--wave-color-one-dark);
+    opacity: 1;
+}
+
+.contacts-content-wrapper.darkmode .wave-wrapper svg .path-two {
+    fill: var(--wave-color-two-dark);
+    opacity: 0.8;
+}
+
+.contacts-content-wrapper.darkmode .wave-wrapper svg .path-three {
+    fill: var(--wave-color-three-dark);
+    opacity: 0.5;
 }
 
 .contacts-content-wrapper.darkmode .wrapper{
@@ -36,18 +55,16 @@
 .contacts-content-wrapper.darkmode .form-label,
 .contacts-content-wrapper.darkmode .contact-form-header{
     color: var(--darkmode-text-light) !important;
+    background: transparent;
 }
 
 .contacts-content-wrapper.darkmode .input-text{
-    background-color: var(--darkmode-bg);
     color: var(--darkmode-text-light);
     border-bottom: 2px solid var(--darkmode-text-light);
-    transition: all 0.2s ease-in-out;
 }
 
 .contacts-content-wrapper.darkmode .input-textarea{
     border: 2px solid var(--darkmode-text-light);
-    background-color: var(--darkmode-bg);
     color: var(--darkmode-text-light);
 }
 
@@ -62,9 +79,4 @@
 .contacts-content-wrapper.darkmode .form-label-textarea{
     color: var(--darkmode-text-light);
     background-color: var(--darkmode-bg);
-    transition: all 0.2s ease-in-out;
-}
-
-.contacts-content-wrapper.darkmode .contact-form-wrapper{
-    background: var(--darkmode-bg-opacity);
 }

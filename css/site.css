@@ -12,6 +12,7 @@
     width: 100%;
     padding: 1em;
     padding-left: 1em;
+    background: transparent;
     margin: 0 auto;
     transition: all 0.2s ease-in-out;
 }
@@ -44,7 +45,7 @@
 .input-text:focus + .form-label,
 .input-text.has-content + .form-label {
     transform: translateY(-110%) translateX(0%);
-    color: var(--text-color-black);
+    color: #234465;
     font-weight: bold;
     transition: all 0.2s ease-in-out;
 }

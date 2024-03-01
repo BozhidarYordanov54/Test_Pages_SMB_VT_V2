@@ -10,4 +10,6 @@ function checkIfInputHasValue(){
     });
 }
 
-document.addEventListener("input", checkIfInputHasValue); 
+checkIfInputHasValue();
+
+document.addEventListener("input", checkIfInputHasValue);

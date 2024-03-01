@@ -6,7 +6,40 @@
     --gradient-bg-color-one: #5ba7d6;
     --gradient-bg-color-two: rgb(64, 153, 212);
     --gradient-bg-color-three: #6eafd8;
+
+    --form-header-bg: rgba(64, 153, 212, 0.781);
+
+    --wave-color-one: #6eafd8;
+    --wave-color-two: #034877;
+    --wave-color-three: #6eafd8;
 }
+
+.wave-wrapper {
+    filter: blur(3px);
+    position: absolute;
+    top: -6em;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .wave-wrapper svg .path-one {
+    fill: var(--wave-color-one);
+    opacity: 1;
+    transition:  all 0.2s ease-in-out;
+  }
+  
+  .wave-wrapper svg .path-two {
+    fill: var(--wave-color-two);
+    opacity: 0.8;
+    transition:  all 0.2s ease-in-out;
+  }
+  
+  .wave-wrapper svg .path-three {
+    fill: var(--wave-color-three);
+    opacity: 0.5;
+    transition:  all 0.2s ease-in-out;
+  }
 
 .contacts-content-wrapper{
     display: flex;
@@ -58,7 +91,6 @@
 .organization-name{
     font-size: 1.5rem;
     font-weight: bold;
-    
 }
 
 .contact-form-wrapper{
@@ -68,10 +100,21 @@
     padding: 1em;
 }
 
+.contact-form-header{
+    position: relative;
+    font-size: 1.5rem;
+    width: 100%;
+    font-weight: bold;
+    padding: 0.5em;
+    color: #234465;
+    text-align-last: left;
+}
+
 .contact-form{
     display: flex;
     flex-direction: column;
     gap: 1em;
+    transition: all 0.2s ease-in-out;
 }
 
 .contact-info-card-wrapper{
@@ -119,6 +162,7 @@
     font-size: 1rem;
     border: 2px solid var(--primary-bg-color);
     border-radius: 5px;
+    background: transparent;
     outline: none;
     resize: none;
 }
@@ -131,7 +175,7 @@
     padding: 3px;
     top: -4.5em;
     left: 0.5em;
-    transition: top 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .input-textarea:focus + .form-label-textarea{
@@ -148,7 +192,6 @@
     gap: 0.5em;
     margin-top: -1em;
     width: 100%;
-    
 }
 
 .btn-submit .fa-paper-plane{
@@ -183,10 +226,28 @@
     100% {background-position: 100%}
 }
 
-@media(max-width: 768px){
+@media(max-width: 1186px){
     .form-input-wrapper
     {
         flex-direction: column;
+        width: 100%;
         gap: 0;
+    }
+
+    .contact-form-header{
+        margin: 0 auto;
+        top: 0;
+    }
+
+    .contact-form-wrapper{
+        min-width: 75%;
+        
+    }
+}
+
+@media(max-width: 768px){
+
+    .contact-form-wrapper{
+        flex: 1;
     }
 }
