@@ -5,8 +5,8 @@
     --darkmode-gradient-one: #292929;
     --darkmode-gradient-two: #4e4e4e;
     --darkmode-gradient-three: #292929;
-    --darkmode-text-light: #FFFFFF; /* Replace with actual color */
-    --darkmode-text-hover-purple: #9434d4; /* Replace with actual color */
+    --darkmode-text-light: #FFFFFF;
+    --darkmode-text-hover-purple: #9434d4;
     --darkmode-btn-submit-bg: white;
     --darkmode-btn-submit-text: #121212;
 }
