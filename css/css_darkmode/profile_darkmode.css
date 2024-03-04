@@ -12,9 +12,6 @@
 
   .profile-settings-wrapper.darkmode{
     background-color: var(--dark-bg);
-    border-radius: 1em;
-    margin: 1em auto;
-    padding: 2em;
   }
 
   .profile-settings-wrapper.darkmode .settings-header{

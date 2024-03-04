@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/site.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/typography.css">
     <link rel="stylesheet" type="text/css" href="css/nav.css">
@@ -69,51 +68,133 @@
         </header>
 
         <section class="profile-settings-wrapper">
+            <nav class="profile-settings-nav">
+                <h2 class="profile-nav-header">Настройки на профила</h2>
+                <ul>
+                    <li><a href="manage_account.html"><i class="fa-solid fa-user"></i>Профил</a></li>
+                    <li><a href="#"><i class="fa-solid fa-envelope-circle-check"></i>Имейл адрес</a></li>
+                    <li><a href="#"><i class="fa-solid fa-shield"></i>Парола</a></li>
+                    <li><a href="#"><i class="fa-solid fa-file-shield"></i>Лични данни</a></li>
+                </ul>
+            </nav>
             <div class="profile-general-information">
-                <div class="profile-image">
-                    <img src="images/Profile-PNG-File.png" alt="Profile Picture" class="profile-picture-placeholder">
-                </div>
-                <h2 class="settings-header">Информация за профила</h2>
+                <div class="profile-info-wrapper">
+                    <h2 class="settings-header">Информация за профила</h2>
                 <form class="form" method="post">
-                        <div class="input-wrapper">
-                            <input type="text" id="username" name="username" class="input-text">
-                            <label for="username" class="form-label">Потребителско име</label>
-                        </div>
-                        <div class="input-wrapper">
-                            <input type="text" id="username" name="username" class="input-text">
-                            <label for="username" class="form-label">Име Фамилия</label>
-                        </div>
-                        <div class="input-wrapper">
-                            <input type="text" id="username" name="username" class="input-text">
-                            <label for="username" class="form-label">Телефонен номер</label>
-                        </div>
-                        <div class="input-wrapper">
-                            <input type="text" name="town" id="town" class="search-box input-text" oninput="filterOptions()" autocomplete="off"/>
-                            <label class="form-label" for="town">Изберете град</label>
-                            <span class="input-error"></span>
-                            <i class="fa-solid fa-xmark"></i>
-                            <div class="select-box">
-                                <ul class="options">
-                                    <li data-value="1">Велико Търново</li> 
-                                    <li data-value="2">Полски Тръмбеш</li> 
-                                    <li data-value="3">Присово</li> 
-                                    <li data-value="4">Дебелец</li> 
-                                    <!--
-                                        @foreach(var town in towns)
-                                        {
-                                            <li class="option">
-                                                <input class="radio" type="radio" id="@town" name="town" value="@town">
-                                                <label for="@town">@town</label>
-                                            </li>
-                                        }
-                                    -->
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="input-wrapper">
-                            <input class="btn-submit" type="submit" value="Запази">
-                        </div>
+                    <div class="input-wrapper">
+                        <input type="text" id="username" name="username" class="input-text">
+                        <label for="username" class="form-label">Име Фамилия</label>
+                    </div>
+                     <div class="input-wrapper">
+                         <input type="text" id="username" name="username" class="input-text">
+                         <label for="username" class="form-label">Потребителско име</label>
+                     </div>
+                     <div class="input-wrapper">
+                         <input type="text" id="username" name="username" class="input-text">
+                         <label for="username" class="form-label">Телефонен номер</label>
+                     </div>
+                     <div class="input-wrapper">
+                         <input type="text" name="town" id="town" class="search-box input-text" oninput="filterOptions()" autocomplete="off"/>
+                         <label class="form-label" for="town">Град</label>
+                         <span class="input-error"></span>
+                         <i class="fa-solid fa-xmark"></i>
+                         <div class="select-box">
+                             <ul class="options">
+                                 <li data-value="1">Велико Търново</li> 
+                                 <li data-value="2">Полски Тръмбеш</li> 
+                                 <li data-value="3">Присово</li> 
+                                 <li data-value="4">Дебелец</li> 
+                                 <!--
+                                     @foreach(var town in towns)
+                                     {
+                                         <li class="option">
+                                             <input class="radio" type="radio" id="@town" name="town" value="@town">
+                                             <label for="@town">@town</label>
+                                         </li>
+                                     }
+                                 -->
+                             </ul>
+                         </div>
+                     </div>
+                     <div class="input-wrapper">
+                         <input class="btn-submit" type="submit" value="Запази">
+                     </div>
                 </form>
+                </div>
+                <div class="child-container-wrapper">
+                    <div class="container">
+                        <h2 class="container-header">Дете/Деца</h2>
+                        <ul class="responsive-table">
+                            <li class="table-header">
+                                <div class="col col-1">ID</div>
+                                <div class="col col-2">Име Фамилия</div>
+                                <div class="col col-3">Град</div>
+                                <div class="col col-4">Клас</div>
+                                <div class="col col-5">Училище</div>
+                                <div class="col col-6">Действия</div> <!-- Added column for actions -->
+                            </li>
+                            <li class="table-row">
+                                <div class="col col-1">1</div>
+                                <div class="col col-2" data-label="Име Фамилия">Божидар Йорданов</div>
+                                <div class="col col-3" data-label="Град">Велико Търново</div>
+                                <div class="col col-4" data-label="Клас">VII</div>
+                                <div class="col col-5" data-label="Училище">ОУ "Бачо Киро"</div>
+                                <div class="col col-6 action-button-wrapper">
+                                    <button class="btn-edit-child"><i class="fa-solid fa-pen-to-square"></i></button>
+                                    <button class="btn-delete-child"><i class="fa-solid fa-trash-can"></i></button>
+                                </div>
+                            </li>
+                            <li class="table-row">
+                                <div class="col col-1">2</div>
+                                <div class="col col-2" data-label="Име Фамилия">Венцислава Попова</div>
+                                <div class="col col-3" data-label="Град">Перник</div>
+                                <div class="col col-4" data-label="Клас">XII</div>
+                                <div class="col col-5" data-label="Училище">СУРИЧЕ "Д-р Петър Берон"</div>
+                                <div class="col col-6 action-button-wrapper">
+                                    <button class="btn-edit-child"><i class="fa-solid fa-pen-to-square"></i></button>
+                                    <button class="btn-delete-child"><i class="fa-solid fa-trash-can"></i></button>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="btn-add-child" aria-label="Отваря форма за добавяне на ученик">Добави ученик</button>
+                        <form action="" class="add-child-form">
+                            <div class="input-wrapper">
+                                <input type="text" id="username" name="username" class="input-text">
+                                <label for="username" class="form-label">Име Фамилия</label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text" name="town" id="town" class="search-box input-text" oninput="filterOptions()" autocomplete="off"/>
+                                <label class="form-label" for="town">Град</label>
+                                <span class="input-error"></span>
+                                <i class="fa-solid fa-xmark"></i>
+                                <div class="select-box">
+                                    <ul class="options">
+                                        <li data-value="1">Велико Търново</li> 
+                                        <li data-value="2">Полски Тръмбеш</li> 
+                                        <li data-value="3">Присово</li> 
+                                        <li data-value="4">Дебелец</li> 
+                                        <!--
+                                            @foreach(var town in towns)
+                                            {
+                                                <li class="option">
+                                                    <input class="radio" type="radio" id="@town" name="town" value="@town">
+                                                    <label for="@town">@town</label>
+                                                </li>
+                                            }
+                                        -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text" id="username" name="username" class="input-text">
+                                <label for="username" class="form-label">Клас</label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="btn-submit" type="submit" value="Запази">
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -177,7 +258,7 @@
     <script src="js_design/rotateArrow.js"></script>
     <script src="js_design/swipeToOpenNav.js"></script>
     <script src="js_design/darkmode.js"></script>
-
+    <script src="js_design/expandChildForm.js"></script>
     <script src="js_logic/filterOptions.js"></script>
     
 </body>
