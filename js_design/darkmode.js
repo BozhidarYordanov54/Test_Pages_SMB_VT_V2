@@ -28,10 +28,10 @@ function toggleDarkMode(isDarkMode) {
         '.footer-wrap',
         '.login-form-wrapper',
         '.register-form-wrapper',
-        '.profile-settings-wrapper',
         '.main-content-wrapper',
         '.contacts-content-wrapper',
-        '.main-table-wrapper'
+        '.main-table-wrapper',
+        '.profile-settings-wrapper'
     ];
 
     selectors.forEach(selector => {
