@@ -123,3 +123,9 @@
     text-align: center;
     padding: 1em 0;    
 }
+
+.email-confirmed-container .input-group-append .input-group-text{
+    position: relative;
+    top: -4em;
+    right: -98%;
+}

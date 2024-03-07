@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/typography.css">
     <link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/site.css">
 
     <link rel="stylesheet" type="text/css" href="css/profile_nav.css">
     <link rel="stylesheet" type="text/css" href="css/css_darkmode/profile_darkmode.css">
@@ -14,6 +15,13 @@
     <link rel="stylesheet" type="text/css" href="css/css_darkmode/nav_darkmode.css">
     <link rel="stylesheet" type="text/css" href="css/css_darkmode/footer_darkmode.css">
     <link rel="icon" type="image/x-icon"  href="/images/Logo-White.png">
+
+    <style>
+        .email-change-wrapper{
+            width: 40%;
+        }
+    </style>
+
     <title>Начало - СМБ-Велико Търново</title>
 </head>
 <body>
@@ -77,128 +85,35 @@
                     <li><a href="#"><i class="fa-solid fa-file-shield"></i>Лични данни</a></li>
                 </ul>
             </nav>
-            <div class="profile-general-information">
-                <div class="profile-info-wrapper">
-                    <h2 class="settings-header">Информация за профила</h2>
-                <form class="form" method="post">
-                    <div class="input-wrapper">
-                        <input type="text" id="username" name="username" class="input-text">
-                        <label for="username" class="form-label">Име Фамилия</label>
-                    </div>
-                     <div class="input-wrapper">
-                         <input type="text" id="username" name="username" class="input-text">
-                         <label for="username" class="form-label">Потребителско име</label>
-                     </div>
-                     <div class="input-wrapper">
-                         <input type="text" id="username" name="username" class="input-text">
-                         <label for="username" class="form-label">Телефонен номер</label>
-                     </div>
-                     <div class="input-wrapper">
-                         <input type="text" name="town" id="town" class="search-box input-text" oninput="filterOptions()" autocomplete="off"/>
-                         <label class="form-label" for="town">Град</label>
-                         <span class="input-error"></span>
-                         <i class="fa-solid fa-xmark"></i>
-                         <div class="select-box">
-                             <ul class="options">
-                                 <li data-value="1">Велико Търново</li> 
-                                 <li data-value="2">Полски Тръмбеш</li> 
-                                 <li data-value="3">Присово</li> 
-                                 <li data-value="4">Дебелец</li> 
-                                 <!--
-                                     @foreach(var town in towns)
-                                     {
-                                         <li class="option">
-                                             <input class="radio" type="radio" id="@town" name="town" value="@town">
-                                             <label for="@town">@town</label>
-                                         </li>
-                                     }
-                                 -->
-                             </ul>
-                         </div>
-                     </div>
-                     <div class="input-wrapper">
-                         <input class="btn-submit" type="submit" value="Запази">
-                     </div>
-                </form>
-                </div>
-                <div class="child-container-wrapper">
-                    <div class="container">
-                        <h2 class="container-header">Дете/Деца</h2>
-                        <ul class="responsive-table">
-                            <li class="table-header">
-                                <div class="col col-1">ID</div>
-                                <div class="col col-2">Име Фамилия</div>
-                                <div class="col col-3">Град</div>
-                                <div class="col col-4">Клас</div>
-                                <div class="col col-5">Училище</div>
-                                <div class="col col-6">Действия</div> <!-- Added column for actions -->
-                            </li>
-                            <li class="table-row">
-                                <div class="col col-1" data-label="ID">1</div>
-                                <div class="col col-2" data-label="Име Фамилия">Божидар Йорданов</div>
-                                <div class="col col-3" data-label="Град">Велико Търново</div>
-                                <div class="col col-4" data-label="Клас">VII</div>
-                                <div class="col col-5" data-label="Училище">ОУ "Бачо Киро"</div>
-                                <div class="col col-6 action-button-wrapper">
-                                    <button class="btn-edit-child"><i class="fa-solid fa-pen-to-square"></i></button>
-                                    <button class="btn-delete-child"><i class="fa-solid fa-trash-can"></i></button>
-                                </div>
-                            </li>
-                            <li class="table-row">
-                                <div class="col col-1" data-label="ID">2</div>
-                                <div class="col col-2" data-label="Име Фамилия">Венцислава Попова</div>
-                                <div class="col col-3" data-label="Град">Перник</div>
-                                <div class="col col-4" data-label="Клас">XII</div>
-                                <div class="col col-5" data-label="Училище">СУРИЧЕ "Д-р Петър Берон"</div>
-                                <div class="col col-6 action-button-wrapper">
-                                    <button class="btn-edit-child"><i class="fa-solid fa-pen-to-square"></i></button>
-                                    <button class="btn-delete-child"><i class="fa-solid fa-trash-can"></i></button>
-                                </div>
-                            </li>
-                        </ul>
-                        <button class="btn-add-child" aria-label="Отваря форма за добавяне на ученик">Добави ученик</button>
-                        <form action="" class="add-child-form">
-                            <div class="input-wrapper">
-                                <input type="text" id="username" name="username" class="input-text">
-                                <label for="username" class="form-label">Име Фамилия</label>
-                            </div>
-                            <div class="input-wrapper">
-                                <input type="text" name="town" id="town" class="search-box input-text" oninput="filterOptions()" autocomplete="off"/>
-                                <label class="form-label" for="town">Град</label>
-                                <span class="input-error"></span>
-                                <i class="fa-solid fa-xmark"></i>
-                                <div class="select-box">
-                                    <ul class="options">
-                                        <li data-value="1">Велико Търново</li> 
-                                        <li data-value="2">Полски Тръмбеш</li> 
-                                        <li data-value="3">Присово</li> 
-                                        <li data-value="4">Дебелец</li> 
-                                        <!--
-                                            @foreach(var town in towns)
-                                            {
-                                                <li class="option">
-                                                    <input class="radio" type="radio" id="@town" name="town" value="@town">
-                                                    <label for="@town">@town</label>
-                                                </li>
-                                            }
-                                        -->
-                                    </ul>
+            <div class="email-change-wrapper">
+                <div class="email-form-wrapper">
+                    <form id="email-form" class="email-form" method="post">
+                        <div asp-validation-summary="All" class="text-danger" role="alert"></div>
+                        @if (Model.IsEmailConfirmed)
+                        {
+                            <div class="input-wrapper email-confirmed-container">
+                                <input asp-for="Email" class="input-text" disabled />
+                                <label asp-for="Email" class="form-label">Моля въведете настоящия си имейл</label>
+                                <div class="input-group-append">
+                                    <span class="h-100 input-group-text text-success font-weight-bold">✓</span>
                                 </div>
                             </div>
+                        }
+                        else
+                        {
                             <div class="input-wrapper">
-                                <input type="text" id="username" name="username" class="input-text">
-                                <label for="username" class="form-label">Клас</label>
+                                <input asp-for="Email" class="input-text" disabled />
+                                <label asp-for="Email" class="form-label">Моля въведете настоящия си имейл</label>
+                                <button class="btn-submit" id="email-verification" type="submit" asp-page-handler="SendVerificationEmail" class="btn btn-link">Send verification email</button>
                             </div>
-                            <div class="input-wrapper">
-                                <input class="btn-submit" type="submit" value="Запази">
-                            </div>
-                            
-                        </form>
-                    </div>
-                </div>
-                <div class="alert alert-success alert-dismissible" role="alert">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    Профилът Ви беше актуализиран успешно!
+                        }
+                        <div class="input-wrapper">
+                            <input asp-for="Input.NewEmail" class="input-text" autocomplete="email" aria-required="true" />
+                            <label asp-for="Input.NewEmail" class="form-label">Въведете новия си имейл</label>
+                            <span asp-validation-for="Input.NewEmail" class="text-danger"></span>
+                        </div>
+                        <button class="btn-submit" id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="w-100 btn btn-lg btn-primary">Change email</button>
+                    </form>
                 </div>
             </div>
         </section>

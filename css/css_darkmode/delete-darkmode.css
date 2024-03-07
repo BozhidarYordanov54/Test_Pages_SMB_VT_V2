@@ -1,0 +1,40 @@
+.delete-child-confirm.darkmode {
+    background: linear-gradient(
+        -45deg,
+        #1a1a1a 0%, /* Darker background */
+        #1a1a1a 50%,
+        #222222 50%, /* Slightly lighter background */
+        #222222 100%
+    );
+}
+
+.delete-child-confirm.darkmode .card-delete {
+    background: #2c2c2cc9; /* Darker card background */
+    color: #ffffff; /* Lighter text color */
+}
+
+.delete-child-confirm.darkmode .card-body {
+    color: #ffffff; /* Lighter text color */
+}
+
+.delete-child-confirm.darkmode .question-header {
+    color: #ffffff; /* Lighter text color */
+}
+
+.delete-child-confirm.darkmode .explanation-header {
+    color: #b3b3b3; /* Lighter color for secondary text */
+}
+
+.delete-child-confirm.darkmode .danger-sign {
+    color: #ff4d4d; /* Lighter color for the danger sign */
+    background: #4d4d4d; /* Darker background for the danger sign */
+}
+
+.delete-child-confirm.darkmode .btn-danger {
+    background: #ff4d4d; /* Lighter color for danger button */
+    color: #ffffff; /* Lighter text color */
+}
+
+.delete-child-confirm.darkmode .btn-secondary {
+    border-color: #666666; /* Slightly lighter border color for secondary button */
+}

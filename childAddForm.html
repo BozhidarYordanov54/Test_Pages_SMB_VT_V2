@@ -11,6 +11,9 @@
     <link rel="stylesheet" type="text/css" href="css/profile_nav.css">
     <link rel="stylesheet" type="text/css" href="css/css_darkmode/profile_darkmode.css">
 
+    <link rel="stylesheet" href="css/delete.css">
+    <link rel="stylesheet" href="css/css_darkmode/delete-darkmode.css">
+
     <link rel="stylesheet" type="text/css" href="css/css_darkmode/nav_darkmode.css">
     <link rel="stylesheet" type="text/css" href="css/css_darkmode/footer_darkmode.css">
     <link rel="icon" type="image/x-icon"  href="/images/Logo-White.png">
@@ -67,139 +70,28 @@
             </nav>
         </header>
 
-        <section class="profile-settings-wrapper">
-            <nav class="profile-settings-nav">
-                <h2 class="profile-nav-header">Настройки на профила</h2>
-                <ul>
-                    <li><a href="manage_account.html"><i class="fa-solid fa-user"></i>Профил</a></li>
-                    <li><a href="changeEmail.html"><i class="fa-solid fa-envelope-circle-check"></i>Имейл адрес</a></li>
-                    <li><a href="#"><i class="fa-solid fa-shield"></i>Парола</a></li>
-                    <li><a href="#"><i class="fa-solid fa-file-shield"></i>Лични данни</a></li>
-                </ul>
-            </nav>
-            <div class="profile-general-information">
-                <div class="profile-info-wrapper">
-                    <h2 class="settings-header">Информация за профила</h2>
-                <form class="form" method="post">
-                    <div class="input-wrapper">
-                        <input type="text" id="username" name="username" class="input-text">
-                        <label for="username" class="form-label">Име Фамилия</label>
-                    </div>
-                     <div class="input-wrapper">
-                         <input type="text" id="username" name="username" class="input-text">
-                         <label for="username" class="form-label">Потребителско име</label>
-                     </div>
-                     <div class="input-wrapper">
-                         <input type="text" id="username" name="username" class="input-text">
-                         <label for="username" class="form-label">Телефонен номер</label>
-                     </div>
-                     <div class="input-wrapper">
-                         <input type="text" name="town" id="town" class="search-box input-text" oninput="filterOptions()" autocomplete="off"/>
-                         <label class="form-label" for="town">Град</label>
-                         <span class="input-error"></span>
-                         <i class="fa-solid fa-xmark"></i>
-                         <div class="select-box">
-                             <ul class="options">
-                                 <li data-value="1">Велико Търново</li> 
-                                 <li data-value="2">Полски Тръмбеш</li> 
-                                 <li data-value="3">Присово</li> 
-                                 <li data-value="4">Дебелец</li> 
-                                 <!--
-                                     @foreach(var town in towns)
-                                     {
-                                         <li class="option">
-                                             <input class="radio" type="radio" id="@town" name="town" value="@town">
-                                             <label for="@town">@town</label>
-                                         </li>
-                                     }
-                                 -->
-                             </ul>
+        <section class="delete-child-confirm">
+            <div class="delete-child-wrapper">
+                 <div class="card-delete">
+                     <div class="card-body">
+                         <div class="consequences-wrapper">
+                             <p class="danger-sign"><i class="fa-solid fa-triangle-exclamation"></i></p>
+                             <p class="question-header">Сигурни ли сте, че искате да изтриете този запис?</p>
+                             <p class="explanation-header">Това действие е необратимо и няма да можете да възстановите данните.</p>
+                         </div>
+                         <div class="model-info-wrapper">
+                             <h3 class="card-title text-center">@Model.Topic</h3>
+                         <p class="mb-0"><strong>Date and Time:</strong> @Model.DateAndTime</p>
                          </div>
                      </div>
-                     <div class="input-wrapper">
-                         <input class="btn-submit" type="submit" value="Запази">
+                     <div class="card-footer">
+                         <form asp-action="DeleteConfirmed" method="post" class="delete-child-form">
+                             <input type="hidden" asp-for="Id" />
+                             <button type="submit" class="btn btn-danger">Изтрий</button>
+                             <a asp-action="All" class="btn btn-secondary">Отказ</a>
+                         </form>
                      </div>
-                </form>
-                </div>
-                <div class="child-container-wrapper">
-                    <div class="container">
-                        <h2 class="container-header">Дете/Деца</h2>
-                        <ul class="responsive-table">
-                            <li class="table-header">
-                                <div class="col col-1">ID</div>
-                                <div class="col col-2">Име Фамилия</div>
-                                <div class="col col-3">Град</div>
-                                <div class="col col-4">Клас</div>
-                                <div class="col col-5">Училище</div>
-                                <div class="col col-6">Действия</div> <!-- Added column for actions -->
-                            </li>
-                            <li class="table-row">
-                                <div class="col col-1" data-label="ID">1</div>
-                                <div class="col col-2" data-label="Име Фамилия">Божидар Йорданов</div>
-                                <div class="col col-3" data-label="Град">Велико Търново</div>
-                                <div class="col col-4" data-label="Клас">VII</div>
-                                <div class="col col-5" data-label="Училище">ОУ "Бачо Киро"</div>
-                                <div class="col col-6 action-button-wrapper">
-                                    <button class="btn-edit-child"><i class="fa-solid fa-pen-to-square"></i></button>
-                                    <button class="btn-delete-child"><i class="fa-solid fa-trash-can"></i></button>
-                                </div>
-                            </li>
-                            <li class="table-row">
-                                <div class="col col-1" data-label="ID">2</div>
-                                <div class="col col-2" data-label="Име Фамилия">Венцислава Попова</div>
-                                <div class="col col-3" data-label="Град">Перник</div>
-                                <div class="col col-4" data-label="Клас">XII</div>
-                                <div class="col col-5" data-label="Училище">СУРИЧЕ "Д-р Петър Берон"</div>
-                                <div class="col col-6 action-button-wrapper">
-                                    <button class="btn-edit-child"><i class="fa-solid fa-pen-to-square"></i></button>
-                                    <button class="btn-delete-child"><i class="fa-solid fa-trash-can"></i></button>
-                                </div>
-                            </li>
-                        </ul>
-                        <button class="btn-add-child" aria-label="Отваря форма за добавяне на ученик">Добави ученик</button>
-                        <form action="" class="add-child-form">
-                            <div class="input-wrapper">
-                                <input type="text" id="username" name="username" class="input-text">
-                                <label for="username" class="form-label">Име Фамилия</label>
-                            </div>
-                            <div class="input-wrapper">
-                                <input type="text" name="town" id="town" class="search-box input-text" oninput="filterOptions()" autocomplete="off"/>
-                                <label class="form-label" for="town">Град</label>
-                                <span class="input-error"></span>
-                                <i class="fa-solid fa-xmark"></i>
-                                <div class="select-box">
-                                    <ul class="options">
-                                        <li data-value="1">Велико Търново</li> 
-                                        <li data-value="2">Полски Тръмбеш</li> 
-                                        <li data-value="3">Присово</li> 
-                                        <li data-value="4">Дебелец</li> 
-                                        <!--
-                                            @foreach(var town in towns)
-                                            {
-                                                <li class="option">
-                                                    <input class="radio" type="radio" id="@town" name="town" value="@town">
-                                                    <label for="@town">@town</label>
-                                                </li>
-                                            }
-                                        -->
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="input-wrapper">
-                                <input type="text" id="username" name="username" class="input-text">
-                                <label for="username" class="form-label">Клас</label>
-                            </div>
-                            <div class="input-wrapper">
-                                <input class="btn-submit" type="submit" value="Запази">
-                            </div>
-                            
-                        </form>
-                    </div>
-                </div>
-                <div class="alert alert-success alert-dismissible" role="alert">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    Профилът Ви беше актуализиран успешно!
-                </div>
+                 </div>
             </div>
         </section>
 

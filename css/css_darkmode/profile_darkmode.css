@@ -1,14 +1,3 @@
-:root {
-    --dark-bg: #121212;
-    --primary-dark: #525252;
-    --lighter-primary-dark: #6e6e6e;
-    --text-light: #ffffff;
-    --text-dark: #777777;
-    --text-hover-purple: #9434d4;
-    --text-hover-dark-purple: #2e2e2e;
-    --highlight-dark-profile: rgba(90, 39, 115, 0.7);
-  }
-
   .profile-settings-wrapper.darkmode{
     color: var(--text-light);
   }

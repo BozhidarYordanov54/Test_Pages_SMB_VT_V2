@@ -30,18 +30,11 @@ body.darkmode {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-  right:5px;
-  position:absolute;
+  width: 0px;
+  height: 0px;
+  
 }
  
-::-webkit-scrollbar-thumb,
-::-webkit-scrollbar-track {
-  background:#8f8f8f;
-  border-radius:5px;
-}
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
