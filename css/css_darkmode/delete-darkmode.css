@@ -9,7 +9,7 @@
 }
 
 .delete-child-confirm.darkmode .card-delete {
-    background: #2c2c2cc9; /* Darker card background */
+    background: #2c2c2c; /* Darker card background */
     color: #ffffff; /* Lighter text color */
 }
 
@@ -26,7 +26,7 @@
 }
 
 .delete-child-confirm.darkmode .danger-sign {
-    color: #ff4d4d; /* Lighter color for the danger sign */
+    color: #e73030; /* Lighter color for the danger sign */
     background: #4d4d4d; /* Darker background for the danger sign */
 }
 

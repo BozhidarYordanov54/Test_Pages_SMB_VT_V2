@@ -32,7 +32,8 @@ function toggleDarkMode(isDarkMode) {
         '.contacts-content-wrapper',
         '.main-table-wrapper',
         '.profile-settings-wrapper',
-        '.delete-child-confirm'
+        '.delete-child-confirm',
+        '.add-child-wrapper'
     ];
 
     selectors.forEach(selector => {
