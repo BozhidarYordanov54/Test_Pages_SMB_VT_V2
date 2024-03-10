@@ -13,9 +13,8 @@
 
     <link rel="stylesheet" type="text/css" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/css_darkmode/footer_darkmode.css">
-    
-    <link rel="stylesheet" type="text/css" href="css/main-layout.css">
-    <link rel="stylesheet" type="text/css" href="css/css_darkmode/main-layout_darkmode.css">
+
+    <link rel="stylesheet" href="css/info_page.css">
 
     <script src="js_logic/flickity.js"></script>
     <script src="https://kit.fontawesome.com/6592283e01.js" crossorigin="anonymous"></script>
@@ -38,7 +37,7 @@
                             <label class="menu-label" for="menu-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>Информация<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M182.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128z"/></svg></label>
                             <input type="checkbox" id="menu-toggle"/>
                             <div class="dropdown-content">
-                                <a href="competitions.html">Състезания</a>
+                                <a href="#">Състезания</a>
                                 <a href="#">Изпити</a>
                                 <a href="#">Често задавани въпроси</a>
                             </div>
@@ -75,7 +74,7 @@
             </nav>
         </header>
 
-        <main class="main-content-wrapper">
+        <main class="info-content-wrapper">
             <div class="wave-wrapper">
                 <svg viewBox="0 0 500 200">
                     <path d="M 0 50 C 150 150 300 0 500 80 L 500 0 L 0 0" class="path-one"></path>
@@ -83,79 +82,45 @@
                     <path d="M 0 50 C 215 150 250 0 500 100 L 500 0 L 0 0" class="path-three"></path>
                 </svg>
             </div>
-            <div class="carousel-wrapper">
-                <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true, "autoPlay": true }'>
-                    <div class="gallery-cell"></div>
-                    <div class="gallery-cell"></div>
-                    <div class="gallery-cell"></div>
-                    <div class="gallery-cell"></div>
-                    <div class="gallery-cell"></div>
-                </div>
-            </div>
-            <section class="services-wrapper">
-                <div class="services-card-list">
-                    <div class="service-wrapper">
-                        <div class="service-card one">
-                            <h3 class="service-header"><i class="fa-solid fa-flag-checkered"></i>Състезания</h3>
-                            <p class="service-context">Състезавай се с най-добрите в областта.</p>
-                            <a class="service-link" href="#">Състезания</a>
-                        </div>
-                    </div>
-                    <div class="service-wrapper">
-                        <div class="service-card two">
-                            <h3 class="service-header"><i class="fa-solid fa-graduation-cap"></i>Изпити</h3>
-                            <p class="service-context">Подготви се за изпити и се докажи пред учителите си.</p>
-                            <a class="service-link" href="#">Изпити</a>
-                        </div>
-                    </div>
-                    <div class="service-wrapper">
-                        <div class="service-card three">
-                            <h3 class="service-header"><i class="fa-solid fa-book"></i>Учебни материали</h3>
-                            <p class="service-context">Изтегли учебни материали и се подготви за изпитите.</p>
-                            <a class="service-link" href="#">Материали</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <section class="upcoming-events">
-                <h2 class="upcoming-events-header">Предстоящи събития</h2>
+                <h2 class="upcoming-events-header">Информация за състезания</h2>
                 <div class="events-wrapper">
-                    <div class="event-card">
-                        <img src="images/website_images/images_lightmode/exam_one.jpg" alt="Изпит">
-                        <div class="event-card-context">
-                            <h3 class="event-name">Пробен изпит по математика</h3>
-                            <p class="event-date">Дата: 16.03.2024</p>
-                            <p class="event-place">Място: ПМГ - Велико Търново</p>
-                            <a class="event-link" href="#">Виж повече</a>
-                        </div>
-                    </div>
-                    <div class="event-card">
-                        <img src="images/website_images/images_lightmode/christmas_math_competition_one.jpg" alt="">
-                        <div class="event-card-context">
-                            <h3 class="event-name">Коледно математическо състезание</h3>
-                            <p class="event-date">Дата: 13.04.2024</p>
-                            <p class="event-place">Място: ПМГ - Велико Търново</p>
-                            <a class="event-link" href="#">Виж повече</a>
-                        </div>
-                    </div>
-                    <div class="event-card">
+                    <div class="info-card" >
                         <img src="images/website_images/images_lightmode/easter_math_competition_one.jpg" alt="">
-                        <div class="event-card-context">
+                        <div class="info-card-context">
                             <h3 class="event-name">Великденско математическо състезание</h3>
-                            <p class="event-date">Дата: 27.04.2024</p>
-                            <p class="event-place">Място: ПМГ - Велико Търново</p>
-                            <a class="event-link" href="#">Виж повече</a>
+                            <p class="event-description" style="display: none;">Великденското математическо състезание е предназначено за ученици от първи до седми клас. Участниците от първи и втори клас имат на разположение 90 минути, докато за трети до седми клас времето за работа е увеличено до 120 минути. Състезанието включва общо 15 задачи с избор на отговор. Всеки въпрос предлага четири възможни отговора (маркирани с а), б), в) и г)). Първите три отговора са конкретни стойности, докато четвъртият вариант е \"друг отговор\". \"Друг отговор\" (отг. г) се счита за правилен единствено при правилно записано числово решение. Вярните отговори се маркират с кръгче. Оценяването на задачите се извършва по следния начин: задачи от 1 до 3 - по 1 точка, от 4 до 6 - по 3 точки, от 7 до 9 - по 5 точки, от 10 до 12 - по 7 точки,  и от 13 до 15 - по 9 точки. Специално за учениците от седми клас, задачите са в модифициран формат, сходен с изпита след седми клас. Всяка от задачите от 1 до 18 има само един верен отговор от четири възможни. Задачи 19 и 20 изискват запис само на отговорите, докато задачите 21, 22 и 23 изискват подробно решение. Класирането на участниците се извършва, като се вземат предвид следните критерии: при равен брой точки, предимство има ученикът, който е работил по-кратко време; при равен брой точки и време, се присъждат еднакви места, като броят на призовите места остава три. Наградите за първите три места са индивидуални и се връчват по училищата.</p>
                         </div>
                     </div>
-                    <div class="event-card">
-                        <img src="images/website_images/images_lightmode/exam_one.jpg" alt="">
-                        <div class="event-card-context">
-                            <h3 class="event-name">Пробен изпит по математика</h3>
-                            <p class="event-date">Дата: 11.05.2024</p>
-                            <p class="event-place">Място: ПМГ - Велико Търново</p>
-                            <a class="event-link" href="#">Виж повече</a>
+                    <div class="info-card" >
+                        <img src="images/website_images/images_lightmode/hitar-petar.jpg" alt="">
+                        <div class="info-card-context">
+                            <h3 class="event-name">Математическо състезание "Хитър Петър"</h3>
+                            <p class="event-description" style="display: none;">This is the full description of the event.</p>
                         </div>
-                    </div>  
+                    </div>
+                    <div class="info-card" >
+                        <img src="images/website_images/images_lightmode/ivan_salabashev.jpg" alt="">
+                        <div class="info-card-context">
+                            <h3 class="event-name">Математичеки турнир "Иван Салбашев"</h3>
+                            <p class="event-description" style="display: none;">Математически турнир \"Иван Салабашев\", е предназначен за ученици от първи до седми клас, е важно събитие, което цели да развие математическите умения на младите ученици. Събитието предлага разнообразие от задачи, съобразени с възрастта и класа на участниците. За първокласниците времето за работа е 60 минути, като им се предоставят 10 задачи. За учениците от II до IX клас има 15 задачи, които трябва да бъдат решени за 120 минути. От X-ти до XII-ти клас времето за работа е също 120 минути, но със само 3 задачи, които са изцяло адаптирани към по-напредналото техническо ниво на тези ученици. Иван Салабашев е възможност за младите математици да изразят своите умения и да се състезават в приятелска и стимулираща среда.</p>
+                        </div>
+                    </div>
+                    <div class="info-card" >
+                        <img src="images/website_images/images_lightmode/30x30.jpg" alt="">
+                        <div class="info-card-context">
+                            <h3 class="event-name">Математическо състезание "30 задачи на 30 езика"</h3>
+                            <p class="event-description" style="display: none;">Отборите са от 3 – 6 души, които решават 30 задачи с избираем отговор в рамките на 2,5 астр. часа (150 минути), без да имат право да ползват техника и/или литература. Всяка задача е на различен език. Отборът трябва да се ориентира в условието ѝ и да избере един от петте дадени отговора, от които точно един е верен. Отговорите сами по себе си също могат да носят информация за смисъла на задачата. За верен отговор се печелят по 5 точки; за непопълнен по 1 точка. Отборът разполага и с таблица на участващите езици, написани всеки на собствения му език. Трябва да се определи кой номер задача на какъв език е и как се казва този език на български. В тази част от бланката се печели по 1 точка за всеки верен отговор. Състезанието се провежда в 3 възрастови категории: 6-7 клас, 8-9 клас, 10-12 клас, а при заявка (както в последните издания) - и „13-99 клас“. Участниците сами формират отборите си в съответствие с изискванията за възрастовите групи.</p>
+                        </div>
+                    </div>
+                    <div class="info-card" >
+                        <img src="images/website_images/images_lightmode/christmas_math_competition_one.jpg" alt="">
+                        <div class="info-card-context">
+                            <h3 class="event-name">Коледно математическо състезание</h3>
+                            <p class="event-description" style="display: none;">Коледното математическо състезание е предназначено за ученици от първи до седми клас. Времето за работа варира в зависимост от класовата степен: учениците от първи и втори клас имат на разположение 90 минути, докато за трети до седми клас това време е увеличено до 120 минути. Състезанието включва 9 задачи с избор на отговор и една задача, която изисква подробно решение. Задачите с избираем отговор имат по един правилен отговор от четири възможни варианта (маркирани с а), б), в) и г)). Всеки правилен отговор е отбелязан с кръгче. Последният отговор (отг. г) е приложим само в случай на правилно записано числово решение. Задачите се оценяват по следния начин: от 1 до 3 - с по 3 точки, от 4 до 6 - с по 5 точки, от 7 до 9 - с по 7 точки. Десетата задача изисква подробно решение и е оценена с 15 точки. За седмокласниците, задачите са в модифициран формат, сходен с изпита след седми клас. Всяка задача от 1 до 18 има само един верен отговор от четири възможни, маркирани с а), б), в) и г)). Задачи от 19 до 20 изискват само запис на отговора, докато от 21 до 23 се изисква подробно решение. Оценките за тези задачи са както следва: от 1 до 3 - по 1 точка, от 4 до 10 - по 2 точки, от 11 до 18 - по 3 точки, задачи 19 и 20 - по 7 точки, задачи 21, 22 и 23 - по 15 точки. Максималният брой точки, които може да се получат, е 100. Неправилни решения или липса на отговор се оценяват с 0 точки. За класирането се използват следните критерии: при равен брой точки, предимство има ученикът, който е работил по-кратко време; при равен брой точки и време, се дават еднакви места, като общият брой на призовите места остава три. Наградите са индивидуални за първите три места и се връчват по училища.",</p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 
@@ -218,5 +183,6 @@
     <script src="js_design/uncheck.js"></script>
     <script src="js_design/rotateArrow.js"></script>
     <script src="js_design/swipeToOpenNav.js"></script>
+    <script src="js_design/expandCompetitionInfo.js"></script>
 </body>
 </html>
