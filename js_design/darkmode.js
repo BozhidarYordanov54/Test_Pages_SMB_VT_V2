@@ -33,7 +33,8 @@ function toggleDarkMode(isDarkMode) {
         '.main-table-wrapper',
         '.profile-settings-wrapper',
         '.delete-child-confirm',
-        '.add-child-wrapper'
+        '.add-child-wrapper',
+        '.info-content-wrapper'
     ];
 
     selectors.forEach(selector => {
