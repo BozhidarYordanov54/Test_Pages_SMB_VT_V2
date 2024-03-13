@@ -1,0 +1,70 @@
+.admin-page-nav-header{
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.5em;
+  
+}
+
+.header-info{
+  display: none;
+}
+
+.nav-wrapper.expanded .header-info{
+  display: block;
+  
+}
+
+.nav-wrapper.expanded .dropdown {
+    > label {
+      cursor: pointer;
+    }
+    
+    #menu-toggle-article,
+    #menu-toggle-competitions {
+      display: none;
+    }
+    
+    .menu {
+      position: absolute;
+      pointer-events: none;
+      background-color: #222;
+    }
+    
+    #menu-toggle-article:checked + .dropdown-content,
+    #menu-toggle-competitions:checked + .dropdown-content{
+      opacity: 1;
+      font-size: 16px;
+      margin-top: 0.5em;
+      height: fit-content;
+      overflow: visible;
+      pointer-events: all;
+    }
+    
+    .arrow-down.rotate {
+      transform-origin: center;
+      transform: rotate(-90deg);
+      top: 10px;
+    }
+  }
+
+  .messages{
+    position: relative;
+  }
+
+  .messages-count{
+    position: absolute;
+    font-size: 10px;
+    background-color: tomato;
+    color: #ffffff;
+    border-radius: 50%;
+    padding-top: 0.5em;
+    z-index: 1;
+    left: -0.3em;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    top: 0
+  }
