@@ -1,0 +1,37 @@
+.add-child-wrapper.darkmode {
+    background: linear-gradient(
+        -45deg,
+        #1a1a1a 0%, /* Darker background */
+        #1a1a1a 50%,
+        #222222 50%, /* Slightly lighter background */
+        #222222 100%
+    );
+}
+
+.add-child-wrapper.darkmode .card-add {
+    background: #2c2c2cc9; /* Darker card background */
+    color: #ffffff; /* Lighter text color */
+}
+
+.add-child-wrapper.darkmode .card-body {
+    color: #ffffff; /* Lighter text color */
+}
+
+.add-child-wrapper.darkmode .form-label {
+    color: var(--text-light);
+    transition: all 0.2s ease-in-out;
+}
+
+.add-child-wrapper.darkmode .input-text{
+    color: var(--text-light);
+    border-bottom: 2px solid var(--text-light);
+}
+
+.add-child-wrapper.darkmode .input-text:focus{
+    border-bottom: 2px solid var(--text-hover-purple);
+}
+
+.add-child-wrapper.darkmode .btn-submit{
+  background: var(--text-light);
+  color: var(--text-hover-dark-purple);
+}

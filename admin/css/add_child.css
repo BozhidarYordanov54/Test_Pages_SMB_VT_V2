@@ -1,0 +1,74 @@
+.footer-wrap{
+    margin-top: 0;
+}
+
+.add-child-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background: linear-gradient(
+        -45deg,
+        #bae6fd 0%,
+        #bae6fd 50%,
+        #e0f2fe 50%,
+        #e0f2fe 100%
+    );
+    padding: 1em;
+}
+
+.card-body{
+    text-align: center;
+}
+
+.add-sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e11d48;
+    background: #ffe4e6;
+    font-size: 34px;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5em;
+    transition: all 0.2s ease-in-out;
+}
+
+.add-child-form-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.card-add{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    background: #ffffffdc;
+    padding: 1.5em;
+    border-radius: 1em;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.select-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.select-wrapper .input-wrapper {
+    width: 100%; 
+}
+
+.input-text.select {
+    max-width: 100%; 
+}
+
+

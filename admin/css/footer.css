@@ -1,0 +1,155 @@
+:root{
+    --footer-bg: #f3f3f3;
+    --footer-border: #b3b3b3;
+    --footer-text: #868686;
+    --footer-text-header: #575757;
+    --footer-text-hover: #6eafd8;
+    --footer-text-hover-after: rgba(3, 72, 119, 0.7);
+}
+
+.footer-wrap{
+    width: 100%;
+    margin-top: 3em;
+    height: auto;
+    background: var(--footer-bg);
+    border-top: 1px solid var(--footer-border);
+}
+
+.footer-content-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 2em 1em;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.link-card-wrapper{
+    display: flex;
+    gap: 5em;
+}
+
+.card p{
+    color: var(--footer-text-header);
+    font-size: 1em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.card p img{
+    display: flex;
+    align-items: center;
+    width: 60px;
+    margin-right: 0.5em;
+}
+
+.card ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+}
+
+.card ul li a{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--footer-text);
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.2s linear;
+}
+
+.card ul li a:hover{
+    color: var(--footer-text-hover);
+}
+
+.card ul li a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    background: var(--footer-text-hover-after);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .card ul li a:hover:after { 
+    width: 100%;
+    left: 0; 
+  }
+
+.social-media-container{
+    display: flex;
+    gap: 1em;
+    margin-top: 0.5em;
+}
+
+.fa-facebook-f,
+.fa-envelope{
+    font-size: 1.5em;
+    color: var(--footer-text);
+    transition: all 0.2s linear;
+}
+
+.fa-facebook-f:hover,
+.fa-envelope:hover{
+    font-size: 1.5em;
+    color: var(--footer-text-hover);
+}
+
+.copyright-info{
+    display: flex;
+    justify-content: space-around;
+    color: var(--footer-text);
+    text-align: center;
+    padding: 1em 0;
+    border-top: 1px solid var(--footer-border);
+}
+
+.site-copyright{
+    font-weight: bold;
+}
+
+.vl{
+    border: 1px solid var(--footer-border);
+    position: relative;
+}
+
+.website-creator a i{
+    text-decoration: none;
+    color: var(--footer-text);
+    margin-left: 0.2em;
+    transition: color 0.2s linear;
+}
+
+.website-creator a i:hover{
+    color: var(--footer-text-hover);
+}
+
+@media(max-width: 768px){
+    
+    .footer-content-wrapper{
+        flex-direction: column;
+        gap: 1em;
+        margin-left: 0.5em;
+    }
+    
+    .link-card-wrapper{
+        margin-top: 2em;
+        flex-direction: column;
+        gap: 1em;
+        
+    }
+
+    .copyright-info{
+        flex-direction: column;
+        gap: 1em;
+    }
+}

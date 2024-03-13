@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection{
+  background: var(--primary-bg-color);
+  color: var(--text-color);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+    background-color: #ffffff;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+body.darkmode {
+    background-color: var(--dark-bg);
+    transition: background-color 0.2s ease-in-out;
+  }
+
+.site{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  
+}
+ 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  -webkit-text-fill-color: #000000;
+}
+
+.register-form-wrapper.darkmode input:-webkit-autofill,
+.register-form-wrapper.darkmode input:-webkit-autofill:hover,
+.register-form-wrapper.darkmode input:-webkit-autofill:focus,
+.register-form-wrapper.darkmode textarea:-webkit-autofill,
+.register-form-wrapper.darkmode textarea:-webkit-autofill:hover,
+.register-form-wrapper.darkmode textarea:-webkit-autofill:focus,
+.register-form-wrapper.darkmode select:-webkit-autofill,
+.register-form-wrapper.darkmode select:-webkit-autofill:hover,
+.register-form-wrapper.darkmode select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #525252 inset !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+.login-form-wrapper.darkmode input:-webkit-autofill,
+.login-form-wrapper.darkmode input:-webkit-autofill:hover,
+.login-form-wrapper.darkmode input:-webkit-autofill:focus,
+.login-form-wrapper.darkmode textarea:-webkit-autofill,
+.login-form-wrapper.darkmode textarea:-webkit-autofill:hover,
+.login-form-wrapper.darkmode textarea:-webkit-autofill:focus,
+.login-form-wrapper.darkmode select:-webkit-autofill,
+.login-form-wrapper.darkmode select:-webkit-autofill:hover,
+.login-form-wrapper.darkmode select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #525252 inset !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+.profile-settings-wrapper.darkmode input:-webkit-autofill,
+.profile-settings-wrapper.darkmode input:-webkit-autofill:hover,
+.profile-settings-wrapper.darkmode input:-webkit-autofill:focus,
+.profile-settings-wrapper.darkmode textarea:-webkit-autofill,
+.profile-settings-wrapper.darkmode textarea:-webkit-autofill:hover,
+.profile-settings-wrapper.darkmode textarea:-webkit-autofill:focus,
+.profile-settings-wrapper.darkmode select:-webkit-autofill,
+.profile-settings-wrapper.darkmode select:-webkit-autofill:hover,
+.profile-settings-wrapper.darkmode select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px var(--dark-bg) inset !important;
+  -webkit-text-fill-color: #ffffff;
+}

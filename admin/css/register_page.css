@@ -1,0 +1,248 @@
+:root {
+    --primary-bg-color: #6eafd8;
+    --secondary-bg-color: #1b2a2b;
+    --text-color: #ffffff;
+    --text-color-black: #000000;
+    --highlight-color: #535353;
+}
+
+.register-header{
+    margin-top: 1.5em;
+}
+
+.register-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 2em;
+    background: transparent;
+}
+
+.form,
+.old-user {
+    height: 40em;
+}
+
+.old-user {
+    display: flex;
+    flex-direction: column;
+    flex: 1 40%;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    background: var(--highlight-color);
+    color: var(--text-color);
+    padding: 2em;
+    border-top-right-radius: 2em;
+    transition: all 0.2s linear;
+}
+
+.old-user .old-user-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 2em;
+    border-top-right-radius: 2em;
+    min-height: 40em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.form {
+    flex: 1 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid var(--primary-bg-color);
+    border-bottom-left-radius: 2em;
+    background-color: #ffffff;
+    padding: 2em;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.form-header a {
+    text-decoration: none;
+    color: var(--primary-bg-color);
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+}
+
+.form-header a:hover {
+    color: var(--highlight-color);
+}
+
+.additional-fields{
+    position: relative;
+    top: -20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-me{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--primary-bg-color);
+    position: relative;
+    top: -25px;
+}
+
+.input-wrapper-forgotten-pass a{
+    color: var(--primary-bg-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+.btn-submit,
+.btn-register {
+    outline: none;
+    border: none;
+    height: 3em;
+    width: 60%;
+    background: var(--primary-bg-color);
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-top: 10px;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-submit{
+    margin-top: 1em !important;
+    margin-bottom: 2em;
+}
+
+.btn-submit:hover,
+.btn-register:hover {
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.btn-register{
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.more-registers-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.border{
+    width: 20em;
+    border-bottom: 2px solid var(--primary-bg-color);
+}
+
+.more-registers h3{
+    position: relative;
+    top: 13px;
+    width: max-content;
+    margin: 0 auto;
+    padding: 0 1em;
+    background: var(--text-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.login-info{
+    font-size: 16px;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.select-box {
+    position: relative;
+    display: inline-block;
+}
+.options {
+    list-style-type: none;
+    display: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    margin-top: -1.6em;
+    background-color: #f9f9f9;
+    border: 2px solid var(--primary-bg-color);
+    max-height: 200px;
+    width: 100%;
+    overflow-y: auto;
+    z-index: 1;
+}
+.options li {
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.options li:hover { 
+    background: var(--primary-bg-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.input-text.has-content .fa-eye{
+    font-size: 16px;
+}
+
+.input-error{
+    position: relative;
+    top: -1.4em;
+    margin-bottom: -0.5em;
+    color: #e23838;
+}
+
+@media(max-width: 768px) {
+    .register-form-wrapper{
+        height: 100%;
+        padding: 1em 1em;
+    }
+    
+    .card-wrapper{
+        flex-direction: column;
+        border-bottom-right-radius: 2em;
+        border-top-left-radius: 2em;
+        width: 95vw;
+    }
+
+    .old-user {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 2em;
+        
+        width: 100%;
+    }
+
+    .form {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 2em;
+        width: 100%;
+        
+    }
+
+    .btn-submit{
+        margin-top: -0.5em;
+    }
+}
