@@ -1,0 +1,126 @@
+.footer-wrap{
+    margin-top: 0;
+}
+
+.add-article-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background: linear-gradient(
+        -45deg,
+        #bae6fd 0%,
+        #bae6fd 50%,
+        #e0f2fe 50%,
+        #e0f2fe 100%
+    );
+    padding: 1em;
+}
+
+.card-body{
+    text-align: center;
+    width: 600px;
+}
+
+.add-sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e11d48;
+    background: #ffe4e6;
+    font-size: 34px;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5em;
+    transition: all 0.2s ease-in-out;
+}
+
+.add-article-form-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.card-add{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    background: #ffffffdc;
+    padding: 1.5em;
+    border-radius: 1em;
+    transition: all 0.2s ease-in-out;
+}
+
+.select-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.select-wrapper .input-wrapper {
+    width: 100%; 
+}
+
+.input-text.select {
+    max-width: 100%; 
+}
+
+.input-textarea{
+    position: relative;
+    min-height: 58px;
+    top: -1em;
+    width: 100%;
+    border: none;
+    border-radius: 0em;
+    padding: 5px;
+    font-size: 1rem;
+    border: 2px solid #6eafd8;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+    resize: none;
+    max-height: 25rem;
+    min-height: 25rem;
+}
+
+.form-label-textarea{
+    position: relative;
+    top: -0.2em;
+    left: 1em;
+    color: rgba(3, 72, 119, 0.9);
+    font-size: 1rem;
+    padding: 0em 0.5em;
+    background: white;
+    font-weight: bold;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .admin-info-wrapper{
+        width: 100%;
+    }
+    .card-body{
+        width: 100%;
+    }
+    
+    .card-add{
+        padding: 1em;
+        width: 100%;
+    }
+
+    .input-textarea{
+        min-height: 20rem;
+    }
+
+    .add-article-form-wrapper{
+        width: 100%;
+        padding: 1em;
+    }
+}
