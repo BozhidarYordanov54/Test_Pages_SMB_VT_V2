@@ -1,7 +1,6 @@
 (() => {
     const carouselWrapper = document.querySelector('.carousel-wrapper');
     const navWrapper = document.querySelector('.nav-wrapper');
-    const toggle = document.getElementById("menu-toggle");
     let xDown = null;
     let yDown = null;
 
@@ -28,7 +27,6 @@
             if (xDiff > 0) {
                 setNavWrapperTransform("-100%");
                 navWrapper.classList.remove('expanded');
-                toggle.checked = false;
             } else {
                 setNavWrapperTransform("0%");
             }
