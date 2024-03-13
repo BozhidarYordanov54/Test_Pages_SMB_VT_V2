@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   var menuToggleArticle = document.getElementById("menu-toggle-article");
   var menuToggleCompetitions = document.getElementById("menu-toggle-competitions");
-  var menuToggle = document.getElementById("menu-toggle");
   var arrowDowns = document.querySelectorAll(".arrow-down");
 
   if (menuToggleArticle) {
@@ -29,9 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-});
 
-document.addEventListener("DOMContentLoaded", function () {
   var menuToggle = document.getElementById("menu-toggle");
   var arrowDown = document.querySelector(".arrow-down");
 
