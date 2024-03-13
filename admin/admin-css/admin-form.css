@@ -102,6 +102,14 @@
     transition: all 0.2s ease-in-out;
 }
 
+.form-label.date{
+    top: -5em;
+}
+
+.input-text.date:focus + .form-label.date{
+    transform: none;
+}
+
 @media (max-width: 768px) {
     .admin-info-wrapper{
         width: 100%;

@@ -66,7 +66,7 @@
                             <div class="dropdown-content">
                                 <a href="#">Всички състезания</a>
                                 <a href="#">Записани за състезание</a>
-                                <a href="add-competition.html">Публикуване на състезание</a>
+                                <a href="#">Публикуване на състезание</a>
                             </div>
                         </div>
                     </li>
@@ -127,17 +127,27 @@
                             <input asp-for="@Model.Name" type="text" id="articleName" class="input-text">
                             <label asp-for="@Model.Name" class="form-label">Заглавие</label>
                         </div>
-                        <div class="textarea-wrapper">
-                            <label for="message" class="form-label-textarea">Описание</label>
-                            <textarea name="message" id="message" class="input-textarea" required></textarea>
+                        <div class="input-wrapper">
+                            <input type="date" id="competition-date" class="input-text date">
+                            <label class="form-label date" for="competition-date">Дата на провеждане</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="date" id="competition-date" class="input-text date">
+                            <label class="form-label date" for="competition-date">Крайна дата за записване</label>
                         </div>
                         <div class="select-wrapper">
                             <div class="input-wrapper">
                                 <select asp-for="@Model.SchoolID" class="input-text select one" id="school">
-                                    <option value="">Изберете снимка</option>
+                                    <option value="">Изберете състезание</option>
                                 </select>
                             </div>
-                            
+                            <div class="select-wrapper">
+                                <div class="input-wrapper">
+                                    <select asp-for="@Model.SchoolID" class="input-text select two" id="photo">
+                                        <option value="">Изберете снимка</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                         <div class="input-wrapper">
                             <input class="btn-submit" type="submit" value="Добави">
