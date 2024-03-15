@@ -59,16 +59,13 @@
 
 .select-wrapper {
     display: flex;
+    flex: 1;
     flex-wrap: wrap;
     gap: 2em;
 }
 
 .select-wrapper .input-wrapper {
     width: 100%; 
-}
-
-.input-text.select {
-    max-width: 100%; 
 }
 
 .input-textarea{
