@@ -8,12 +8,16 @@
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" href="../css/typography.css">
     <link rel="stylesheet" type="text/css" href="../css/nav.css">
+    <link rel="stylesheet" type="text/css" href="../css/site.css">
 
     <link rel="stylesheet" type="text/css" href="admin-css/admin-nav.css">
     <link rel="stylesheet" href="admin-css/admin-layout.css">
 
-    <link rel="stylesheet" href="admin-css/admin-form.css">
-    <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" href="admin-css/table-layout.css">
+    <link rel="stylesheet" href="admin-css/users.css">
+
+    <link rel="stylesheet" href="admin-css/signed-up.css">
+
 
     <link rel="icon" type="image/x-icon" href="../images/website_images/images_lightmode/Logo-White.png">
 
@@ -46,7 +50,7 @@
                             <input type="checkbox" id="menu-toggle-article" />
                             <div class="dropdown-content">
                                 <a href="#">Всички статии</a>
-                                <a href="#">Добавяне</a>
+                                <a href="add-article.html">Добавяне</a>
                             </div>
                         </div>
                     </li>
@@ -70,7 +74,7 @@
                             </div>
                         </div>
                     </li>
-                    <li><a href="users.html"><svg xmlns="http://www.w3.org/2000/svg"
+                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512">
                                 <path
                                     d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
@@ -112,33 +116,47 @@
         </header>
 
         <main class="admin-info-wrapper">
-            <div class="add-article-form-wrapper">
-                <div class="card-add">
-                    <div class="card-body">
-                        <p class="add-sign"><i class="fa-solid fa-plus"></i></p>
-                        <h2 class="add-header">Добавяне на статия</h2>
+            <div class="admin-container-wrapper">
+                <div class="container">
+                    <div class="container-header-wrapper">
+                        <h2 class="container-header">Записани за състезание</h2>
+                        <div class="sorting-options-wrapper">
+                            <form action="" class="search-bar">
+                                <div class="input-wrapper">
+                                    <input type="text" id="search" name="search" pattern=".*\S.*" class="input-text search" required>
+                                    <label for="search" class="form-label">Търси потребител...</label>
+                                    <button class="search-btn" type="submit">
+                                        <span class="fa-solid fa-magnifying-glass"></span>
+                                    </button>
+                                </div>
+                            </form>
+                            <select name="competition" id="competition" class="competition-select">
+                                <option value="all">Всички състезания</option>
+                                <option value="math">Математически турнир "Иван Салабашев"</option>
+                                <option value="physics">Физически турнир "Георги Наджаков"</option>
+                                <option value="chemistry">Химически турнир "Димитър Хадживасилев"</option>
+                            </select>
+                        </div>
+                        <button class="btn-download">Изтегляне на данни за състезание</button>
                     </div>
-                    <form asp-action="Add" method="post" class="add-article-form form">
-                        <div class="input-wrapper">
-                            <input asp-for="@Model.Name" type="text" id="articleName" class="input-text">
-                            <label asp-for="@Model.Name" class="form-label">Заглавие</label>
-                        </div>
-                        <div class="textarea-wrapper">
-                            <label for="message" class="form-label-textarea">Описание</label>
-                            <textarea name="message" id="message" class="input-textarea" required></textarea>
-                        </div>
-                        <div class="select-wrapper">
-                            <div class="input-wrapper">
-                                <select asp-for="@Model.SchoolID" class="input-text select one" id="school">
-                                    <option value="">Изберете снимка</option>
-                                </select>
-                            </div>
-                            
-                        </div>
-                        <div class="input-wrapper">
-                            <input class="btn-submit" type="submit" value="Добави">
-                        </div>
-                    </form>
+                    <ul class="responsive-table">
+                        <li class="table-header">
+                            <div class="col col-1">Номер</div>
+                            <div class="col col-2">Име на родител</div>
+                            <div class="col col-3">Име</div>
+                            <div class="col col-4">Имейл</div>
+                            <div class="col col-5">Тел. номер</div>
+                            <div class="col col-6">Състезание</div>
+                        </li>
+                        <li class="table-row">
+                            <div class="col col-1" data-label="ID">1</div>
+                            <div class="col col-2" data-label="Име на родител">Иван Иванов</div>
+                            <div class="col col-3" data-label="Име">Иван Иванов</div>
+                            <div class="col col-4" data-label="Имейл">ivan.ivanov@gmail.com</div>
+                            <div class="col col-5" data-label="Тел. номер">0885155667</div>
+                            <div class="col col-6" data-label="Състезание">Математически турнир "Иван Салабашев"</div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </main>
@@ -151,6 +169,7 @@
     <script src="../js_design/expandNavigation.js"></script>
     <script src="../js_design/rotateArrow.js"></script>
     <script src="../js_design/swipeToOpenNav.js"></script>
+    <script src="js/buttonDisplay.js"></script>
 </body>
 
 </html>

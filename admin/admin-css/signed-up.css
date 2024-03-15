@@ -1,0 +1,57 @@
+.container-header-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+
+}
+
+.sorting-options-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.competition-select{
+    position: relative;
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #6eafd8;
+    width: 400px;
+    height: 30px;
+    top: 1.85em;
+}
+
+.btn-download{
+    display: none;
+    position: relative;
+    outline: none;
+    border: none;
+    background: #6ed880;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 1em;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+
+@media(max-width: 915px){
+    .competition-select{
+        width: 500px;
+        margin: 0 auto;
+        top: 0;
+        margin-bottom: 1em;
+    }
+}
+@media(max-width: 768px){
+    .competition-select{
+        width: 330px;
+        margin: 0 auto;
+        top: 0;
+        margin-bottom: 1em;
+    }
+}
