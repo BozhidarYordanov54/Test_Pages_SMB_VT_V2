@@ -1,0 +1,125 @@
+:root {
+    --wave-color-one: #6eafd8;
+    --wave-color-two: #034877;
+    --wave-color-three: #6eafd8;
+  
+    --joined-card-bg: rgba(110, 175, 216, 0.8);
+    --joined-card-bg-hover: rgba(3, 72, 119, 0.8);
+  
+    --white-background: #ffffff;
+    --text-color-main: #ffffff;
+    --text-color-hover: #6eafd8;
+  }
+
+.wave-wrapper {
+    position: absolute;
+    top: -0.5em;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .wave-wrapper svg .path-one {
+    fill: var(--wave-color-one);
+    opacity: 1;
+  }
+  
+  .wave-wrapper svg .path-two {
+    fill: var(--wave-color-two);
+    opacity: 0.8;
+  }
+  
+  .wave-wrapper svg .path-three {
+    fill: var(--wave-color-three);
+    opacity: 0.5;
+  }
+
+  .joined-event-content-wrapper {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .joined-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em;
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    color: var(--text-color-main);
+    background: var(--joined-card-bg);
+    transition: all 0.2s linear;
+    width: 30rem;
+  }
+
+  .joined-card-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+  
+  .joined-wrapper:hover {
+    background-color: var(--joined-card-bg-hover);
+  }
+  
+  .joined-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+  }
+  
+  .joined-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .joined-header i{
+    margin-right: 0.5em;
+  }
+  
+  .joined-context {
+    font-size: 1.1em;
+    text-align: center;
+  }
+  
+  .joined-link{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    background: transparent;
+    text-align: center;
+    padding: 0.5em;
+    margin-top: 1em;
+    border-radius: 10px 0 10px 0;
+    background: var(--white-background);
+    color: var(--text-color-hover);
+    transition: opacity, background 0.2s linear;
+  }
+
+  .joined-card .context{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    transition: all 0.2s linear;
+  }
+
+  @media (max-width: 768px) {
+    .joined-event-content-wrapper{
+        padding: 1em;
+    }
+    
+    .joined-wrapper {
+        padding: 1em;
+        width: 100%;
+    }
+  }
