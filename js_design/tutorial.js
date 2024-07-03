@@ -112,7 +112,11 @@ function showNavFunctions() {
 
                         animationOverlayWrapper.style = 'display: none;';
                         siteHeader.style = 'filter: none; -webkit-transition : -webkit-filter 500ms linear; z-index: 6;';
-                        document.getElementsByTagName('main') = 'filter: none; -webkit-transition : -webkit-filter 500ms linear; z-index: 6;';
+                        var mainElement = document.querySelector('main');
+
+                        if (mainElement) {
+                            mainElement.style = 'filter: none; -webkit-transition : -webkit-filter 500ms linear;';
+                        }
                     }, 6000);
                 }
             }
