@@ -17,11 +17,11 @@ if (!hasUserCompletedTutorial) {
     
     setTimeout(showNavFunctions, 12000); // Adjust time based on actual needs -> DEFAULT VALUE FOR TIMEOUT IS 12_000
     
-    //setTimeout(() => {enableScroll()}, 18000); // Adjust time based on actual needs
+    setTimeout(() => {enableScroll()}, 18000); // Adjust time based on actual needs
 }
 
 function greetUser() {
-    textElement.innerHTML = '<img class="tutorial-logo" src="/images/website_images/images_lightmode/Logo-White.png"><p>Здравейте, и добре дошли в новия сайт на СМБ-Велико Търново!</p>';
+    textElement.innerHTML = '<img class="tutorial-logo" src="../images/website_images/images_lightmode/Logo-White.png"><p>Здравейте, и добре дошли в новия сайт на СМБ-Велико Търново!</p>';
     textElement.style = 'transform: translateY(0px); transition: all 1s;';
 
     setTimeout(() => {
