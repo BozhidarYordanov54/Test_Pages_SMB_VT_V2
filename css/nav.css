@@ -15,7 +15,7 @@
   white-space: nowrap;
   padding: 0 2em;
   position: fixed;
-  min-height: 98%;
+  height: 98vh;
   border-radius: 0.5em;
   margin-left: 0.5em;
   margin-top: 0.5em;
