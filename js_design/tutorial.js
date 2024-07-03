@@ -21,7 +21,7 @@ if (!hasUserCompletedTutorial) {
 }
 
 function greetUser() {
-    textElement.innerHTML = '<img class="tutorial-logo" src="../images/website_images/images_lightmode/Logo-White.png"><p>Здравейте, и добре дошли в новия сайт на СМБ-Велико Търново!</p>';
+    textElement.innerHTML = '<img class="tutorial-logo" src="images/website_images/images_lightmode/Logo-White.png"><p>Здравейте, и добре дошли в новия сайт на СМБ-Велико Търново!</p>';
     textElement.style = 'transform: translateY(0px); transition: all 1s;';
 
     setTimeout(() => {
