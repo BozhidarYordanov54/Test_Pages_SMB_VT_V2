@@ -27,6 +27,7 @@ main,
 .hand-wrapper i{
     position: absolute;
     font-size: 0;
+    transform: translateX(0%);
 }
 
 .text-wrapper{
@@ -47,10 +48,8 @@ main,
     width: 0px;
     height: 0px;
     position: absolute;
-    top: 6.5em;
-    left: 0.95em;
     border-radius: 10px;
-    backdrop-filter: brightness(2.2);
+    backdrop-filter: brightness(5);
     transition: all 0.5s ease-out;
 }
 
@@ -69,7 +68,7 @@ main,
         transform: translateX(0) rotate(-45deg);
     }
     50% {
-        transform: translateX(100px) rotate(-45deg);
+        transform: translateX(200px) rotate(-45deg);
     }
     100% {
         transform: translateX(0) rotate(-45deg);
@@ -92,3 +91,5 @@ main,
 .swipe-animation {
     animation: swipeHand 2s infinite;
 }
+
+
