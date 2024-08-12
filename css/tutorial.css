@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-main,
+.animation-overlay-wrapper{
+    display: none;
+}
+
+@media(max-width: 1050px)
+{
+    main,
 .site-header{
     filter: blur(10px);
-
 }
 
 .animation-overlay-wrapper{
+    display: block;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -92,4 +98,5 @@ main,
     animation: swipeHand 2s infinite;
 }
 
+}
 

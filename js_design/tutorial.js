@@ -16,27 +16,27 @@ const navWrapper = document.querySelector(".nav-wrapper");
 let isUserAction = false;
 let isMenuOpened = false;
 
-if (!hasUserCompletedTutorial) {
-  disableScroll();
+if (!hasUserCompletedTutorial && window.innerWidth < 1050) {
 
-  // Show tutorial
-  // greetUser();
+    // Disable scrolling initially to prevent user from scrolling while tutorial is running
+    disableScroll();
 
-  // // Wait for greetUser animation and delay, then show showTutorial
-  // setTimeout(showTutorial, 6000); // Adjust time based on actual needs
+    greetUser();
 
-  // Wait for showTutorial animation and delay, then show showNavFunctions
+    // Wait for greetUser animation and delay, then show showTutorial
+    setTimeout(showTutorial, 6000); 
 
-  if (window.innerWidth < 1050) {
+
+  // Wait for showTutorial animation and delay, then show showNavFunctions => ONLY FOR MOBILE
+
     setTimeout(showMobileNavFunctions, 0);
-  } else {
-    setTimeout(showDesktopNavFunctions, 0);
-  } // Adjust time based on actual needs -> DEFAULT VALUE FOR TIMEOUT IS 12_000
 
-  setTimeout(() => {
-    enableScroll();
-  }, 18000); // Adjust time based on actual needs
-}
+    setTimeout(() => {
+      enableScroll(); // Enable scrolling after tutorial is complete
+    }, 18000); // Adjust time based on actual needs
+
+    localStorage.setItem("hasUserCompletedTutorial", true);
+} 
 
 function greetUser() {
   textElement.innerHTML =
@@ -164,10 +164,7 @@ function showMobileNavFunctions() {
         }
       }
 
-      if (
-        navWrapper.style.transform.includes("-100%") &&
-        isUserAction == true
-      ) {
+      
         
       }
     }
@@ -185,40 +182,7 @@ function showMobileNavFunctions() {
   setTimeout(() => {
     textElement.style = "transform: translateY(-999px); transition: all 1s;";
   }, 16000); // Hide the second message after it has been displayed for a while
-}
 
-function showDesktopNavFunctions() {
-  siteHeaderLinks.forEach((link) => {
-    link.style = "pointer-events: none;";
-  });
-
-  textElement.innerHTML =
-    "Това са функциите на навигационното меню. За да видите менюто, може да кликнете върху него.";
-  textElement.style = "transform: translateY(0px); transition: all 1s;";
-
-  setTimeout(() => {
-    hand.style.fontSize = "2em"; // Modify font size
-    hand.style.transition = "all 0.5s"; // Set transition
-    hand.style.transitionDelay = "0.5s"; // Set transition delay
-  }, 600);
-
-  hand.style = "left: 2.3em; transition: all 1s;";
-  hand.classList.add("hand-animation");
-
-  setTimeout(() => {
-    siteHeader.style =
-      "filter: none; -webkit-transition : -webkit-filter 500ms linear; z-index: 6;";
-  }, 1000);
-
-  siteHeader.addEventListener("click", function () {
-    hand.classList.remove("hand-animation"); // This stops the animation
-    hand.style = "font-size: 0;";
-  });
-
-  setTimeout(() => {
-    textElement.style = "transform: translateY(-999px); transition: all 1s;";
-  }, 5000);
-}
 
 function disableScroll() {
   document.body.style.overflow = "hidden";
