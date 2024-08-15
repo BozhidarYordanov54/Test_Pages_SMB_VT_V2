@@ -34,7 +34,9 @@ function toggleDarkMode(isDarkMode) {
         '.profile-settings-wrapper',
         '.delete-child-confirm',
         '.add-child-wrapper',
-        '.info-content-wrapper'
+        '.info-content-wrapper',
+        'success-container',
+        'fail-container'
     ];
 
     selectors.forEach(selector => {

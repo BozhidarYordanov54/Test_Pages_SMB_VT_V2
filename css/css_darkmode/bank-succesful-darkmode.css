@@ -1,0 +1,67 @@
+body.darkmode{
+    background: linear-gradient(
+        -45deg,
+        #1a1a1a 0%, /* Darker background */
+        #1a1a1a 50%,
+        #222222 50%, /* Slightly lighter background */
+        #222222 100%
+    );
+    transition: all 0.3s ease-in-out;
+}
+
+body.darkmode .success-content{
+    background: #2c2c2cc9 !important;
+    color: #ffffff;
+}
+
+body.darkmode .success-content .receipt-table th{
+    background: #601f8c;
+}
+
+body.darkmode .success-content .receipt-table td{
+    background: #2c2c2c;
+}
+
+body.darkmode .success-container .link-home{
+    background: #601f8c;
+    border: none;
+}
+
+body.darkmode .success-container .success-contact-info{
+    color: #efefef;
+}
+
+body.darkmode .success-container .link-home:hover{
+    background: #802bb9;
+}
+
+body.darkmode .success-container .success-contact-info a{
+    color: #ffffff;
+}
+
+body.darkmode .success-container .receipt-header{
+    color: #802bb9;
+}
+
+body.darkmode .receipt-table td:hover{
+    background: #461a64;
+    transition: background 0.2s ease-in-out;
+}
+
+body.darkmode .receipt-table th {
+    background-color: #f2f2f2;
+}
+
+body.darkmode .receipt-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+body.darkmode .receipt-table tr:hover {
+    background-color: #f1f1f1;
+    transition: all 0.2s ease-in-out;
+}
+
+body.darkmode .receipt-table th, .receipt-table td {
+    border: 1px solid #7e7e7e;
+}
+
