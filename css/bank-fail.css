@@ -1,0 +1,108 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background: linear-gradient(
+        -45deg,
+        #bae6fd 0%,
+        #bae6fd 50%,
+        #e0f2fe 50%,
+        #e0f2fe 100%
+    );
+    padding: 1em;
+}
+
+dotlottie-player{
+    width: 150px !important;
+    height: 150px !important;
+    margin-top: -1em;
+}
+
+.fail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.fa-triangle-exclamation{
+    font-size: 5em;
+    color: #ed213a;
+}
+
+.fail-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 400px;
+    height: 600px;
+    border: 2px solid #ed213a;
+    background: #ffffffcb;
+    border-radius: 5px;
+    text-align: center;
+    color: #2d2d2d;
+    padding: 2em;
+}
+
+.fail-content h1{
+    font-weight: 600;
+    z-index: 2;
+    margin-top: -1em;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.link-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 3;
+}
+
+.link-wrapper a{
+    width: fit-content;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+
+}
+
+.link-event{
+    background: #6eafd8;
+    color: #efefef;
+}
+
+.error-code{
+    font-size: 1.2em;
+    margin-top: -1em;
+    font-weight: 700;
+    color: #ed213a;
+}
+
+.link-home{
+    border: 1px solid #6eafd8d5;
+    color: #6eafd8d5;
+}
+
+.error-contact-info{
+    font-size: 0.8em;
+    margin-top: 1em;
+    color: #2d2d2d;
+    font-style: italic;
+}
+
+.error-contact-info a{
+    color: #6eafd8d5;
+    font-weight: 700;
+}

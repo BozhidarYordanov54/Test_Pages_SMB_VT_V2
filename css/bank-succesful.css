@@ -1,0 +1,119 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background: linear-gradient(
+        -45deg,
+        #bae6fd 0%,
+        #bae6fd 50%,
+        #e0f2fe 50%,
+        #e0f2fe 100%
+    );
+    padding: 1em;
+}
+
+dotlottie-player{
+    position: absolute;
+    top: -6em;
+}
+
+.success-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.success-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 500px;
+    height: 700px;
+    background: #ffffffcb;
+    border-radius: 5px;
+    text-align: center;
+    color: #2d2d2d;
+    padding: 2em;
+}
+
+.success-content h1{
+    font-weight: 600;
+    z-index: 2;
+    text-wrap: nowrap;
+    margin-top: 1.5em;
+}
+
+.receipt-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+.receipt-table th, .receipt-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+.receipt-table th {
+    background-color: #f2f2f2;
+}
+.receipt-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.receipt-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.receipt-header{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #2d2d2d;
+}
+
+.receipt-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #6eafd8d5;
+    color: white;
+}
+
+.success-contact-info{
+    font-size: 0.8em;
+    color: #2d2d2d;
+    font-style: italic;
+}
+
+.success-contact-info a{
+    color: #6eafd8d5;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.link-home{
+    border: 1px solid #6eafd8d5;
+    color: #ffffff;
+    background: #6eafd8d5;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+@media(max-width: 768px){
+    .success-content{
+        width: 100%;
+        height: 100%;
+        padding: 1em;
+    }
+}
