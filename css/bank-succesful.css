@@ -1,8 +1,4 @@
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
     background: linear-gradient(
         -45deg,
         #bae6fd 0%,
@@ -10,7 +6,6 @@ body{
         #e0f2fe 50%,
         #e0f2fe 100%
     );
-    padding: 1em;
 }
 
 dotlottie-player{
