@@ -92,12 +92,15 @@ dotlottie-player{
     font-size: 0.8em;
     color: #2d2d2d;
     font-style: italic;
+    border-top: 2px solid #dadada;
+    padding-top: 0.1em;
 }
 
 .success-contact-info a{
     color: #6eafd8d5;
     font-weight: 700;
     text-decoration: none;
+    
 }
 
 .link-home{
