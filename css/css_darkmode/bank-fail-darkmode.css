@@ -1,0 +1,49 @@
+body.darkmode{
+    background: linear-gradient(
+        -45deg,
+        #1a1a1a 0%, /* Darker background */
+        #1a1a1a 50%,
+        #222222 50%, /* Slightly lighter background */
+        #222222 100%
+    );
+    transition: all 0.3s ease-in-out;
+}
+
+body.darkmode .fail-content{
+    background: #2c2c2cc9; /* Darker background */
+    color: #ffffff;
+}
+
+body.darkmode .fail-container .link-home{
+    border: 2px solid #601f8c;
+    color: #efefef;
+}
+
+body.darkmode .fail-container .link-event{
+    background: #601f8c;
+    color: #efefef;
+}
+
+body.darkmode .fail-container .fail-contact-info{
+    color: #efefef;
+}
+
+body.darkmode .fail-container .link-home:hover{
+    background: #802bb9;
+}
+
+body.darkmode .fail-container .fail-contact-info a{
+    color: #ffffff;
+}
+
+body.darkmode .fail-container .receipt-header{
+    color: #802bb9;
+}
+
+body.darkmode .error-contact-info{
+    color: #efefef;
+}
+
+body.darkmode .error-contact-info a{
+    color: #601f8c;
+}

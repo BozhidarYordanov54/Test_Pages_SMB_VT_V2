@@ -1,13 +1,4 @@
-body.darkmode{
-    background: linear-gradient(
-        -45deg,
-        #1a1a1a 0%, /* Darker background */
-        #1a1a1a 50%,
-        #222222 50%, /* Slightly lighter background */
-        #222222 100%
-    );
-    transition: all 0.3s ease-in-out;
-}
+
 
 body.darkmode .success-content{
     background: #2c2c2cc9 !important;

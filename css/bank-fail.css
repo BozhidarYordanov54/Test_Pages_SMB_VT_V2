@@ -22,11 +22,6 @@ dotlottie-player{
   height: 100vh;
 }
 
-.fa-triangle-exclamation{
-    font-size: 5em;
-    color: #ed213a;
-}
-
 .fail-content{
     position: relative;
     display: flex;
@@ -40,6 +35,8 @@ dotlottie-player{
     text-align: center;
     color: #2d2d2d;
     padding: 2em;
+    transition: background 0.2s ease-in-out,
+                color 0.2s ease-in-out;
 }
 
 .fail-content h1{
@@ -76,6 +73,7 @@ dotlottie-player{
 .link-event{
     background: #6eafd8;
     color: #efefef;
+    transition: all 0.2s ease-in-out;
 }
 
 .error-code{
