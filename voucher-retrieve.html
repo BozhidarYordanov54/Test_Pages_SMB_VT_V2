@@ -93,11 +93,11 @@
                         <div class="voucher-information">
                             <div class="main-voucher-wrapper">
                                 <div class="qr-code-wrapper">
-                                    <img class="qr-code" src="images/website_images/images_lightmode/--512.svg" alt="QR-Code">
+                                    <div class="qr-code" id="qr-code"></div>
                                 </div>
                                 <div class="info">
                                     <h2 class="voucher-text-header">Ваучер за отстъпка при последващо записване</h2>
-                                    <p class="text">Поздравления вашия ваучер беше активиран успешно! За да се възползвате от него, е необходимо да се регистрирате за съответното събитие чрез нашия уебсайт, като изберете ваучера от полето при записване. </p>
+                                    <p class="text">Поздравления, вашия ваучер беше активиран успешно! Спечелихте ваучер за отстъпка от такста на следващо събитие по избор от нашия календар, качен на началната страница на уебсайта ни. За да се възползвате от отсъпката е необходимо да се регистрирате за избраното от Вас сънитие и да изберете ваучера от полето при записване. Ваучерът е с валидност 6(шест) месеца от датата на активирането му.</p>
                                     <p class="grettings">Пожелаваме Ви успех в предстоящите състезания!</p>
                                     <p class="valid-until">Валиден до 08.12.2025г.</p>
                                     <p class="voucher-code">Код на ваучера: lkjrEtf</p>
@@ -171,5 +171,72 @@
     <script src="js_design/uncheck.js"></script>
     <script src="js_design/rotateArrow.js"></script>
     <script src="js_design/swipeToOpenNav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <script>
+        // Function to get query parameter by name
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Get the link from the query parameter 'link'
+        const link = getQueryParam('link') || "https://smb-vt.com/Voucher/Retrieve?code=lkjrEtf"; // Default link if none provided
+
+        let qrCodeMainColor = '';
+        let qrCodeSecondaryColor = '';
+
+        if(document.body.classList.contains('darkmode')) {
+            qrCodeMainColor = 'rgba(90, 39, 115, 1)';
+            qrCodeSecondaryColor = '#9434d4';
+        } else {
+            qrCodeMainColor = '#6eafd8';
+            qrCodeSecondaryColor = '#034877';
+        }
+
+        const qrCode = new QRCodeStyling({
+            width: 300,
+            height: 300,
+            margin: 0,
+            data: link, // Use the link from the query parameter
+            image: "images/website_images/images_lightmode/Logo-White.png", // Path to your logo
+            dotsOptions: {
+                color: qrCodeMainColor,
+                type: "classy"
+            },
+            cornersSquareOptions: {
+                color: qrCodeMainColor,
+                type: "extra-rounded"
+            },
+            cornersDotOptions: {
+                color: qrCodeSecondaryColor,
+                type: "extra-rounded"
+            },
+            backgroundOptions: {
+                color: "#ffffff00",
+            },
+            imageOptions: {
+                crossOrigin: "anonymous",
+                margin: 10, // Smaller margin for better scannability
+                imageSize: 0.2 // Logo size relative to the QR code
+            },
+            errorCorrectionLevel: 'H' // Highest level of error correction
+        });
+
+        // Initialize with the QR code
+        qrCode.append(document.getElementById("qr-code"));
+
+        // Function to download the QR code as PNG
+        function downloadPNG() {
+            qrCode.download({ extension: "png" });
+        }
+
+        // Automatically generate the QR code when the page loads
+        window.onload = function() {
+            qrCode.update({
+                data: link
+            });
+            qrCode.append(document.getElementById("qr-code"));
+        };
+    </script>
 </body>
 </html>
