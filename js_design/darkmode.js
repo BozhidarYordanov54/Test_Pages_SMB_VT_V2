@@ -36,7 +36,7 @@ function toggleDarkMode(isDarkMode) {
         '.add-child-wrapper',
         '.info-content-wrapper',
         'success-container',
-        'fail-container'
+        'fail-container',
     ];
 
     selectors.forEach(selector => {
