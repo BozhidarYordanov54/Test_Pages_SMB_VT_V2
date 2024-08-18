@@ -43,6 +43,7 @@
   flex-wrap: wrap;
   padding: 0em 2em;
   width: 95%;
+  animation: slide-in 1s ease-in-out;
 }
 
 .website-statistics{
@@ -171,6 +172,8 @@
   align-items: center;
   gap: 3em;
   margin-bottom: 2em;
+  opacity: 1;
+  animation: slide-in 1s ease-in-out;
 }
 
 .service-vl {
@@ -330,6 +333,17 @@
 
 .event-card:nth-child(odd){
   border-radius: 0 10px 0px 10px;
+}
+
+@keyframes slide-in{
+  0%{
+    transform: translateY(50%);
+    opacity: 0.1;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 768px) {
