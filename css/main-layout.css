@@ -58,15 +58,23 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  text-align: center;
   padding: 1em;
-  width: 170px;
-  height: 90px;
+  width: 200px;
+  height: 100px;
   border-radius: 5px;
   background: var(--main-content-bg);
   backdrop-filter: blur(5px);
   font-weight: bold;
   font-size: 1em;
   color: var(--text-color-main);
+}
+
+.counter-wrapper{
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  align-items: center;
 }
 
 .landing-wrapper .landing-header{
@@ -333,6 +341,36 @@
   .service-wrapper {
     padding: 1.5em;
     font-size: 0.9rem;
+  }
+
+  .landing-wrapper{
+    height: auto;
+  }
+
+  .landing-text,
+  .website-statistics{
+    width: 90%;
+  }
+
+  .website-statistics .statistic-card{
+    width: 150px;
+  }
+  .landing-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .landing-image img{
+    width: 150px;
+  }
+
+  .landing-content{
+    width: 100%;
+    gap: 1em;
+  }
+
+  .landing-header{
+    font-size: 2em;
   }
 }
 
