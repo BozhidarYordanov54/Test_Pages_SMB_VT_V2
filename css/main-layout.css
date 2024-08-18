@@ -393,4 +393,8 @@
     gap: 1em;
     padding: 0em 1em;
   }
+
+  .service-vl {
+    display: none;
+  }
 }
