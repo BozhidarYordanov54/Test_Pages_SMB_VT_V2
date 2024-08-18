@@ -17,6 +17,16 @@
     --wave-color-three-dark: #464646;
   }
 
+.main-content-wrapper.darkmode .landing-wrapper{
+    background: rgb(65, 65, 65);
+    background: linear-gradient(180deg, rgba(90, 39, 115, 0.6) 0%, rgba(90, 39, 115, 0.6) 46%, rgba(255, 255, 255, 0) 100%);
+}
+
+.main-content-wrapper.darkmode .website-statistics .statistic-card{
+    background: var(--main-content-bg-dark);
+    color: var(--text-color-main-dark);
+}
+
 .main-content-wrapper.darkmode .wave-wrapper svg .path-one {
     fill: var(--wave-color-one-dark);
     opacity: 1;
