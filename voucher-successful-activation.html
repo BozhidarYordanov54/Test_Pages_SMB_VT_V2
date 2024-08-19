@@ -23,6 +23,7 @@
 
     <script src="js_logic/flickity.js"></script>
     <script src="https://kit.fontawesome.com/6592283e01.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
 
     <link rel="icon" type="image/x-icon"  href="images/website_images/images_lightmode/Logo-White.png">
     <title>Начало - СМБ-Велико Търново</title>
@@ -88,6 +89,10 @@
                 </svg>
             </div>
             <div class="voucher-container">
+                <div class="voucher-container-header-wrapper">
+                    <dotlottie-player src="https://lottie.host/a1a38989-3d2a-4797-b721-083dbcb2b96e/xnobMoGXNh.json" background="transparent" speed="0.7" style="width: 300px; height: 300px;" autoplay></dotlottie-player>
+                    <h1 class="voucher-container-header">Успешно активиране на ваучер!</h1>
+                </div>
                 <div class="voucher-wrapper">
                     <div class="voucher-content">
                         <div class="voucher-information">
@@ -97,7 +102,7 @@
                                 </div>
                                 <div class="info">
                                     <h2 class="voucher-text-header">Ваучер за отстъпка при последващо записване</h2>
-                                    <p class="text">Поздравления, вашия ваучер беше активиран успешно! Спечелихте ваучер за отстъпка от такста на следващо събитие по избор от нашия календар, качен на началната страница на уебсайта ни. За да се възползвате от отсъпката е необходимо да се регистрирате за избраното от Вас сънитие и да изберете ваучера от полето при записване. Ваучерът е с валидност 6(шест) месеца от датата на активирането му.</p>
+                                    <p class="text">Поздравления, вашият ваучер беше активиран успешно! Спечелихте ваучер за отстъпка от такста на следващо събитие по избор от нашия календар, качен на началната страница на уебсайта ни. За да се възползвате от отсъпката е необходимо да се регистрирате за избраното от Вас сънитие и да изберете ваучера от полето при записване. Ваучерът е с валидност 6(шест) месеца от датата на активирането му.</p>
                                     <p class="grettings">Пожелаваме Ви успех в предстоящите състезания!</p>
                                     <p class="valid-until">Валиден до 08.12.2025г.</p>
                                     <p class="voucher-code">Код на ваучера: lkjrEtf</p>
@@ -185,14 +190,23 @@
         let qrCodeMainColor = '';
         let qrCodeSecondaryColor = '';
 
-        if(document.body.classList.contains('darkmode')) {
-            qrCodeMainColor = 'rgba(90, 39, 115, 1)';
-            qrCodeSecondaryColor = '#9434d4';
-        } else {
-            qrCodeMainColor = '#6eafd8';
-            qrCodeSecondaryColor = '#034877';
+        // Function to update QR code colors based on the current theme
+        function updateQRCodeColors() {
+            if (document.body.classList.contains('darkmode')) {
+                qrCodeMainColor = 'rgba(90, 39, 115, 1)';
+                qrCodeSecondaryColor = '#9434d4';
+            } else {
+                qrCodeMainColor = '#6eafd8';
+                qrCodeSecondaryColor = '#034877';
+            }
+            qrCode.update({
+                dotsOptions: { color: qrCodeMainColor },
+                cornersSquareOptions: { color: qrCodeMainColor },
+                cornersDotOptions: { color: qrCodeSecondaryColor }
+            });
         }
 
+        // Initialize the QR code
         const qrCode = new QRCodeStyling({
             width: 300,
             height: 300,
@@ -222,7 +236,7 @@
             errorCorrectionLevel: 'H' // Highest level of error correction
         });
 
-        // Initialize with the QR code
+        // Append the QR code to the DOM
         qrCode.append(document.getElementById("qr-code"));
 
         // Function to download the QR code as PNG
@@ -230,12 +244,25 @@
             qrCode.download({ extension: "png" });
         }
 
+        // Observe changes to the body's class attribute to detect theme changes
+        const observer = new MutationObserver(mutations => {
+            mutations.forEach(mutation => {
+                if (mutation.attributeName === 'class') {
+                    updateQRCodeColors();
+                }
+            });
+        });
+
+        observer.observe(document.body, {
+            attributes: true // Watch for attribute changes
+        });
+
         // Automatically generate the QR code when the page loads
         window.onload = function() {
+            updateQRCodeColors();
             qrCode.update({
                 data: link
             });
-            qrCode.append(document.getElementById("qr-code"));
         };
     </script>
 </body>

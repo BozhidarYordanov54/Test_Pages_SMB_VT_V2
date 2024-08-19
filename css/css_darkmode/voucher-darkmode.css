@@ -6,6 +6,10 @@ body.darkmode .voucher-wrapper{
     border-radius: 10px;
 }
 
+body.darkmode .voucher-container-header{
+    color: #ffffff;
+}
+
 body.darkmode .voucher-text-header{
     color: #9434d4;
 }
