@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="admin-css/admin-form.css">
     <link rel="stylesheet" href="../css/site.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
     <link rel="icon" type="image/x-icon" href="../images/website_images/images_lightmode/Logo-White.png">
 
@@ -125,35 +124,13 @@
                 </div>
                 <button class="btn-submit">Генериране</button>
             </form>
+            <button id="downloadBtn">Download Vouchers</button>
 
-            <div class="voucher-container">
-                <div class="voucher-wrapper" id="captureArea">
-                    <div class="voucher-content">
-                        <div class="voucher-information">
-                            <div class="main-voucher-wrapper">
-                                <div class="qr-code-wrapper">
-                                    <div class="qr-code" id="qr-code"></div>
-                                </div>
-                                <div class="info">
-                                    <h2 class="voucher-text-header">Ваучер за отстъпка при последващо записване</h2>
-                                    <p class="text">Поздравления, вашият ваучер беше активиран успешно! Спечелихте ваучер за отстъпка от такста на следващо събитие по избор от нашия календар, качен на началната страница на уебсайта ни. За да се възползвате от отсъпката е необходимо да се регистрирате за избраното от Вас сънитие и да изберете ваучера от полето при записване. Ваучерът е с валидност 6(шест) месеца от датата на активирането му.</p>
-                                    <p class="grettings">Пожелаваме Ви успех в предстоящите състезания!</p>
-                                    <p class="voucher-code">Код на ваучера: lkjrEtf</p>
-                                    <p class="discount">30% отстъпка</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="voucher-footer">
-                        <p class="footer-text">*Моля, имайте предвид, че ваучерът е валиден за период от 6 месеца от датата на активация и може да се използва само веднъж. Ваучерът Ви дава право на отстъпка при записване в състезанията и може да бъде използван само от вас. </p>
-                    </div>
-                </div>
+            <div class="generated-voucher-wrapper">
+
             </div>
 
-            <button class="btn-download" id="downloadButton">Изтегляне като JPEG</button>
         </main>
-
-
 
     </div>
     <script src="https://kit.fontawesome.com/6592283e01.js" crossorigin="anonymous"></script>
@@ -161,24 +138,94 @@
     <script src="../js_design/expandNavigation.js"></script>
     <script src="../js_design/rotateArrow.js"></script>
     <script src="../js_design/swipeToOpenNav.js"></script>
-    <script src="js/convertHTMLtoJPEG.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
     <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            // Create a new instance of JSZip
+            const zip = new JSZip();
+
+            let counter = 1;
+
+            // Select all elements with the class 'captureArea'
+            const captureElements = document.querySelectorAll('.captureArea');
+
+            // Check if elements are found
+            if (captureElements.length === 0) {
+                console.error('No elements with the class "captureArea" found.');
+                return;
+            }
+
+            // Create an array of promises to capture each element
+            const capturePromises = Array.from(captureElements).map((element, index) => {
+                return html2canvas(element).then(canvas => {
+                    // Convert the canvas to a JPEG image
+                    const imageUrl = canvas.toDataURL('image/jpeg');
+
+                    // Extract the base64 data from the image URL
+                    const base64Data = imageUrl.split(',')[1];
+
+                    // Add the image to the ZIP file
+                    zip.file(`downloaded-image-${index + 1}.jpg`, base64Data, { base64: true });
+
+                    console.log(`Captured element ${index + 1}`);
+                }).catch(error => {
+                    console.error(`Error capturing element ${index + 1}:`, error);
+                });
+            });
+
+            // Wait for all capture promises to resolve
+            Promise.all(capturePromises).then(() => {
+                // Generate the ZIP file
+                zip.generateAsync({ type: 'blob' }).then(content => {
+                    // Create a link element
+                    const link = document.createElement('a');
+
+                    // Set the download attribute with a filename
+                    link.download = 'captured-images.zip';
+
+                    // Create a URL for the ZIP file
+                    link.href = URL.createObjectURL(content);
+
+                    // Programmatically click the link to trigger the download
+                    link.click();
+
+                    console.log('ZIP file generated and download triggered.');
+                }).catch(error => {
+                    console.error('Error generating ZIP file:', error);
+                });
+            }).catch(error => {
+                console.error('Error capturing elements:', error);
+            });
+        });
+    </script>
+
+    <script>
+
+        const voucherWrapper = document.querySelector('.generated-voucher-wrapper');
+
         // Function to get query parameter by name
-        function getQueryParam(name) {
+        function getQueryParam(code) {
             const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
+            return urlParams.get(code);
         }
 
         // Get the link from the query parameter 'link'
-        const link = getQueryParam('link') || "https://smb-vt.com/Voucher/Retrieve?code=lkjrEtf"; // Default link if none provided
+        const links = [ 
+            "https://smb-vt.com/Voucher/Retrieve?code=lkjrEtf", 
+            "https://smb-vt.com/Voucher/Retrieve?code=56732346", 
+            "https://smb-vt.com/Voucher/Retrieve?code=qweqda8763",
+            "https://smb-vt.com/Voucher/Retrieve?code=jlui89o76",
+        ]; // Default link if none provided
 
         let qrCodeMainColor = '';
         let qrCodeSecondaryColor = '';
 
         // Function to update QR code colors based on the current theme
-        function updateQRCodeColors() {
+        function updateQRCodeColors(qrCode) {
             if (document.body.classList.contains('darkmode')) {
                 qrCodeMainColor = 'rgba(90, 39, 115, 1)';
                 qrCodeSecondaryColor = '#9434d4';
@@ -193,43 +240,123 @@
             });
         }
 
-        // Initialize the QR code
-        const qrCode = new QRCodeStyling({
-            width: 300,
-            height: 300,
-            margin: 0,
-            data: link, // Use the link from the query parameter
-            image: "images/website_images/images_lightmode/Logo-White.png", // Path to your logo
-            dotsOptions: {
-                color: qrCodeMainColor,
-                type: "classy"
-            },
-            cornersSquareOptions: {
-                color: qrCodeMainColor,
-                type: "extra-rounded"
-            },
-            cornersDotOptions: {
-                color: qrCodeSecondaryColor,
-                type: "extra-rounded"
-            },
-            backgroundOptions: {
-                color: "#ffffff00",
-            },
-            imageOptions: {
-                crossOrigin: "anonymous",
-                margin: 10, // Smaller margin for better scannability
-                imageSize: 0.2 // Logo size relative to the QR code
-            },
-            errorCorrectionLevel: 'H' // Highest level of error correction
-        });
+        let id = 1;
 
-        // Append the QR code to the DOM
-        qrCode.append(document.getElementById("qr-code"));
+// Ensure voucherWrapper exists
 
-        // Function to download the QR code as PNG
-        function downloadPNG() {
-            qrCode.download({ extension: "png" });
+
+// Initialize the QR code
+links.forEach(link => {
+    const container = document.createElement('div');
+    container.classList.add('voucher-container');
+
+    const url = new URL(link);
+    const code = url.searchParams.get('code');
+
+    container.innerHTML = `
+        <div class="voucher-wrapper captureArea" id="captureArea${id}">
+            <div class="voucher-content">
+                <div class="voucher-information">
+                    <div class="main-voucher-wrapper">
+                        <div class="qr-code-wrapper">
+                            <div class="qr-code" id="qr-code-${id}"></div>
+                        </div>
+                        <div class="info">
+                            <h2 class="voucher-text-header">Ваучер за отстъпка при последващо записване</h2>
+                            <p class="text">Поздравления, вашият ваучер беше активиран успешно! Спечелихте ваучер за отстъпка от такста на следващо събитие по избор от нашия календар, качен на началната страница на уебсайта ни. За да се възползвате от отсъпката е необходимо да се регистрирате за избраното от Вас сънитие и да изберете ваучера от полето при записване. Ваучерът е с валидност 6(шест) месеца от датата на активирането му.</p>
+                            <p class="grettings">Пожелаваме Ви успех в предстоящите състезания!</p>
+                            <p class="voucher-code">Код на ваучера: ${code}</p>
+                            <p class="discount">30% отстъпка</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="voucher-footer">
+                <p class="footer-text">*Моля, имайте предвид, че ваучерът е валиден за период от 6 месеца от датата на активация и може да се използва само веднъж. Ваучерът Ви дава право на отстъпка при записване в състезанията и може да бъде използван само от вас. </p>
+            </div>
+        </div>
+        `;
+
+    // Append the container to the voucherWrapper
+    voucherWrapper.appendChild(container);
+
+    // Initialize the QR code
+    const qrCode = new QRCodeStyling({
+        width: 300,
+        height: 300,
+        margin: 0,
+        data: link, // Use the link from the query parameter
+        image: "images/website_images/images_lightmode/Logo-White.png", // Path to your logo
+        dotsOptions: {
+            color: qrCodeMainColor,
+            type: "classy"
+        },
+        cornersSquareOptions: {
+            color: qrCodeMainColor,
+            type: "extra-rounded"
+        },
+        cornersDotOptions: {
+            color: qrCodeSecondaryColor,
+            type: "extra-rounded"
+        },
+        backgroundOptions: {
+            color: "#ffffff00",
+        },
+        imageOptions: {
+            crossOrigin: "anonymous",
+            margin: 10, // Smaller margin for better scannability
+            imageSize: 0.2 // Logo size relative to the QR code
+        },
+        errorCorrectionLevel: 'H' // Highest level of error correction
+    });
+
+    // Append the QR code to the correct container
+    qrCode.append(document.getElementById(`qr-code-${id}`));
+
+    id++;
+});
+
+// Ensure QR code colors are updated after the window loads
+window.onload = function() {
+    links.forEach((link, index) => {
+        const qrCodeElement = document.getElementById(`qr-code-${index + 1}`);
+        if (qrCodeElement) {
+            const qrCode = new QRCodeStyling({
+                width: 300,
+                height: 300,
+                margin: 0,
+                data: link, // Use the link from the query parameter
+                image: "images/website_images/images_lightmode/Logo-White.png", // Path to your logo
+                dotsOptions: {
+                    color: qrCodeMainColor,
+                    type: "classy"
+                },
+                cornersSquareOptions: {
+                    color: qrCodeMainColor,
+                    type: "extra-rounded"
+                },
+                cornersDotOptions: {
+                    color: qrCodeSecondaryColor,
+                    type: "extra-rounded"
+                },
+                backgroundOptions: {
+                    color: "#ffffff00",
+                },
+                imageOptions: {
+                    crossOrigin: "anonymous",
+                    margin: 10, // Smaller margin for better scannability
+                    imageSize: 0.2 // Logo size relative to the QR code
+                },
+                errorCorrectionLevel: 'H' // Highest level of error correction
+            });
+
+            qrCode.append(qrCodeElement);
+            updateQRCodeColors(qrCode);
+            qrCode.update({
+                data: link
+            });
         }
+    });
 
         // Observe changes to the body's class attribute to detect theme changes
         const observer = new MutationObserver(mutations => {
@@ -243,14 +370,10 @@
         observer.observe(document.body, {
             attributes: true // Watch for attribute changes
         });
+    };
 
         // Automatically generate the QR code when the page loads
-        window.onload = function() {
-            updateQRCodeColors();
-            qrCode.update({
-                data: link
-            });
-        };
+        
     </script>
 </body>
 </html>
