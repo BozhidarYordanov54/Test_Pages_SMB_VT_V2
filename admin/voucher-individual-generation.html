@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/typography.css">
+    <link rel="stylesheet" type="text/css" href="../css/nav.css">
+
+    <link rel="stylesheet" type="text/css" href="admin-css/admin-nav.css">
+    <link rel="stylesheet" href="admin-css/admin-layout.css">
+
+    <link rel="stylesheet" href="/css/voucher.css">
+    <link rel="stylesheet" href="admin-css/voucher-generation.css">
+
+    <link rel="stylesheet" href="admin-css/admin-form.css">
+    <link rel="stylesheet" href="../css/site.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="../images/website_images/images_lightmode/Logo-White.png">
+
+    <title>Начало - СМБ-Велико Търново</title>
+</head>
+
+<body>
+    <div class="site">
+        <header class="site-header">
+            <nav class="nav-wrapper">
+                <a class="admin-page-nav-header" href="../index.html"><img class="logo"
+                        src="../images/website_images/images_darkmode/Logo-Black.png" alt="СМБ-ВТ-ЛОГО"><span
+                        class="header-info">Админ</span></a>
+                <ul class="nav-list-first">
+                    <li><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path
+                                    d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                            </svg>Начало</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <label class="menu-label" for="menu-toggle-article"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M96 96c0-35.3 28.7-64 64-64H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H80c-44.2 0-80-35.8-80-80V128c0-17.7 14.3-32 32-32s32 14.3 32 32V400c0 8.8 7.2 16 16 16s16-7.2 16-16V96zm64 24v80c0 13.3 10.7 24 24 24H296c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24H184c-13.3 0-24 10.7-24 24zm208-8c0 8.8 7.2 16 16 16h48c8.8 0 16-7.2 16-16s-7.2-16-16-16H384c-8.8 0-16 7.2-16 16zm0 96c0 8.8 7.2 16 16 16h48c8.8 0 16-7.2 16-16s-7.2-16-16-16H384c-8.8 0-16 7.2-16 16zM160 304c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16zm0 96c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16z" />
+                                </svg></i>Статии<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512">
+                                    <path
+                                        d="M182.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128z" />
+                                </svg></label>
+                            <input type="checkbox" id="menu-toggle-article" />
+                            <div class="dropdown-content">
+                                <a href="#">Всички статии</a>
+                                <a href="#">Добавяне</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <label class="menu-label" for="menu-toggle-competitions"><svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512">
+                                    <path
+                                        d="M32 0C49.7 0 64 14.3 64 32V48l69-17.2c38.1-9.5 78.3-5.1 113.5 12.5c46.3 23.2 100.8 23.2 147.1 0l9.6-4.8C423.8 28.1 448 43.1 448 66.1V345.8c0 13.3-8.3 25.3-20.8 30l-34.7 13c-46.2 17.3-97.6 14.6-141.7-7.4c-37.9-19-81.3-23.7-122.5-13.4L64 384v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V400 334 64 32C0 14.3 14.3 0 32 0zM64 187.1l64-13.9v65.5L64 252.6V318l48.8-12.2c5.1-1.3 10.1-2.4 15.2-3.3V238.7l38.9-8.4c8.3-1.8 16.7-2.5 25.1-2.1l0-64c13.6 .4 27.2 2.6 40.4 6.4l23.6 6.9v66.7l-41.7-12.3c-7.3-2.1-14.8-3.4-22.3-3.8v71.4c21.8 1.9 43.3 6.7 64 14.4V244.2l22.7 6.7c13.5 4 27.3 6.4 41.3 7.4V194c-7.8-.8-15.6-2.3-23.2-4.5l-40.8-12v-62c-13-3.8-25.8-8.8-38.2-15c-8.2-4.1-16.9-7-25.8-8.8v72.4c-13-.4-26 .8-38.7 3.6L128 173.2V98L64 114v73.1zM320 335.7c16.8 1.5 33.9-.7 50-6.8l14-5.2V251.9l-7.9 1.8c-18.4 4.3-37.3 5.7-56.1 4.5v77.4zm64-149.4V115.4c-20.9 6.1-42.4 9.1-64 9.1V194c13.9 1.4 28 .5 41.7-2.6l22.3-5.2z" />
+                                </svg>Състезания<svg class="arrow-down" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512">
+                                    <path
+                                        d="M182.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128z" />
+                                </svg></label>
+                            <input type="checkbox" id="menu-toggle-competitions" />
+                            <div class="dropdown-content">
+                                <a href="#">Всички състезания</a>
+                                <a href="signed-up-for-competition.html">Записани за състезание</a>
+                                <a href="add-competition.html">Публикуване на състезание</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="users.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512">
+                                <path
+                                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                            </svg>Потребители</a></li>
+                    <li class="messages"><span class="messages-count">99+</span><a href="messages.html"><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512">
+                                <path
+                                    d="M121 32C91.6 32 66 52 58.9 80.5L1.9 308.4C.6 313.5 0 318.7 0 323.9V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V323.9c0-5.2-.6-10.4-1.9-15.5l-57-227.9C446 52 420.4 32 391 32H121zm0 64H391l48 192H387.8c-12.1 0-23.2 6.8-28.6 17.7l-14.3 28.6c-5.4 10.8-16.5 17.7-28.6 17.7H195.8c-12.1 0-23.2-6.8-28.6-17.7l-14.3-28.6c-5.4-10.8-16.5-17.7-28.6-17.7H73L121 96z" />
+                            </svg>Съобщения</a></li>
+                </ul>
+
+                <ul class="nav-list-second">
+                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z" />
+                            </svg>Профил</a></li>
+                    <li>
+                        <form class="logout-form">
+                            <button class="logout-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z" />
+                                </svg>
+                                <span class="logout-text">Излизане</span>
+                            </button>
+                        </form>
+                    </li>
+                    <li><a href="login.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z" />
+                            </svg>Вход</a></li>
+                    <li><a href="register.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                <path
+                                    d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z" />
+                            </svg>Регистрация</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="admin-info-wrapper">
+            <h2>Генериране на индивидуален ваучер</h2>
+            <form class="admin-form" method="post">
+                <div class="input-wrapper">
+                    <input class="input-text" type="number" id="discount" name="discount" required>
+                    <label class="form-label" for="discount">Намаление в проценти</label>
+                </div>
+                <button class="btn-submit">Генериране</button>
+            </form>
+
+            <div class="voucher-container">
+                <div class="voucher-wrapper" id="captureArea">
+                    <div class="voucher-content">
+                        <div class="voucher-information">
+                            <div class="main-voucher-wrapper">
+                                <div class="qr-code-wrapper">
+                                    <div class="qr-code" id="qr-code"></div>
+                                </div>
+                                <div class="info">
+                                    <h2 class="voucher-text-header">Ваучер за отстъпка при последващо записване</h2>
+                                    <p class="text">Поздравления, вашият ваучер беше активиран успешно! Спечелихте ваучер за отстъпка от такста на следващо събитие по избор от нашия календар, качен на началната страница на уебсайта ни. За да се възползвате от отсъпката е необходимо да се регистрирате за избраното от Вас сънитие и да изберете ваучера от полето при записване. Ваучерът е с валидност 6(шест) месеца от датата на активирането му.</p>
+                                    <p class="grettings">Пожелаваме Ви успех в предстоящите състезания!</p>
+                                    <p class="voucher-code">Код на ваучера: lkjrEtf</p>
+                                    <p class="discount">30% отстъпка</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="voucher-footer">
+                        <p class="footer-text">*Моля, имайте предвид, че ваучерът е валиден за период от 6 месеца от датата на активация и може да се използва само веднъж. Ваучерът Ви дава право на отстъпка при записване в състезанията и може да бъде използван само от вас. </p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-download" id="downloadButton">Изтегляне като JPEG</button>
+        </main>
+
+
+
+    </div>
+    <script src="https://kit.fontawesome.com/6592283e01.js" crossorigin="anonymous"></script>
+
+    <script src="../js_design/expandNavigation.js"></script>
+    <script src="../js_design/rotateArrow.js"></script>
+    <script src="../js_design/swipeToOpenNav.js"></script>
+    <script src="js/convertHTMLtoJPEG.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <script>
+        // Function to get query parameter by name
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Get the link from the query parameter 'link'
+        const link = getQueryParam('link') || "https://smb-vt.com/Voucher/Retrieve?code=lkjrEtf"; // Default link if none provided
+
+        let qrCodeMainColor = '';
+        let qrCodeSecondaryColor = '';
+
+        // Function to update QR code colors based on the current theme
+        function updateQRCodeColors() {
+            if (document.body.classList.contains('darkmode')) {
+                qrCodeMainColor = 'rgba(90, 39, 115, 1)';
+                qrCodeSecondaryColor = '#9434d4';
+            } else {
+                qrCodeMainColor = '#6eafd8';
+                qrCodeSecondaryColor = '#034877';
+            }
+            qrCode.update({
+                dotsOptions: { color: qrCodeMainColor },
+                cornersSquareOptions: { color: qrCodeMainColor },
+                cornersDotOptions: { color: qrCodeSecondaryColor }
+            });
+        }
+
+        // Initialize the QR code
+        const qrCode = new QRCodeStyling({
+            width: 300,
+            height: 300,
+            margin: 0,
+            data: link, // Use the link from the query parameter
+            image: "images/website_images/images_lightmode/Logo-White.png", // Path to your logo
+            dotsOptions: {
+                color: qrCodeMainColor,
+                type: "classy"
+            },
+            cornersSquareOptions: {
+                color: qrCodeMainColor,
+                type: "extra-rounded"
+            },
+            cornersDotOptions: {
+                color: qrCodeSecondaryColor,
+                type: "extra-rounded"
+            },
+            backgroundOptions: {
+                color: "#ffffff00",
+            },
+            imageOptions: {
+                crossOrigin: "anonymous",
+                margin: 10, // Smaller margin for better scannability
+                imageSize: 0.2 // Logo size relative to the QR code
+            },
+            errorCorrectionLevel: 'H' // Highest level of error correction
+        });
+
+        // Append the QR code to the DOM
+        qrCode.append(document.getElementById("qr-code"));
+
+        // Function to download the QR code as PNG
+        function downloadPNG() {
+            qrCode.download({ extension: "png" });
+        }
+
+        // Observe changes to the body's class attribute to detect theme changes
+        const observer = new MutationObserver(mutations => {
+            mutations.forEach(mutation => {
+                if (mutation.attributeName === 'class') {
+                    updateQRCodeColors();
+                }
+            });
+        });
+
+        observer.observe(document.body, {
+            attributes: true // Watch for attribute changes
+        });
+
+        // Automatically generate the QR code when the page loads
+        window.onload = function() {
+            updateQRCodeColors();
+            qrCode.update({
+                data: link
+            });
+        };
+    </script>
+</body>
+</html>

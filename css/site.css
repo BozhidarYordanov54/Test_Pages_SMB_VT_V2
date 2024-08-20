@@ -87,7 +87,8 @@
 }
 
 .btn-submit,
-.btn-register {
+.btn-register,
+.btn-download {
     outline: none;
     border: none;
     height: 3em;
@@ -112,7 +113,8 @@
 }
 
 .btn-submit:hover,
-.btn-register:hover {
+.btn-register:hover,
+.btn-download:hover {
     cursor: pointer;
     box-shadow: none;
 }

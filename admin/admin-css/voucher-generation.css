@@ -1,0 +1,23 @@
+.admin-info-wrapper h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #234465;
+    margin-bottom: 1em;
+    padding-top: 1em;
+}
+
+.voucher-wrapper{
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+}
+
+.btn-submit{
+    width: 250px !important;
+}
+
+.btn-download{
+    margin-top: 1em !important;
+    width: 250px !important;
+
+}
