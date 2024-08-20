@@ -119,13 +119,14 @@
             <h2>Генериране на индивидуален ваучер</h2>
             <form class="admin-form" method="post">
                 <div class="input-wrapper">
-                    <input class="input-text" type="number" id="discount" name="discount" required>
-                    <label class="form-label" for="discount">Намаление в проценти</label>
+                    <input class="input-text" type="number" id="winner-count" name="winner-count" required>
+                    <label class="form-label" for="winner-count">Брой победители</label>
                 </div>
+                <p class="info">Общия брой на победителите(Участници в ТОП 3)</p>
+                <p class="percentage-info">Процентите са фиксирани по следния начин: Първо място - 50%, Второ място - 30%, Трето място - 25%</p>
                 <button class="btn-submit">Генериране</button>
             </form>
-            <button id="downloadBtn">Download Vouchers</button>
-
+            <button class="btn-download" id="downloadBtn">Изтегляне на ваучери (.zip)</button>
             <div class="generated-voucher-wrapper">
 
             </div>

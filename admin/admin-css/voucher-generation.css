@@ -6,6 +6,13 @@
     padding-top: 1em;
 }
 
+.admin-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .voucher-wrapper{
     box-shadow: none;
     border: none;
@@ -17,7 +24,7 @@
 }
 
 .btn-download{
-    margin-top: 1em !important;
+    margin: 1em 0 !important;
     width: 250px !important;
 
 }
