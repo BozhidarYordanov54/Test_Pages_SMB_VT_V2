@@ -6,6 +6,83 @@
   --highlight-color: #294C60;
 }
 
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+button{
+  color:black;
+}
+.hamb {
+    position: relative;
+    margin-right: -.625rem;
+    border-width: 0px;
+    background-color: transparent;
+    padding: 0;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+.hamb .ham {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.hamb .ham {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+.hamb .ham .top {
+    stroke-dasharray: 40 160;
+}
+.hamb .ham .middle {
+    transform-origin: 50%;
+    stroke-dasharray: 40 142;
+}
+.hamb .ham .bottom {
+    transform-origin: 50%;
+    stroke-dasharray: 40 85;
+}
+.hamb .line {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 5;
+    transition-duration: .3s;
+    stroke-linecap: round;
+}
+.hamb.active svg {
+    --tw-rotate: 45deg;
+    transform: rotate(var(--tw-rotate));
+}
+.hamb.active svg .top {
+    stroke-dashoffset: -64px;
+}
+.hamb.active svg .middle {
+    --tw-rotate: 90deg;
+    transform: rotate(var(--tw-rotate));
+}
+.hamb.active svg .bottom {
+    stroke-dashoffset: -64px;
+}
+
 .nav-wrapper {
   z-index: 1;
   display: flex;
@@ -347,9 +424,86 @@
 }
 
 @media(max-width: 1200px){
-  .nav-wrapper{
-    transform: translateX(-100%);
+  .site-header{
+    display: flex;
+    width: 100%;
+    justify-content: center;
   }
+
+  .nav-wrapper{
+    bottom: 1em;
+    padding: 0 1em;
+    width: 98%;
+    height: 70px;
+    overflow: hidden;
+    opacity: 1;
+    margin-left: 0;
+  }
+
+  .nav-wrapper.expanded{
+    width: 250px;
+    right: 1em;
+    height: 98%;
+  }
+
+  .nav-wrapper .nav-list-first,
+  .nav-wrapper .nav-list-second{
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.2s ease-in;
+  }
+
+  .nav-wrapper.expanded .nav-list-first,
+  .nav-wrapper.expanded .nav-list-second{
+    height: auto;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav-wrapper .logo{
+    margin-top: 0.5em;
+  }
+
+  .burger-button-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dropdown{
+    border-radius: 5px;
+  }
+
+  .dropdown-content{
+   position: static;
+  }
+
+  .dropdown-content a{
+    padding: 8px 12px;
+  }
+
+ .burger{
+  display: flex;
+ }
+
+ .dropdown-element{
+  width: 90%;
+ }
+
+ .dropdown-content{
+  background-color: transparent;
+  box-shadow: none;
+  margin-top: 2em;
+ }
+
+ .dropdown-content a{
+  color: #294C60 !important;
+ }
+
+ .nav-wrapper.expanded .nav-list-first li a{
+  white-space: wrap;
+  text-align: center;
+ }
 }
 
 
